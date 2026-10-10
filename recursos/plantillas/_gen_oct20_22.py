@@ -360,6 +360,48 @@ S["Exe-09-Cierre"] = cierre("¿Te depositaron", "y no sabes qué es?",
     "Agenda tu revisión", "<strong>¿Hacemos parte 2?</strong> Comenta “SÍ” y guarda este post.",
     "torres", "50% 80%", 9, TB, "Torres de Monterrey con la sierra")
 
+
+# ---------- Portadas v2 (sin billetes: no repetir motivo con RESICO) ----------
+def xrow(t, strike=True):
+    deco = "text-decoration: line-through; text-decoration-color: #C98F7E; text-decoration-thickness: 4px;" if strike else ""
+    return (f'<div style="display: flex; align-items: center; gap: 22px; padding: 20px 0; border-bottom: 2px dashed rgba(43,53,66,0.18)">'
+            f'<svg aria-hidden="true" width="44" height="44" viewBox="0 0 24 24" style="flex-shrink: 0"><rect x="2" y="2" width="20" height="20" rx="4" fill="none" stroke="#2B3542" stroke-width="2"></rect><path d="M7 7l10 10M17 7L7 17" stroke="#C98F7E" stroke-width="3" stroke-linecap="round"></path></svg>'
+            f'<span style="font-size: 34px; {deco}">{t}</span></div>')
+S["Nun-01-Portada"] = page("Nunca haría · Portada", "", "#1E242C", f"""
+<div aria-hidden="true" style="position: absolute; inset: 0; background-image: radial-gradient(rgba(43,53,66,0.13) 2px, transparent 2.5px); background-size: 30px 30px"></div>
+<div class="serif" aria-hidden="true" style="position: absolute; right: -40px; top: -150px; font-size: 900px; line-height: 1; color: rgba(255,253,248,0.45)">5</div>
+<div style="position: absolute; left: 80px; top: 96px; right: 80px; display: flex; flex-direction: column; gap: 26px">
+<div style="align-self: flex-start; padding: 12px 22px; background: #2B3542; color: #F4F1EA; font-size: 20px; font-weight: 700; letter-spacing: 0.2em; transform: rotate(-2deg)">PALABRA DE CONTADOR</div>
+<h1 class="serif" style="margin: 0; font-size: 136px; line-height: 0.88; color: #1E242C">5 cosas que <em style="font-style: italic">nunca</em> haría con mis impuestos</h1>
+</div>
+<div class="hoja" style="position: absolute; left: 110px; top: 700px; width: 700px; box-sizing: border-box; padding: 40px 50px 30px; transform: rotate(-3deg); box-shadow: 0 26px 50px rgba(30,36,44,0.28)">
+<div class="kicker" style="font-size: 19px; color: #5F7E9E; padding-bottom: 6px">MI LISTA DE “NO”</div>
+{xrow('Comprar facturas')}{xrow('Pedir factura de todo')}{xrow('No facturar todo lo que…', False)}
+<div style="height: 70px; background: linear-gradient(rgba(255,253,248,0), #FFFDF8)"></div>
+</div>
+{tape(380, 676, 200, 4, 'rgba(255,253,248,0.75)')}
+<div class="sticker" style="position: absolute; left: 720px; top: 1010px; transform: rotate(8deg)"><div style="padding: 22px 28px; background: #C98F7E; color: #FFFFFF; border-radius: 50%; width: 200px; height: 200px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 25px; font-weight: 700; line-height: 1.2">La 3 casi nadie la ve venir</div></div>
+<div style="position: absolute; left: 80px; right: 80px; bottom: 60px; display: flex; justify-content: space-between; font-size: 21px; font-weight: 600; color: #2B3542"><span>GGTZ Consultores · @bernardolatorre.fiscal</span><span>Desliza →</span></div>
+""", bg=" background: #B7CFE6;")
+
+S["Exe-01-Portada"] = page("No paga ISR · Portada", "bg-sarga", "#F4F1EA", f"""
+<div style="position: absolute; right: 0; top: 0; width: 520px; height: 1350px; overflow: hidden">
+<img src="{B('pensativa')}" alt="Mujer pensativa leyendo" style="width: 100%; height: 100%; object-fit: cover; object-position: 38% 50%">
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(38,47,59,0.55) 0%, rgba(38,47,59,0) 30%)"></div>
+</div>
+<div style="position: absolute; left: 330px; top: 170px; width: 640px; padding: 26px 28px; background: rgba(244,241,234,0.96); border-radius: 30px; color: #1E242C; display: flex; gap: 22px; align-items: center; box-shadow: 0 26px 50px rgba(0,0,0,0.45); transform: rotate(-3deg)">
+<div style="width: 80px; height: 80px; border-radius: 20px; background: #2B3542; display: flex; align-items: center; justify-content: center; flex-shrink: 0"><svg aria-hidden="true" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#B7CFE6" stroke-width="2"><path d="M3 10h18M5 10V20M10 10v10M14 10v10M19 10v10M2 21h20M12 3l9 5H3z"></path></svg></div>
+<div style="display: flex; flex-direction: column; gap: 4px; flex: 1"><div style="display: flex; justify-content: space-between; font-size: 19px; color: #5F7E9E; font-weight: 600"><span>TU BANCO</span><span>ahora</span></div><div style="font-size: 30px; font-weight: 700">Recibiste una transferencia</div><div style="font-size: 27px">+$150,000.00 de “Papá”</div></div>
+</div>
+<div style="position: absolute; left: 80px; top: 520px; width: 560px; display: flex; flex-direction: column; gap: 30px">
+<div class="kicker" style="color: #B7CFE6">ANTES DE ENTRAR EN PÁNICO</div>
+<h1 class="serif" style="margin: 0; font-size: 128px; line-height: 0.88">¿Ese dinero <em style="font-style: italic; color: #B7CFE6">paga ISR?</em></h1>
+<p style="margin: 0; font-size: 32px; line-height: 1.4; color: rgba(244,241,234,0.9)">5 ingresos por los que, cumpliendo requisitos, <strong style="color: #F4F1EA">no pagas impuesto</strong></p>
+</div>
+<div style="position: absolute; left: 80px; bottom: 60px; font-size: 21px; font-weight: 600; color: rgba(244,241,234,0.8)">GGTZ Consultores · @bernardolatorre.fiscal</div>
+<div style="position: absolute; right: 60px; bottom: 56px; padding: 10px 18px; background: rgba(38,47,59,0.75); font-size: 21px; font-weight: 600">Desliza →</div>
+""")
+
 for k, v in S.items():
     (OUT / f"{k}.dc.html").write_text(v)
 print(len(S))

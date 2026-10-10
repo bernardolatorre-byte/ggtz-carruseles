@@ -26,6 +26,17 @@ Estándar aprobado por Berny el 9 de octubre de 2026 (versión "v2": Cierre fisc
   - Las capturas del SAT siempre van dentro de un marco de navegador o de celular y con contexto educativo.
   - No usar fotos con texto en inglés, ni moneda o formularios de otros países.
 
+## Portada: analizarla siempre contra las anteriores
+
+Berny pidió (10 oct 2026) que las portadas nunca se vean iguales. Antes de diseñar una portada, revisa las **4 últimas** en `historial.md` y compara estos 4 rasgos:
+
+1. **Motivo principal**: el objeto o la escena (billetes, pareja, lista, persona, edificio, gráfica…). **No se repite en las últimas 4 portadas.** Dinero (billetes o monedas) es el motivo más trillado del tema: úsalo como máximo 1 de cada 6 portadas.
+2. **Tipo de fondo**: foto a todo lo ancho, pantalla dividida, color liso, textura sin foto, collage. No repitas el mismo tipo en dos portadas seguidas.
+3. **Color dominante**: pizarra oscuro, marfil, azul polvo, salvia, terracota, foto en B/N. No repitas el de la portada anterior.
+4. **Acomodo del título**: abajo en tarjeta, arriba grande, mitad izquierda, centrado, dentro de un objeto (celular, hoja, ticket). No repitas el de la portada anterior.
+
+Después de renderizar, arma una tira con tu portada nueva junto a las 4 anteriores y mírala: si dos se parecen a primera vista, rehaz la nueva. Anota en `historial.md` la composición **y el motivo principal**.
+
 ## Ritmo visual (para que no se vea plano)
 
 - **Alternar fondos.** Nunca dos láminas seguidas con el mismo fondo. Las opciones son:
