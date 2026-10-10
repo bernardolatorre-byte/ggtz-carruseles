@@ -12,7 +12,7 @@ Estándar aprobado por Berny el 9 de octubre de 2026 (versión "v2": Cierre fisc
   - Salvia #A9C9A9 y terracota suave #D9B4A8 / #C98F7E como acentos secundarios.
   - Texto en #1E242C. **Nunca dorado.**
 - **Tipografía:** Instrument Serif para los títulos (con una palabra clave en cursiva) y Hanken Grotesk para el texto. Las etiquetas pequeñas van en mayúsculas con letter-spacing de 0.24em.
-- **Portada:** nunca lleva la foto de Berny. Su foto (sticker recortado) aparece solo en la última lámina, junto al botón para agendar.
+- **Portada:** nunca lleva la foto de Berny (excepción: posts de presentación personal, donde él pidió salir en portada y un tono formal). Su foto (sticker recortado) aparece solo en la última lámina, junto al botón para agendar.
 - **Última lámina:**
   - Una foto real de Monterrey en una banda superior.
   - Una pregunta en grande.
