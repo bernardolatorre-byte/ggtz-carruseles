@@ -22,8 +22,32 @@ Todas vienen de Unsplash con su licencia libre: se pueden usar gratis en publica
 | mano-firmando-documento.jpg | Mano firmando un documento | Scott Graham | f6ef9d166eaf01db13ae40b4bfb2954d |
 | terminal-pago-ticket.jpg | Terminal de pago con ticket | Towfiqu barbhuiya | cbaf38e3f38b21310b66683d091aaf60 |
 | ticket-arrugado.jpg | Ticket de compra arrugado (texto en inglés) | Michael Walter | (no subido) |
+| taqueria-esquina.jpg | Taquería de esquina con bancos naranjas | sander traa | f31af4ba04b2ab7d176e287d92455e9d (solo local) |
+| florista-mercado-celular.jpg | Florista en el mercado revisando su celular | Reza Madani | 42d8079cc3c861ee4b89735b38496096 (solo local) |
+| familia-al-aire-libre.jpg | Familia de seis al aire libre (Ensenada) | Josue Michel | faddc9c76095ba578488017124a3ec07 (solo local) |
+| trabajadores-andamio.jpg | Trabajadores con equipo de protección en andamio | Angel Maldonado | 8436fc96469020769a31b5247dd1a407 (solo local) |
+| pago-tarjeta-terminal.jpg | Pago con tarjeta en terminal, café | Clay Banks | 91a759277f2d4e3b9a03c351430610c6 (solo local) |
+| grafica-velas-tableta.jpg | Gráfica de velas de mercado en tableta | Jakub Żerdzicki | c7512a52eaf842fcb5e4f66bd82d57d3 (solo local) |
+| reunion-oficina.jpg | Equipo en junta de oficina con laptops | Joao paulo m ramos paulo | cee1524dd145415aaedc593dd9eb9df5 (solo local) |
+| cafe-laptop-trabajo.jpg | Persona con café frente a laptop | Anton Jansson | cb53358cbd5f1694569d50016950c96f (solo local) |
+| repartidor-moto.jpg | Repartidor en moto en movimiento | CJ | 2c94f2aa34ec448162402106fb16bb89 (solo local) |
+| bolsas-de-compras.jpg | Bolsas de compras sobre fondo claro | Iuliia Pilipeichenko | 1ccd1d95ade8d86a89a378fb60c1709b (solo local) |
+| llaves-casa.jpg | Llaves con llavero de casa | Jakub Żerdzicki | 2cd46b5a58bfffbfb27eeaf5ec4a9cb3 (solo local) |
+| fabrica-linea-ensamble.jpg | Línea de ensamble en fábrica | Remy Gieling | e0af3e7a3af559bd05b3fb1436bcd392 (solo local) |
+| mujer-pensativa-bn.jpg | Mujer pensativa leyendo (blanco y negro) | Matt Antonioli | a02e797c6e63f92e4b9aa4f8ded12cb8 (solo local) |
+| monterrey-sierra-madre.jpg | Monterrey con la Sierra Madre y torre | Jesus Herrera | 9040fcf6f15982c0e0dcbed5b75698cf (solo local) |
+| entrega-paquete.jpg | Entrega de un paquete en mano | RoseBox | a79cf3796677e058d838f6dc2173b0d8 (solo local) |
+| naranjas-mercado.jpg | Naranjas apiladas en mercado (tianguis) | Evelyn Verdín | 1b2f2713c15f34a4723e193276de30d4 (solo local) |
+| bandera-mexico-edificio.jpg | Bandera de México sobre cúpula histórica | Alejandro Barba | 23e73c9b9f1fd2ff32d5f54a90fd97c8 (solo local) |
+| billetes-500-pesos.jpg | Billetes de 500, 200 y 50 pesos | Sandra Gabriel | 29e4c8d2580b23552880ae35ab069428 (solo local) |
+| barberia.jpg | Barbero atendiendo a un cliente | delfina pan | cab0e08a0c98b670f1eccfaacfa36c4c (solo local) |
+| mecanico-taller.jpg | Mecánico trabajando en motor | Sten Rademaker | 5dbe984a94857f880f3988204f66fcb3 (solo local) |
+| apreton-de-manos.jpg | Apretón de manos en oficina | Amari Shutters | b76d35ba22dfc8f60635788e7c949071 (solo local) |
+| monedas-pila.jpg | Pila de monedas sobre mesa | Matthew Lancaster | fe5062850ea989b748a47059e0b37f26 (solo local) |
 
-Descartadas por no servir para México: calendario con texto en inglés, laptop con factura en alemán, calcetín navideño con euros.
+Las marcadas "solo local" no están subidas al canvas de Design: `recursos/render.py` las resuelve igual con `/_blob/<id>`. Si se usan en el canvas, súbelas primero y cambia el id.
+
+Descartadas por no servir para México: calendario con texto en inglés, laptop con factura en alemán, calcetín navideño con euros, formulario 1040 de EE. UU., calendario en inglés, súper estadounidense, alcancía con dólares.
 
 ## Capturas del portal del SAT (`sat/`)
 

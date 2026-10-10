@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Cierre fiscal · Portada</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#2B3542}a:hover{color:#5F7E9E}
+.hoja{background-color:#FFFDF8;background-image:linear-gradient(rgba(255,253,248,0.62),rgba(255,253,248,0.62)),url(/_blob/5fe8c28b9943619ea44f604b391f1f8a);background-size:cover}
+.sticker{filter: drop-shadow(5px 0 0 #fff) drop-shadow(-5px 0 0 #fff) drop-shadow(0 5px 0 #fff) drop-shadow(0 -5px 0 #fff) drop-shadow(0 14px 18px rgba(20,24,30,0.35))}
+</style>
+</helmet>
+<div style="width: 1080px; height: 1350px; position: relative; overflow: hidden; background: #262F3B; font-family: 'Hanken Grotesk', sans-serif; color: #1E242C">
+<img src="/_blob/2e0e172c4839bba47ef68d634b599452" alt="Pareja preocupada leyendo una carta" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%">
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(38,47,59,0.15) 0%, rgba(38,47,59,0.05) 35%, rgba(38,47,59,0.75) 70%, rgba(38,47,59,0.95) 100%)"></div>
+<div style="position: absolute; right: 60px; top: 64px; display: flex; align-items: center; gap: 12px; padding: 12px 22px; background: rgba(244,241,234,0.92); font-size: 20px; font-weight: 700; letter-spacing: 0.2em; color: #2B3542; transform: rotate(2deg)">CIERRE FISCAL 2026</div>
+<div class="hoja" style="position: absolute; left: 60px; top: 760px; width: 900px; box-sizing: border-box; padding: 56px 60px 50px; transform: rotate(-2deg); box-shadow: 0 24px 50px rgba(0,0,0,0.35); display: flex; flex-direction: column; gap: 20px">
+<h1 style="margin: 0; font-family: 'Instrument Serif', serif; font-size: 128px; line-height: 0.88; font-weight: 400; color: #2B3542">Cierra el año<br><em style="font-style: italic">sin sorpresas</em></h1>
+<p style="margin: 0; font-size: 34px; line-height: 1.35; font-weight: 500">Lo que tienes que hacer <span style="background: linear-gradient(transparent 52%, {{marker}} 52%); padding: 0 6px">antes del 31 de diciembre</span></p>
+</div>
+<div aria-hidden="true" style="position: absolute; left: 380px; top: 730px; width: 230px; height: 56px; background: rgba(183,207,230,0.85); transform: rotate(3deg); box-shadow: 0 2px 6px rgba(0,0,0,0.15)"></div>
+<div class="sticker" style="position: absolute; left: 60px; top: 150px; transform: rotate(-9deg)">
+<svg role="img" aria-label="Calendario en 31 de diciembre" width="250" height="262" viewBox="0 0 190 200"><rect x="8" y="22" width="174" height="170" rx="18" fill="#FFFFFF"></rect><path d="M8 40 a18 18 0 0 1 18 -18 h138 a18 18 0 0 1 18 18 v28 h-174z" fill="#C98F7E"></path><text x="95" y="60" text-anchor="middle" font-family="Hanken Grotesk, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF" letter-spacing="3">DIC</text><text x="95" y="160" text-anchor="middle" font-family="Instrument Serif, serif" font-size="88" fill="#2B3542">31</text><rect x="48" y="8" width="14" height="30" rx="7" fill="#2B3542"></rect><rect x="128" y="8" width="14" height="30" rx="7" fill="#2B3542"></rect></svg>
+</div>
+<div style="position: absolute; left: 0; right: 0; bottom: 34px; display: flex; justify-content: space-between; padding: 0 60px; font-size: 21px; font-weight: 600; color: #F4F1EA">
+<span>GGTZ Consultores · @bernardolatorre.fiscal</span>
+<span>Desliza →</span>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"marker":{"editor":"color","default":"#B7CFE6","options":["#B7CFE6","#A9C9A9","#D9B4A8"]},"$preview":{"width":1080,"height":1350}}'>
+class Component extends DCLogic {
+renderVals() {
+return { marker: this.props.marker ?? '#B7CFE6' };
+}
+}
+</script>
+</body>
+</html>

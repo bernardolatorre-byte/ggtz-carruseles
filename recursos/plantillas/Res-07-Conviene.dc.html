@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>RESICO · Te conviene</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#2B3542}a:hover{color:#5F7E9E}
+.bg-lino{background-color:#EEEAE1;background-image:url(/_blob/6c9eecc651dcae0e49c6e32a51e1513e);background-size:cover}
+.hoja{background-color:#FFFDF8;background-image:linear-gradient(rgba(255,253,248,0.62),rgba(255,253,248,0.62)),url(/_blob/5fe8c28b9943619ea44f604b391f1f8a);background-size:cover}
+</style>
+</helmet>
+<div class="bg-lino" style="width: 1080px; height: 1350px; position: relative; overflow: hidden; font-family: 'Hanken Grotesk', sans-serif; color: #1E242C">
+<div style="height: 100%; box-sizing: border-box; padding: 88px 80px 72px; display: flex; flex-direction: column; gap: 52px">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div style="font-size: 22px; font-weight: 600; letter-spacing: 0.24em; color: #5F7E9E">HAGAMOS CUENTAS</div>
+<h2 style="margin: 0; font-family: 'Instrument Serif', serif; font-size: 92px; line-height: 0.95; font-weight: 400; color: #2B3542">¿Entonces<br><em style="font-style: italic">te conviene?</em></h2>
+</div>
+<div class="hoja" style="display: flex; align-items: center; gap: 30px; padding: 52px 44px; box-shadow: 0 14px 28px rgba(43,53,66,0.12); transform: rotate(-0.8deg)">
+<div style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 0"><div style="font-size: 20px; font-weight: 600; letter-spacing: 0.16em; color: #5F7E9E">EJEMPLO</div><div style="font-size: 28px; line-height: 1.4">Cobras <strong style="font-weight: 700">$50,000</strong> en el mes, sin IVA</div></div>
+<div style="font-family: 'Instrument Serif', serif; font-size: 52px; color: #2B3542">→</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px"><div style="font-family: 'Instrument Serif', serif; font-size: 92px; line-height: 0.9; color: #2B3542">$550</div><div style="font-size: 22px; color: #3A4552">de ISR (1.10%)</div></div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px">
+<div style="display: flex; flex-direction: column; gap: 26px; padding: 48px 32px; background: #2B3542; color: #F4F1EA">
+<div style="font-size: 22px; font-weight: 700; letter-spacing: 0.14em; color: #A9C9A9">TE CONVIENE SI…</div>
+<div style="font-size: 26px; line-height: 1.4">Tienes pocos gastos deducibles</div>
+<div style="font-size: 26px; line-height: 1.4">Tus clientes son personas físicas o público en general</div>
+<div style="font-size: 26px; line-height: 1.4">Quieres cumplir de forma sencilla</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 26px; padding: 48px 32px; background: #FFFDF8; border: 3px solid #2B3542">
+<div style="font-size: 22px; font-weight: 700; letter-spacing: 0.14em; color: #C98F7E">COMPARA SI…</div>
+<div style="font-size: 26px; line-height: 1.4">Tienes muchos gastos del negocio</div>
+<div style="font-size: 26px; line-height: 1.4">Quieres aplicar tus deducciones personales</div>
+<div style="font-size: 26px; line-height: 1.4">Tus ingresos están cerca de $3.5 millones</div>
+</div>
+</div>
+<div style="margin-top: auto; display: flex; justify-content: space-between; font-size: 20px; font-weight: 600; color: #5F7E9E"><span>@bernardolatorre.fiscal</span><span>07 / 08</span></div>
+</div>
+<div style="position: absolute; right: 64px; top: 56px; width: 236px; box-sizing: border-box; padding: 12px 12px 46px; background: #FFFFFF; transform: rotate(-5deg); box-shadow: 0 18px 34px rgba(30,36,44,0.28)">
+<img src="/_blob/ffb338567052021e4c903fcf4373dfeb" alt="Persona haciendo cuentas con calculadora" style="display: block; width: 100%; height: 230px; object-fit: cover; object-position: 60% 60%">
+<div style="position: absolute; left: 0; right: 0; bottom: 10px; text-align: center; font-family: 'Instrument Serif', serif; font-style: italic; font-size: 24px; color: #2B3542">números reales</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"marker":{"editor":"color","default":"#B7CFE6","options":["#B7CFE6","#A9C9A9","#D9B4A8"]},"$preview":{"width":1080,"height":1350}}'>
+class Component extends DCLogic {
+renderVals() {
+return { marker: this.props.marker ?? '#B7CFE6' };
+}
+}
+</script>
+</body>
+</html>

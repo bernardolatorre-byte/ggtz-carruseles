@@ -3,10 +3,9 @@ from playwright.sync_api import sync_playwright
 
 SRC = pathlib.Path(sys.argv[1])
 OUT = pathlib.Path(sys.argv[2])
-OLD = pathlib.Path("/tmp/claude-0/-home-claude/b581291f-53f5-5455-a3f7-0c6137b39cf3/scratchpad")
-NEW = pathlib.Path(__file__).parent
-FONTS = OLD / "render" / "fonts"
-REC = pathlib.Path("/home/claude/ggtz-carruseles/recursos")
+NEW = pathlib.Path(__file__).resolve().parent
+FONTS = NEW / "fuentes"
+REC = NEW
 BLOBS = {k: REC / v for k, v in json.load(open(REC / "assets.json")).items()}
 names = sys.argv[3:]
 fonts = f"""
