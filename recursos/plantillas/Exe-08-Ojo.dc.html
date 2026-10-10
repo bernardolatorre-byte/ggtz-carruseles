@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>No paga ISR · Ojo</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:inherit}
+.bg-lino{background-color:#EEEAE1;background-image:url(/_blob/6c9eecc651dcae0e49c6e32a51e1513e);background-size:cover}
+.bg-papel{background-color:#F4F1EA;background-image:linear-gradient(rgba(95,126,158,0.10) 1px,transparent 1px),linear-gradient(90deg,rgba(95,126,158,0.10) 1px,transparent 1px),url(/_blob/5fe8c28b9943619ea44f604b391f1f8a);background-size:36px 36px,36px 36px,cover}
+.bg-sarga{background-color:#262F3B;background-image:url(/_blob/dadb3c074dd971422db84d954c63babd);background-size:cover}
+.hoja{background-color:#FFFDF8;background-image:linear-gradient(rgba(255,253,248,0.62),rgba(255,253,248,0.62)),url(/_blob/5fe8c28b9943619ea44f604b391f1f8a);background-size:cover}
+.sticker{filter: drop-shadow(5px 0 0 #fff) drop-shadow(-5px 0 0 #fff) drop-shadow(0 5px 0 #fff) drop-shadow(0 -5px 0 #fff) drop-shadow(0 14px 18px rgba(20,24,30,0.3))}
+.serif{font-family:'Instrument Serif',serif;font-weight:400}
+.kicker{font-size:22px;font-weight:600;letter-spacing:0.24em}
+</style>
+</helmet>
+<div class="bg-papel" style="width: 1080px; height: 1350px; position: relative; overflow: hidden; font-family: 'Hanken Grotesk', sans-serif; color: #1E242C;">
+
+<div style="position: absolute; left: 80px; top: 96px; right: 80px; display: flex; flex-direction: column; gap: 22px">
+<div class="kicker" style="color: #5F7E9E">GUÁRDALO</div>
+<h2 class="serif" style="margin: 0; font-size: 96px; line-height: 0.92; color: #2B3542">Exento <em style="font-style: italic">no es</em> “que nadie se entere”</h2>
+<p style="margin: 0; font-size: 30px; line-height: 1.45">Si el SAT te pregunta, tienes que poder explicarlo:</p>
+</div>
+<div style="position: absolute; left: 80px; top: 560px; width: 400px; min-height: 260px; box-sizing: border-box; padding: 40px 32px; background: #FFF3B8; transform: rotate(-4deg); box-shadow: 0 16px 26px rgba(43,53,66,0.2); font-size: 29px; line-height: 1.4"><strong>Transfiere</strong>, no en efectivo: que se vea de qué cuenta salió.</div>
+<div style="position: absolute; left: 560px; top: 540px; width: 400px; min-height: 260px; box-sizing: border-box; padding: 40px 32px; background: #CFE3C9; transform: rotate(3deg); box-shadow: 0 16px 26px rgba(43,53,66,0.2); font-size: 29px; line-height: 1.4"><strong>Pon por escrito</strong> préstamos y donativos (contrato o escritura, según tu estado).</div>
+<div style="position: absolute; left: 100px; top: 880px; width: 400px; min-height: 260px; box-sizing: border-box; padding: 40px 32px; background: #D6E4F2; transform: rotate(2deg); box-shadow: 0 16px 26px rgba(43,53,66,0.2); font-size: 29px; line-height: 1.4"><strong>Informa en tu anual</strong> préstamos, donativos y premios que sumen más de $600,000.</div>
+<div style="position: absolute; left: 580px; top: 870px; width: 400px; min-height: 260px; box-sizing: border-box; padding: 40px 32px; background: #F2D9D0; transform: rotate(-3deg); box-shadow: 0 16px 26px rgba(43,53,66,0.2); font-size: 29px; line-height: 1.4"><strong>Guarda todo</strong>: estados de cuenta, contratos y facturas.</div>
+<div style="position: absolute; left: 80px; right: 80px; bottom: 60px; display: flex; justify-content: space-between; font-size: 20px; font-weight: 600; color: #5F7E9E"><span>Fuente: art. 90 LISR · @bernardolatorre.fiscal</span><span>08 / 09</span></div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"marker":{"editor":"color","default":"#B7CFE6","options":["#B7CFE6","#A9C9A9","#D9B4A8"]},"$preview":{"width":1080,"height":1350}}'>
+class Component extends DCLogic {
+renderVals() {
+return { marker: this.props.marker ?? '#B7CFE6' };
+}
+}
+</script>
+</body>
+</html>
