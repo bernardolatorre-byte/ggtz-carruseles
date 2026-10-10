@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Primeros clientes · Aprende</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:inherit}
+.bg-lino{background-color:#EEEAE1;background-image:url(/_blob/6c9eecc651dcae0e49c6e32a51e1513e);background-size:cover}
+.bg-papel{background-color:#F4F1EA;background-image:linear-gradient(rgba(95,126,158,0.10) 1px,transparent 1px),linear-gradient(90deg,rgba(95,126,158,0.10) 1px,transparent 1px),url(/_blob/5fe8c28b9943619ea44f604b391f1f8a);background-size:36px 36px,36px 36px,cover}
+.bg-sarga{background-color:#262F3B;background-image:url(/_blob/dadb3c074dd971422db84d954c63babd);background-size:cover}
+.hoja{background-color:#FFFDF8;background-image:linear-gradient(rgba(255,253,248,0.62),rgba(255,253,248,0.62)),url(/_blob/5fe8c28b9943619ea44f604b391f1f8a);background-size:cover}
+.sticker{filter: drop-shadow(5px 0 0 #fff) drop-shadow(-5px 0 0 #fff) drop-shadow(0 5px 0 #fff) drop-shadow(0 -5px 0 #fff) drop-shadow(0 14px 18px rgba(20,24,30,0.3))}
+.serif{font-family:'Instrument Serif',serif;font-weight:400}
+.kicker{font-size:22px;font-weight:600;letter-spacing:0.24em}
+</style>
+</helmet>
+<div class="bg-sarga" style="width: 1080px; height: 1350px; position: relative; overflow: hidden; font-family: 'Hanken Grotesk', sans-serif; color: #F4F1EA;">
+
+<div style="position: absolute; left: 80px; top: 96px; right: 420px; display: flex; flex-direction: column; gap: 22px"><div style="display: flex; align-items: center; gap: 26px"><div class="serif" style="width: 96px; height: 96px; border-radius: 50%; background: #B7CFE6; color: #262F3B; display: flex; align-items: center; justify-content: center; font-size: 64px; line-height: 1">6</div><div class="kicker" style="color: #B7CFE6">Y NUNCA DEJES DE ESTUDIAR</div></div><h2 class="serif" style="margin: 0; font-size: 92px; line-height: 0.94; ">Cada cliente <em style="font-style: italic; color: #B7CFE6">te enseña algo</em></h2></div>
+<div style="position: absolute; right: 70px; top: 120px; width: 300px; height: 560px; box-sizing: border-box; padding: 12px; background: #12161C; border-radius: 46px; transform: rotate(5deg); box-shadow: 0 30px 56px rgba(0,0,0,0.55)">
+<div style="width: 100%; height: 100%; border-radius: 36px; overflow: hidden; background: #FFFFFF"><img src="/_blob/0adc0a675d66cb76d2f8d28aa693463f" alt="Inicio del portal del SAT en celular" style="width: 100%; height: 100%; object-fit: cover; object-position: 0 0"></div></div>
+<div style="position: absolute; left: 80px; top: 470px; width: 560px; display: flex; flex-direction: column; gap: 26px">
+<div style="display: flex; gap: 18px; align-items: flex-start"><span class="serif" style="font-size: 50px; line-height: 1; color: #B7CFE6">→</span><span style="font-size: 29px; line-height: 1.4">Investiga y actualízate: la ley y el portal cambian cada año.</span></div>
+<div style="display: flex; gap: 18px; align-items: flex-start"><span class="serif" style="font-size: 50px; line-height: 1; color: #B7CFE6">→</span><span style="font-size: 29px; line-height: 1.4">Pregunta cuando no sepas algo.</span></div>
+<div style="display: flex; gap: 18px; align-items: flex-start"><span class="serif" style="font-size: 50px; line-height: 1; color: #D9B4A8">→</span><span style="font-size: 29px; line-height: 1.4">Nunca prometas algo que no puedes cumplir.</span></div>
+</div>
+<div style="position: absolute; left: 80px; right: 80px; top: 930px; padding: 44px 48px; background: #F4F1EA; color: #1E242C; transform: rotate(-1.5deg); box-shadow: 0 18px 34px rgba(0,0,0,0.4)">
+<p class="serif" style="margin: 0; font-size: 58px; line-height: 1.05; color: #2B3542">Todos los despachos empezaron <em style="font-style: italic">con un primer cliente.</em></p></div>
+<div style="position: absolute; left: 80px; right: 80px; bottom: 60px; display: flex; justify-content: space-between; font-size: 20px; font-weight: 600; color: rgba(244,241,234,0.6)"><span>Captura: portal del SAT · @bernardolatorre.fiscal</span><span>08 / 09</span></div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"marker":{"editor":"color","default":"#B7CFE6","options":["#B7CFE6","#A9C9A9","#D9B4A8"]},"$preview":{"width":1080,"height":1350}}'>
+class Component extends DCLogic {
+renderVals() {
+return { marker: this.props.marker ?? '#B7CFE6' };
+}
+}
+</script>
+</body>
+</html>
