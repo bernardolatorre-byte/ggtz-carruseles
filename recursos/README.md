@@ -44,6 +44,12 @@ Todas vienen de Unsplash con su licencia libre: se pueden usar gratis en publica
 | mecanico-taller.jpg | Mecánico trabajando en motor | Sten Rademaker | 5dbe984a94857f880f3988204f66fcb3 (solo local) |
 | apreton-de-manos.jpg | Apretón de manos en oficina | Amari Shutters | b76d35ba22dfc8f60635788e7c949071 (solo local) |
 | monedas-pila.jpg | Pila de monedas sobre mesa | Matthew Lancaster | fe5062850ea989b748a47059e0b37f26 (solo local) |
+| centro-comercial-domo.jpg | Centro comercial con domo de cristal y gente | Korng Sok | 3110b2461179542afeae0468e90f0970 (solo local) |
+| pantalla-tv-sala.jpg | Pantalla grande en sala con luz rosa | Jan Böttinger | 0341e1000fe28e333061b1328b83e2b1 (solo local) |
+| carrito-pasto-cielo.jpg | Carrito de súper vacío en pasto, cielo azul | Alfred Kenneally | a03a7c1869ad9099d5bc5d1791cf40a4 (solo local) |
+| regalo-navidad-pino.jpg | Regalo envuelto sobre ramas de pino | Annie Spratt | ab01a5797cb0f9a7880df9eb23249e57 (solo local) |
+| arbol-navidad-luces.jpg | Árbol de Navidad con luces desenfocadas | Mourad Saadi | 894e4f56451ef943a235b34e4b0e0e85 (solo local) |
+| carrito-oscuro-luz.jpg | Carrito de súper bajo una lámpara, fondo oscuro | Oleksii S | dd6f80d3e9a164f540c89581b6ef0337 (solo local) |
 
 Las marcadas "solo local" no están subidas al canvas de Design: `recursos/render.py` las resuelve igual con `/_blob/<id>`. Si se usan en el canvas, súbelas primero y cambia el id.
 
@@ -60,6 +66,8 @@ Capturas de pantalla de páginas públicas de sat.gob.mx, tomadas el 9 de octubr
 | sat-opinion-cumplimiento.jpg | Opinión del cumplimiento (32-D CFF) | dc4a7a1dee459811d64474d9d608865d |
 | sat-buzon-tributario-servicios.jpg | Servicios del Buzón Tributario | ada958ada7bffd85467f13dafb7111a2 |
 | sat-declaraciones-personas-fisicas.jpg | Declaraciones de personas físicas | 878d0248a9f91fbe79bc73a1bd94383b |
+
+| elbuenfin-org-inicio-movil.jpg | Sitio oficial El Buen Fin 2026 (Secretaría de Economía), vista móvil, 10 oct 2026 | e933984a0f932c680adec5c2f1add845 (solo local) |
 
 ## Texturas y foto de Berny (en el canvas)
 

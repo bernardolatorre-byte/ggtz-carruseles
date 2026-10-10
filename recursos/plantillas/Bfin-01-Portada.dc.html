@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Buen Fin · Portada</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:inherit}
+.bg-lino{background-color:#EEEAE1;background-image:url(/_blob/6c9eecc651dcae0e49c6e32a51e1513e);background-size:cover}
+.bg-papel{background-color:#F4F1EA;background-image:linear-gradient(rgba(95,126,158,0.10) 1px,transparent 1px),linear-gradient(90deg,rgba(95,126,158,0.10) 1px,transparent 1px),url(/_blob/5fe8c28b9943619ea44f604b391f1f8a);background-size:36px 36px,36px 36px,cover}
+.bg-sarga{background-color:#262F3B;background-image:url(/_blob/dadb3c074dd971422db84d954c63babd);background-size:cover}
+.hoja{background-color:#FFFDF8;background-image:linear-gradient(rgba(255,253,248,0.62),rgba(255,253,248,0.62)),url(/_blob/5fe8c28b9943619ea44f604b391f1f8a);background-size:cover}
+.sticker{filter: drop-shadow(5px 0 0 #fff) drop-shadow(-5px 0 0 #fff) drop-shadow(0 5px 0 #fff) drop-shadow(0 -5px 0 #fff) drop-shadow(0 14px 18px rgba(20,24,30,0.3))}
+.serif{font-family:'Instrument Serif',serif;font-weight:400}
+.kicker{font-size:22px;font-weight:600;letter-spacing:0.24em}
+</style>
+</helmet>
+<div class="" style="width: 1080px; height: 1350px; position: relative; overflow: hidden; font-family: 'Hanken Grotesk', sans-serif; color: #F4F1EA;">
+
+<img src="/_blob/dd6f80d3e9a164f540c89581b6ef0337" alt="Carrito de súper bajo una lámpara" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 70%">
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(38,47,59,0.85) 0%, rgba(38,47,59,0.35) 45%, rgba(38,47,59,0.1) 70%, rgba(38,47,59,0.6) 100%)"></div>
+<div style="position: absolute; left: 80px; right: 80px; top: 90px; display: flex; flex-direction: column; gap: 26px">
+<div class="kicker" style="color: #B7CFE6">ANTES DE LLENAR EL CARRITO</div>
+<h1 class="serif" style="margin: 0; font-size: 140px; line-height: 0.88">Buen Fin <em style="font-style: italic; color: #B7CFE6">sin arrepentirte</em></h1>
+<p style="margin: 0; max-width: 640px; font-size: 32px; line-height: 1.4; color: rgba(244,241,234,0.9)">Facturas, sorteo del SAT, meses sin intereses y lo que debe saber tu negocio.</p>
+</div>
+<svg aria-hidden="true" style="position: absolute; left: 0; top: 0" width="1080" height="1350"><path d="M890 560 C 900 640, 850 700, 840 760" fill="none" stroke="#F4F1EA" stroke-width="4"></path></svg>
+<div style="position: absolute; left: 640px; top: 740px; width: 340px; transform: rotate(-12deg); filter: drop-shadow(0 22px 30px rgba(0,0,0,0.45))">
+<svg aria-hidden="true" width="340" height="400" viewBox="0 0 340 400" style="position: absolute; left: 0; top: 0"><path d="M100 0 H240 L340 90 V380 Q340 400 320 400 H20 Q0 400 0 380 V90 Z" fill="#C98F7E"></path><circle cx="170" cy="70" r="20" fill="#262F3B"></circle></svg>
+<div style="position: relative; height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding-top: 70px; color: #FFFDF8; text-align: center">
+<div class="kicker" style="font-size: 20px">2026</div>
+<div class="serif" style="font-size: 92px; line-height: 0.9">13–17</div>
+<div style="font-size: 30px; font-weight: 700; letter-spacing: 0.2em">NOVIEMBRE</div>
+</div></div>
+<div style="position: absolute; left: 80px; right: 80px; bottom: 50px; display: flex; justify-content: space-between; font-size: 21px; font-weight: 600; color: rgba(244,241,234,0.85)"><span>GGTZ Consultores · @bernardolatorre.fiscal</span><span>Desliza →</span></div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"marker":{"editor":"color","default":"#B7CFE6","options":["#B7CFE6","#A9C9A9","#D9B4A8"]},"$preview":{"width":1080,"height":1350}}'>
+class Component extends DCLogic {
+renderVals() {
+return { marker: this.props.marker ?? '#B7CFE6' };
+}
+}
+</script>
+</body>
+</html>
