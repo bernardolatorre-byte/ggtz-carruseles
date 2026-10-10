@@ -30,19 +30,23 @@ S["Pre-01-Portada"] = page("Presentación · Portada", "", "#F4F1EA", f"""
 """)
 
 # 2 · Quién soy: foto grande a la derecha
-S["Pre-02-Quien"] = page("Presentación · Perfil", "bg-sarga", "#F4F1EA", f"""
-<div style="position: absolute; right: 0; top: 0; width: 500px; height: 1350px; overflow: hidden">
-<img src="{B('icpnl')}" alt="Bernardo Latorre en el ICPNL" style="width: 100%; height: 100%; object-fit: cover; object-position: 22% 40%">
-<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(38,47,59,0.9) 0%, rgba(38,47,59,0) 35%)"></div>
+def dato(k, v, bg, fg, rot):
+    return (f'<div style="flex: 1 1 0; display: flex; flex-direction: column; gap: 10px; padding: 34px 28px; background: {bg}; color: {fg}; transform: rotate({rot}deg); box-shadow: 0 14px 26px rgba(43,53,66,0.16)">'
+            f'<div class="kicker" style="font-size: 17px; opacity: 0.8">{k}</div><div class="serif" style="font-size: 40px; line-height: 1.05">{v}</div></div>')
+S["Pre-02-Quien"] = page("Presentación · Perfil", "bg-papel", "#1E242C", f"""
+{polaroid('icpnl', 'Monterrey, N.L.', 80, 90, 460, 560, -3, '20% 35%', 'Bernardo Latorre en el ICPNL')}
+{tape(230, 70, 160, 4)}
+<div style="position: absolute; left: 600px; right: 80px; top: 150px; display: flex; flex-direction: column; gap: 26px">
+<div class="kicker" style="color: #5F7E9E">PERFIL</div>
+<h2 class="serif" style="margin: 0; font-size: 76px; line-height: 0.95; color: #2B3542">Asesoría fiscal <em style="font-style: italic">con experiencia</em></h2>
+<div style="width: 110px; height: 3px; background: #2B3542"></div>
+<p style="margin: 0; font-size: 27px; line-height: 1.5">Cumplimiento y planeación fiscal para personas físicas y PyMEs.</p>
 </div>
-<div style="position: absolute; left: 80px; top: 120px; width: 470px; display: flex; flex-direction: column; gap: 30px">
-<div class="kicker" style="color: #B7CFE6">PERFIL</div>
-<h2 class="serif" style="margin: 0; font-size: 86px; line-height: 0.94">Asesoría fiscal <em style="font-style: italic; color: #B7CFE6">con experiencia</em></h2>
-<p style="margin: 0; font-size: 29px; line-height: 1.5; color: rgba(244,241,234,0.9)"><strong style="color: #F4F1EA">Contador Público</strong> egresado de la UDEM y socio de <strong style="color: #F4F1EA">GGTZ Consultores</strong>, despacho de asesoría fiscal y legal en Monterrey.</p>
-<p style="margin: 0; font-size: 29px; line-height: 1.5; color: rgba(244,241,234,0.9)">Especializado en cumplimiento y planeación fiscal para personas físicas y PyMEs.</p>
+<div style="position: absolute; left: 80px; right: 80px; top: 820px; display: flex; gap: 20px">
+{dato('FORMACIÓN', 'Contador Público, UDEM', '#2B3542', '#F4F1EA', -1.5)}{dato('ACTUALMENTE', 'Socio de GGTZ Consultores', '#B7CFE6', '#1E242C', 1)}{dato('EXPERIENCIA', '8 años en Big Four', '#FFFDF8', '#1E242C', -1)}
 </div>
-<div style="position: absolute; left: 80px; top: 1080px; padding: 14px 24px; background: #F4F1EA; color: #2B3542; font-size: 22px; font-weight: 700; letter-spacing: 0.12em; transform: rotate(-2deg)">MONTERREY, N.L.</div>
-{foot('@bernardolatorre.fiscal', 2, T, True)}
+<div style="position: absolute; left: 80px; right: 80px; top: 1110px; font-size: 27px; line-height: 1.45; color: #3A4552">GGTZ Consultores: despacho de asesoría fiscal y legal en Monterrey.</div>
+{foot('@bernardolatorre.fiscal', 2, T)}
 """)
 
 # 3 · Trayectoria: línea de tiempo con polaroids
