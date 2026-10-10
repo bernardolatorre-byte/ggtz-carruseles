@@ -75,3 +75,28 @@ Capturas de pantalla de páginas públicas de sat.gob.mx, tomadas el 9 de octubr
 - **Fotos:** en unsplash.com, filtro de licencia libre. La versión vertical para láminas se descarga con `https://images.unsplash.com/<photo-id>?w=780&h=1000&fit=crop&q=90`.
 - **Portal del SAT:** usa las páginas de wwwmat.sat.gob.mx; muchas de www.sat.gob.mx responden "acceso prohibido" a navegadores automatizados.
 - **No usar** imágenes sueltas de Google Imágenes, de noticias ni de otras cuentas: tienen derechos de autor.
+
+## Fotos personales de Berny (`berny/fotos/`)
+
+Fotos que Berny compartió el 10 oct 2026 para usar en sus posts (trayectoria: UDEM, Deloitte, ICPNL, despacho). Solo para contenido de @bernardolatorre.fiscal. **Nunca en portadas** (regla de la guía). Las que salen otras personas: usarlas solo en posts sobre trayectoria/comunidad, sin nombrarlas.
+
+| Archivo | Qué muestra | Id local |
+|---|---|---|
+| oficina-camisa-azul-laptop.jpg | En su oficina con laptop y micrófono, ventanal con vista a Monterrey | df12d7834689b02a85e1e7c7bb293a70 |
+| icpnl-muro-logo.jpg | De pie frente al muro del ICPNL | a2422d80cf89486e9000c552c64f9d5f |
+| icpnl-termo-sesion.jpg | Termo del ICPNL en una sesión/curso | 1f8dc3829c55597e9446e20484a1c9ab |
+| icpnl-con-colega.jpg | Con un colega frente al logo del ICPNL | 4d623ee1f9fdf083e493b1b0adcdb71b |
+| foro-economico-fiscal-pose.jpg | En el Foro Económico Fiscal del ICPNL | 3fe85b200d3b7acd10e189542208fef2 |
+| foro-economico-fiscal-escenario.jpg | Conferencia en el Foro Económico Fiscal (3a edición) | 5f30980ae63e1c1aea6b4d1660223e2f |
+| campana-familia.jpg | Con sus papás bajo la campana (graduación) | 8dc04c93ef388c8aece189fbce585143 |
+| deloitte-sillon-verde-1.jpg | En el lobby de Deloitte, sillón verde | 8a7c7dc900ab04139254ce465038f1e8 |
+| deloitte-equipo-evento.jpg | Con compañeros en evento de Deloitte | be23a7eba4eddb0405ca1c089fe0f071 |
+| campana-tocando.jpg | Tocando la campana (graduación) | 4ead5090323fb1e8ec01f1ce6a258d51 |
+| bandera-universidad.jpg | Con traje frente a la bandera de México y la universitaria | 2f83584efd5212cf53d3f370478a98a0 |
+| foto-ovalo-escultura-amarilla.jpg | Foto ovalada sostenida frente a la escultura amarilla | 89e3486a35c41b49fce28fd83a82634f |
+| elevador-celular-rojo.jpg | Selfie en elevador (época Big Four), celular rojo | 4de5119ef9ed16d185072cea5ed29267 |
+| escultura-amarilla-amigos.jpg | Con dos amigos frente a la escultura amarilla | 60d2b5995b0614cb20f8ea4b185a8401 |
+| elevador-saco-azul.jpg | Selfie en elevador con saco azul | ca9c24c05cbeba3fe2b67703258f9639 |
+| deloitte-cumpleanos-escritorio.jpg | Festejo de cumpleaños en su escritorio de Deloitte | ef7401e5a2d861f0e9589b54aa26a24c |
+| deloitte-sillon-verde-2.jpg | En el lobby de Deloitte, sillón verde (piernas cruzadas) | a011b9480cdaf80932f25a89e006f0e7 |
+| icpnl-caso-2017-tercer-lugar.jpg | Tercer lugar en el 14° Caso ICPNL 2017 | af1d182640088e390fc9a1587aeb8853 |

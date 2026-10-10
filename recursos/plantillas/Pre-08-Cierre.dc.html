@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Cierre</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:inherit}
+.bg-lino{background-color:#EEEAE1;background-image:url(/_blob/6c9eecc651dcae0e49c6e32a51e1513e);background-size:cover}
+.bg-papel{background-color:#F4F1EA;background-image:linear-gradient(rgba(95,126,158,0.10) 1px,transparent 1px),linear-gradient(90deg,rgba(95,126,158,0.10) 1px,transparent 1px),url(/_blob/5fe8c28b9943619ea44f604b391f1f8a);background-size:36px 36px,36px 36px,cover}
+.bg-sarga{background-color:#262F3B;background-image:url(/_blob/dadb3c074dd971422db84d954c63babd);background-size:cover}
+.hoja{background-color:#FFFDF8;background-image:linear-gradient(rgba(255,253,248,0.62),rgba(255,253,248,0.62)),url(/_blob/5fe8c28b9943619ea44f604b391f1f8a);background-size:cover}
+.sticker{filter: drop-shadow(5px 0 0 #fff) drop-shadow(-5px 0 0 #fff) drop-shadow(0 5px 0 #fff) drop-shadow(0 -5px 0 #fff) drop-shadow(0 14px 18px rgba(20,24,30,0.3))}
+.serif{font-family:'Instrument Serif',serif;font-weight:400}
+.kicker{font-size:22px;font-weight:600;letter-spacing:0.24em}
+</style>
+</helmet>
+<div class="bg-sarga" style="width: 1080px; height: 1350px; position: relative; overflow: hidden; font-family: 'Hanken Grotesk', sans-serif; color: #F4F1EA;">
+
+<div style="position: absolute; left: 0; top: 0; width: 1080px; height: 520px; overflow: hidden">
+<img src="/_blob/e448a584e362be7c35d718376ddbb2a9" alt="Cerro de la Silla al atardecer" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 58%">
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(38,47,59,0) 45%, rgba(38,47,59,1) 100%)"></div>
+</div>
+<div style="position: absolute; left: 60px; top: 60px; padding: 12px 22px; background: rgba(244,241,234,0.92); font-size: 20px; font-weight: 700; letter-spacing: 0.2em; color: #2B3542; transform: rotate(-2deg)">DESDE MONTERREY</div>
+<div aria-hidden="true" style="position: absolute; right: 30px; top: 790px; width: 470px; height: 470px; border-radius: 50%; background: #A9C9A9"></div>
+<img src="/_blob/25bcb8fe94907e94b0640cf81bd101a6" alt="Bernardo Latorre, GGTZ Consultores" style="position: absolute; right: -30px; bottom: 0; width: 540px; height: auto; filter: drop-shadow(0 14px 24px rgba(0,0,0,0.35))">
+<div style="position: relative; height: 100%; box-sizing: border-box; padding: 470px 80px 64px; display: flex; flex-direction: column; gap: 30px">
+<h2 class="serif" style="margin: 0; font-size: 100px; line-height: 0.92">¿En qué te<br><em style="font-style: italic; color: #B7CFE6">puedo ayudar?</em></h2>
+<p style="margin: 0; max-width: 470px; font-size: 30px; line-height: 1.45; color: rgba(244,241,234,0.88)">Si tienes dudas con el SAT, tu negocio o tus impuestos, platiquemos.</p>
+<div style="align-self: flex-start; display: inline-flex; align-items: center; gap: 18px; padding: 26px 40px; background: #F4F1EA; color: #262F3B; font-size: 28px; font-weight: 700; border-radius: 4px">Agenda tu asesoría
+<svg aria-hidden="true" width="30" height="20" viewBox="0 0 40 24" fill="none" stroke="#262F3B" stroke-width="2.4"><path d="M2 12h34M26 3l10 9-10 9"></path></svg></div>
+<div style="max-width: 440px; padding: 22px 28px; background: rgba(244,241,234,0.08); border: 1px solid rgba(244,241,234,0.22); transform: rotate(-1.5deg); font-size: 25px; line-height: 1.4"><strong>Cuéntame en comentarios</strong> qué tema quieres que explique primero. Y sígueme para no perderte nada.</div>
+<div style="margin-top: auto; display: flex; flex-direction: column; gap: 8px; font-size: 24px; font-weight: 500">
+<span>81 2758 0277 · @bernardolatorre.fiscal</span>
+<span class="serif" style="font-size: 40px; letter-spacing: 0.04em">GGTZ <span style="font-family: 'Hanken Grotesk', sans-serif; font-size: 16px; letter-spacing: 0.3em; color: #B7CFE6">CONSULTORES</span></span>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"marker":{"editor":"color","default":"#B7CFE6","options":["#B7CFE6","#A9C9A9","#D9B4A8"]},"$preview":{"width":1080,"height":1350}}'>
+class Component extends DCLogic {
+renderVals() {
+return { marker: this.props.marker ?? '#B7CFE6' };
+}
+}
+</script>
+</body>
+</html>

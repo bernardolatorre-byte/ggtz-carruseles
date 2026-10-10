@@ -8,7 +8,9 @@ with contextlib.redirect_stdout(io.StringIO()):
 page, foot, polaroid, tape, cierre, num_badge = base.page, base.foot, base.polaroid, base.tape, base.cierre, base.num_badge
 base.IMG.update(cafe="cb53358cbd5f1694569d50016950c96f", florista="42d8079cc3c861ee4b89735b38496096",
                 mecanico="5dbe984a94857f880f3988204f66fcb3", barberia="cab0e08a0c98b670f1eccfaacfa36c4c",
-                sathome="0adc0a675d66cb76d2f8d28aa693463f", cerro="e448a584e362be7c35d718376ddbb2a9")
+                sathome="0adc0a675d66cb76d2f8d28aa693463f", cerro="e448a584e362be7c35d718376ddbb2a9",
+                deloitte2="a011b9480cdaf80932f25a89e006f0e7", deloitteeq="be23a7eba4eddb0405ca1c089fe0f071",
+                oficina="df12d7834689b02a85e1e7c7bb293a70", icpnl="a2422d80cf89486e9000c552c64f9d5f", foro="5f30980ae63e1c1aea6b4d1660223e2f")
 B = base.B
 T = 9
 S = {}
@@ -36,8 +38,10 @@ S["Cli-01-Portada"] = page("Primeros clientes · Portada", "", "#1E242C", f"""
 # 2 · Intro: cita grande en oscuro
 S["Cli-02-Intro"] = page("Primeros clientes · Intro", "bg-sarga", "#F4F1EA", f"""
 <div class="serif" aria-hidden="true" style="position: absolute; left: 50px; top: 10px; font-size: 520px; line-height: 1; color: rgba(183,207,230,0.18)">“</div>
-<div style="position: absolute; left: 80px; right: 80px; top: 300px; display: flex; flex-direction: column; gap: 46px">
-<p class="serif" style="margin: 0; font-size: 88px; line-height: 1.02">Independizarte da miedo. <em style="font-style: italic; color: #B7CFE6">El primer cliente es el que más cuesta.</em></p>
+{polaroid('deloitte2', 'mis años en Big Four', 690, 80, 320, 300, 5, '50% 50%', 'Berny en el lobby de Deloitte')}
+{tape(790, 62, 140, -5)}
+<div style="position: absolute; left: 80px; right: 80px; top: 500px; display: flex; flex-direction: column; gap: 40px">
+<p class="serif" style="margin: 0; font-size: 80px; line-height: 1.02">Independizarte da miedo. <em style="font-style: italic; color: #B7CFE6">El primer cliente es el que más cuesta.</em></p>
 <div style="width: 120px; height: 4px; background: #B7CFE6"></div>
 <p style="margin: 0; max-width: 820px; font-size: 32px; line-height: 1.5; color: rgba(244,241,234,0.88)">No hay fórmula mágica, pero sí cosas que puedes empezar a hacer hoy para que la gente te conozca <strong style="color: #F4F1EA">y te tenga confianza.</strong></p>
 <p style="margin: 0; font-size: 26px; font-weight: 600; letter-spacing: 0.04em; color: #B7CFE6">— Berny, GGTZ Consultores</p>
@@ -50,8 +54,9 @@ def ring(d, color, label, ly):
     return (f'<div style="position: absolute; left: {540 - d // 2}px; top: {950 - d // 2}px; width: {d}px; height: {d}px; border-radius: 50%; background: {color}; border: 2px solid rgba(43,53,66,0.25)"></div>'
             f'<div style="position: absolute; left: 0; right: 0; top: {ly}px; text-align: center; font-size: 25px; font-weight: 600; color: #2B3542">{label}</div>')
 S["Cli-03-Circulos"] = page("Primeros clientes · Quién te conoce", "bg-lino", "#1E242C", f"""
-{head(1, 'EMPIEZA CERCA', 'Con quien <em style="font-style: italic">ya te conoce</em>')}
-<p style="position: absolute; left: 80px; right: 80px; top: 420px; margin: 0; font-size: 30px; line-height: 1.45">Tu primer cliente casi siempre está más cerca de lo que crees. Cuéntales qué haces y en qué les puedes ayudar.</p>
+{head(1, 'EMPIEZA CERCA', 'Con quien <em style="font-style: italic">ya te conoce</em>', False, 400)}
+{polaroid('deloitteeq', 'excompañeros', 720, 70, 290, 230, 5, '50% 30%', 'Berny con compañeros de Deloitte')}
+<p style="position: absolute; left: 80px; right: 80px; top: 450px; margin: 0; font-size: 30px; line-height: 1.45">Tu primer cliente casi siempre está más cerca de lo que crees. Cuéntales qué haces y en qué les puedes ayudar.</p>
 {ring(620, '#FFFDF8', 'Conocidos de conocidos', 665)}{ring(440, '#D6E4F2', 'Excompañeros de trabajo', 755)}{ring(260, '#B7CFE6', 'Familia y amigos', 845)}
 <div style="position: absolute; left: 470px; top: 910px; width: 140px; height: 80px; border-radius: 40px; background: #2B3542; color: #F4F1EA; display: flex; align-items: center; justify-content: center; font-size: 30px; font-weight: 700">Tú</div>
 {foot('@bernardolatorre.fiscal', 3, T)}
@@ -78,9 +83,10 @@ S["Cli-04-Nicho"] = page("Primeros clientes · Nicho", "bg-papel", "#1E242C", f"
 def day(d, t, bg, fg, rot):
     return f'<div style="flex: 1 1 0; display: flex; flex-direction: column; gap: 14px; padding: 26px 20px; background: {bg}; color: {fg}; transform: rotate({rot}deg); box-shadow: 0 14px 26px rgba(0,0,0,0.35)"><div class="kicker" style="font-size: 18px">{d}</div><div style="font-size: 25px; line-height: 1.35">{t}</div></div>'
 S["Cli-05-Contenido"] = page("Primeros clientes · Contenido", "bg-sarga", "#F4F1EA", f"""
-{head(3, 'DATE A CONOCER', 'Comparte <em style="font-style: italic; color: #B7CFE6">lo que sabes</em>', True)}
-<p style="position: absolute; left: 80px; right: 80px; top: 420px; margin: 0; font-size: 30px; line-height: 1.45; color: rgba(244,241,234,0.88)">No necesitas ser “influencer”. Explicar lo que ves en tu día a día te posiciona como la persona que sabe.</p>
-<div style="position: absolute; left: 80px; right: 80px; top: 620px; display: flex; gap: 18px">
+{head(3, 'DATE A CONOCER', 'Comparte <em style="font-style: italic; color: #B7CFE6">lo que sabes</em>', True, 400)}
+{polaroid('oficina', 'grabando para ustedes', 720, 70, 290, 280, -4, '50% 30%', 'Berny en su oficina con micrófono')}
+<p style="position: absolute; left: 80px; right: 80px; top: 480px; margin: 0; font-size: 30px; line-height: 1.45; color: rgba(244,241,234,0.88)">No necesitas ser “influencer”. Explicar lo que ves en tu día a día te posiciona como la persona que sabe.</p>
+<div style="position: absolute; left: 80px; right: 80px; top: 660px; display: flex; gap: 18px">
 {day('LUNES', 'Una duda que te hicieron esta semana', '#F4F1EA', '#1E242C', -2)}{day('MIÉRCOLES', 'Una fecha límite que se acerca', '#B7CFE6', '#1E242C', 1.5)}{day('VIERNES', 'Un error común y cómo evitarlo', '#D9B4A8', '#1E242C', -1)}
 </div>
 <div style="position: absolute; left: 80px; right: 80px; top: 1010px; display: flex; gap: 20px; align-items: flex-start"><svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" fill="#A9C9A9" style="flex-shrink: 0; margin-top: 3px"><circle cx="12" cy="12" r="11"></circle><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#262F3B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span style="font-size: 28px; line-height: 1.45">Tres temas a la semana son suficientes. <strong>Constancia le gana a perfección.</strong></span></div>
@@ -91,8 +97,9 @@ S["Cli-05-Contenido"] = page("Primeros clientes · Contenido", "bg-sarga", "#F4F
 def nodo(t, x, y, bg="#FFFDF8", fg="#1E242C"):
     return f'<div style="position: absolute; left: {x}px; top: {y}px; width: 250px; padding: 22px 10px; background: {bg}; color: {fg}; text-align: center; font-size: 26px; font-weight: 600; border-radius: 40px; box-shadow: 0 10px 20px rgba(30,36,44,0.16)">{t}</div>'
 S["Cli-06-Alianzas"] = page("Primeros clientes · Alianzas", "bg-papel", "#1E242C", f"""
-{head(4, 'NO ESTÁS SOLO', 'Haz <em style="font-style: italic">alianzas</em>')}
-<p style="position: absolute; left: 80px; right: 80px; top: 420px; margin: 0; font-size: 30px; line-height: 1.45">Otros profesionistas ven a diario a gente que necesita un contador. Y no todos los colegas son competencia.</p>
+{head(4, 'NO ESTÁS SOLO', 'Haz <em style="font-style: italic">alianzas</em>', False, 400)}
+{polaroid('icpnl', 'mi gremio: ICPNL', 740, 60, 260, 240, 6, '30% 30%', 'Berny en el ICPNL')}
+<p style="position: absolute; left: 80px; right: 380px; top: 330px; margin: 0; font-size: 30px; line-height: 1.45">Otros profesionistas ven a diario a gente que necesita un contador. Y no todos los colegas son competencia.</p>
 <svg aria-hidden="true" style="position: absolute; left: 0; top: 0" width="1080" height="1350"><g stroke="#2B3542" stroke-width="3" stroke-dasharray="6 10"><path d="M540 905 L245 690"></path><path d="M540 905 L835 690"></path><path d="M540 905 L205 1110"></path><path d="M540 905 L875 1110"></path><path d="M540 905 L540 1170"></path></g></svg>
 {nodo('Abogados', 120, 650)}{nodo('Administradores', 710, 650)}{nodo('Notarios', 80, 1070)}{nodo('Asesores financieros', 750, 1070, '#D6E4F2')}{nodo('Otros contadores', 415, 1150, '#CFE3C9')}
 <div style="position: absolute; left: 430px; top: 860px; width: 220px; height: 90px; border-radius: 45px; background: #2B3542; color: #F4F1EA; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 700; box-shadow: 0 14px 26px rgba(30,36,44,0.3)">Tú</div>
@@ -119,8 +126,7 @@ S["Cli-07-Recomienda"] = page("Primeros clientes · Que te recomienden", "bg-lin
 # 8 · Aprende con cada cliente
 S["Cli-08-Aprende"] = page("Primeros clientes · Aprende", "bg-sarga", "#F4F1EA", f"""
 {head(6, 'Y NUNCA DEJES DE ESTUDIAR', 'Cada cliente <em style="font-style: italic; color: #B7CFE6">te enseña algo</em>', True, 420)}
-<div style="position: absolute; right: 70px; top: 120px; width: 300px; height: 560px; box-sizing: border-box; padding: 12px; background: #12161C; border-radius: 46px; transform: rotate(5deg); box-shadow: 0 30px 56px rgba(0,0,0,0.55)">
-<div style="width: 100%; height: 100%; border-radius: 36px; overflow: hidden; background: #FFFFFF"><img src="{B('sathome')}" alt="Inicio del portal del SAT en celular" style="width: 100%; height: 100%; object-fit: cover; object-position: 0 0"></div></div>
+{polaroid('foro', 'Foro Económico Fiscal', 690, 90, 330, 330, 5, '50% 60%', 'Conferencia en el Foro Económico Fiscal del ICPNL')}
 <div style="position: absolute; left: 80px; top: 470px; width: 560px; display: flex; flex-direction: column; gap: 26px">
 <div style="display: flex; gap: 18px; align-items: flex-start"><span class="serif" style="font-size: 50px; line-height: 1; color: #B7CFE6">→</span><span style="font-size: 29px; line-height: 1.4">Investiga y actualízate: la ley y el portal cambian cada año.</span></div>
 <div style="display: flex; gap: 18px; align-items: flex-start"><span class="serif" style="font-size: 50px; line-height: 1; color: #B7CFE6">→</span><span style="font-size: 29px; line-height: 1.4">Pregunta cuando no sepas algo.</span></div>
@@ -128,7 +134,7 @@ S["Cli-08-Aprende"] = page("Primeros clientes · Aprende", "bg-sarga", "#F4F1EA"
 </div>
 <div style="position: absolute; left: 80px; right: 80px; top: 930px; padding: 44px 48px; background: #F4F1EA; color: #1E242C; transform: rotate(-1.5deg); box-shadow: 0 18px 34px rgba(0,0,0,0.4)">
 <p class="serif" style="margin: 0; font-size: 58px; line-height: 1.05; color: #2B3542">Todos los despachos empezaron <em style="font-style: italic">con un primer cliente.</em></p></div>
-{foot('Captura: portal del SAT · @bernardolatorre.fiscal', 8, T, True)}
+{foot('@bernardolatorre.fiscal', 8, T, True)}
 """)
 
 S["Cli-09-Cierre"] = cierre("¿Hacemos", "alianza?",
