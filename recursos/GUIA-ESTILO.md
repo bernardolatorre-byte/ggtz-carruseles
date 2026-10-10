@@ -91,3 +91,8 @@ Después de renderizar, arma una tira con tu portada nueva junto a las 4 anterio
 - **Llamada a la acción:** pedir que **guarden** o **comenten** (funciona mucho mejor que pedir "likes"). La pie de foto incluye una pregunta.
 - **Pie de foto:** escrito con las palabras que la gente busca (SEO dentro de Instagram) y con 1 o 2 hashtags relevantes (máximo 5).
 - **Tono:** cálido, directo y de tú, para personas físicas y PyMEs de México. Nada de lenguaje de abogado.
+
+## Datos de Berny para textos
+
+- Es **socio** de GGTZ Consultores (no "socio fundador").
+- En posts formales o de presentación: usar "Bernardo Latorre", no el apodo "Berny". No mencionar el Caso ICPNL 2017 en texto (la foto sí se puede usar).

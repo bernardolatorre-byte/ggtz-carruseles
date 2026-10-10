@@ -1,4 +1,4 @@
-# Carrusel de presentación "Hola, soy Berny" (Pre-*), 10 oct 2026
+# Carrusel de presentación de Bernardo Latorre (Pre-*), 10 oct 2026
 import importlib.util, pathlib, io, contextlib
 HERE = pathlib.Path(__file__).parent
 spec = importlib.util.spec_from_file_location("base", HERE / "_gen_oct20_22.py")
@@ -6,7 +6,7 @@ base = importlib.util.module_from_spec(spec)
 with contextlib.redirect_stdout(io.StringIO()):
     spec.loader.exec_module(base)
 page, foot, polaroid, tape, cierre, sello = base.page, base.foot, base.polaroid, base.tape, base.cierre, base.sello
-base.IMG.update(
+base.IMG.update(colega="4d623ee1f9fdf083e493b1b0adcdb71b", 
     oficina="df12d7834689b02a85e1e7c7bb293a70", campana="4ead5090323fb1e8ec01f1ce6a258d51",
     caso="af1d182640088e390fc9a1587aeb8853", deloitte1="8a7c7dc900ab04139254ce465038f1e8",
     deloitteeq="be23a7eba4eddb0405ca1c089fe0f071", cumple="ef7401e5a2d861f0e9589b54aa26a24c",
@@ -16,30 +16,30 @@ B = base.B
 T = 8
 S = {}
 
-# 1 · Portada: gafete colgando (sin foto de Berny)
+# 1 · Portada: foto de Bernardo a todo lo ancho
 S["Pre-01-Portada"] = page("Presentación · Portada", "", "#F4F1EA", f"""
 <img src="{B('oficina')}" alt="Bernardo Latorre en su oficina en Monterrey" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%">
 <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(38,47,59,0) 35%, rgba(38,47,59,0.75) 62%, rgba(38,47,59,0.97) 100%)"></div>
-<div style="position: absolute; left: 70px; top: 70px; padding: 12px 22px; background: rgba(244,241,234,0.94); color: #2B3542; font-size: 20px; font-weight: 700; letter-spacing: 0.2em">PERMÍTEME PRESENTARME</div>
-<div style="position: absolute; left: 80px; right: 80px; top: 900px; display: flex; flex-direction: column; gap: 20px">
-<h1 class="serif" style="margin: 0; font-size: 140px; line-height: 0.88">Bernardo Latorre</h1>
-<div style="width: 120px; height: 4px; background: #B7CFE6"></div>
-<p style="margin: 0; font-size: 34px; line-height: 1.35; font-weight: 500">Contador Público · Socio fundador de <span style="color: #B7CFE6">GGTZ Consultores</span></p>
+<div style="position: absolute; left: 70px; top: 70px; padding: 12px 22px; background: rgba(244,241,234,0.94); color: #2B3542; font-size: 20px; font-weight: 700; letter-spacing: 0.24em">PRESENTACIÓN</div>
+<div style="position: absolute; left: 80px; right: 80px; top: 900px; display: flex; flex-direction: column; gap: 22px">
+<h1 class="serif" style="margin: 0; font-size: 140px; line-height: 0.88">Bernardo <em style="font-style: italic; color: #B7CFE6">Latorre</em></h1>
+<div style="width: 140px; height: 3px; background: #B7CFE6"></div>
+<p style="margin: 0; font-size: 32px; line-height: 1.4; font-weight: 500">Contador Público · Socio de GGTZ Consultores</p>
 </div>
 <div style="position: absolute; left: 80px; right: 80px; bottom: 50px; display: flex; justify-content: space-between; font-size: 21px; font-weight: 600; color: rgba(244,241,234,0.8)"><span>@bernardolatorre.fiscal</span><span>Desliza →</span></div>
 """)
 
 # 2 · Quién soy: foto grande a la derecha
-S["Pre-02-Quien"] = page("Presentación · Quién soy", "bg-sarga", "#F4F1EA", f"""
+S["Pre-02-Quien"] = page("Presentación · Perfil", "bg-sarga", "#F4F1EA", f"""
 <div style="position: absolute; right: 0; top: 0; width: 500px; height: 1350px; overflow: hidden">
-<img src="{B('bandera')}" alt="Bernardo Latorre" style="width: 100%; height: 100%; object-fit: cover; object-position: 30% 30%">
+<img src="{B('icpnl')}" alt="Bernardo Latorre en el ICPNL" style="width: 100%; height: 100%; object-fit: cover; object-position: 22% 40%">
 <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(38,47,59,0.9) 0%, rgba(38,47,59,0) 35%)"></div>
 </div>
 <div style="position: absolute; left: 80px; top: 120px; width: 470px; display: flex; flex-direction: column; gap: 30px">
-<div class="kicker" style="color: #B7CFE6">QUIÉN SOY</div>
-<h2 class="serif" style="margin: 0; font-size: 86px; line-height: 0.94">Asesoría fiscal <em style="font-style: italic; color: #B7CFE6">con respaldo</em></h2>
-<p style="margin: 0; font-size: 29px; line-height: 1.5; color: rgba(244,241,234,0.9)">Soy <strong style="color: #F4F1EA">Contador Público</strong> egresado de la UDEM y socio fundador de <strong style="color: #F4F1EA">GGTZ Consultores</strong>, despacho de asesoría fiscal y legal en Monterrey.</p>
-<p style="margin: 0; font-size: 29px; line-height: 1.5; color: rgba(244,241,234,0.9)">Mi especialidad es el cumplimiento y la planeación fiscal de personas físicas y PyMEs.</p>
+<div class="kicker" style="color: #B7CFE6">PERFIL</div>
+<h2 class="serif" style="margin: 0; font-size: 86px; line-height: 0.94">Asesoría fiscal <em style="font-style: italic; color: #B7CFE6">con experiencia</em></h2>
+<p style="margin: 0; font-size: 29px; line-height: 1.5; color: rgba(244,241,234,0.9)"><strong style="color: #F4F1EA">Contador Público</strong> egresado de la UDEM y socio de <strong style="color: #F4F1EA">GGTZ Consultores</strong>, despacho de asesoría fiscal y legal en Monterrey.</p>
+<p style="margin: 0; font-size: 29px; line-height: 1.5; color: rgba(244,241,234,0.9)">Especializado en cumplimiento y planeación fiscal para personas físicas y PyMEs.</p>
 </div>
 <div style="position: absolute; left: 80px; top: 1080px; padding: 14px 24px; background: #F4F1EA; color: #2B3542; font-size: 22px; font-weight: 700; letter-spacing: 0.12em; transform: rotate(-2deg)">MONTERREY, N.L.</div>
 {foot('@bernardolatorre.fiscal', 2, T, True)}
@@ -56,9 +56,9 @@ S["Pre-03-Trayectoria"] = page("Presentación · Trayectoria", "bg-lino", "#1E24
 <div aria-hidden="true" style="position: absolute; left: 101px; top: 345px; width: 3px; height: 680px; background: #2B3542"></div>
 {hito(360, '2019 · UDEM', 'Contador Público', 'Universidad de Monterrey.')}
 {hito(570, '8 AÑOS', 'Big Four', '4 años en Deloitte y 4 en EY.')}
-{hito(780, 'HOY', 'GGTZ Consultores', 'Socio fundador (antes Latorre y Asociados).', '#A9C9A9')}
+{hito(780, 'HOY', 'GGTZ Consultores', 'Socio (antes Latorre y Asociados).', '#A9C9A9')}
 {hito(990, 'EN CURSO', 'Maestría en Impuestos', 'En el IEE.', '#D9B4A8')}
-{polaroid('caso', 'ICPNL', 650, 300, 360, 220, 4, '55% 40%', 'Bernardo Latorre recibiendo el tercer lugar del Caso ICPNL 2017')}
+{polaroid('caso', 'ICPNL', 650, 300, 360, 220, 4, '55% 40%', 'Bernardo Latorre en el ICPNL')}
 {polaroid('campana', 'Graduación UDEM', 690, 640, 300, 300, -4, '40% 40%', 'Bernardo Latorre tocando la campana en su graduación')}
 {tape(760, 624, 140, 5)}
 {foot('@bernardolatorre.fiscal', 3, T)}
@@ -103,7 +103,7 @@ S["Pre-06-Aprendiendo"] = page("Presentación · Comunidad", "bg-lino", "#1E242C
 <h2 class="serif" style="margin: 0; font-size: 92px; line-height: 0.94; color: #2B3542">Actualización <em style="font-style: italic">constante</em></h2>
 </div>
 {polaroid('foropose', 'Foro Económico Fiscal', 80, 400, 380, 400, -4, '50% 30%', 'Bernardo Latorre en el Foro Económico Fiscal del ICPNL')}
-{polaroid('icpnl', 'miembro activo del ICPNL', 560, 370, 420, 330, 4, '25% 35%', 'Bernardo Latorre frente al logo del ICPNL')}
+{polaroid('colega', 'miembro activo del ICPNL', 560, 370, 420, 330, 4, '50% 35%', 'Bernardo Latorre en el ICPNL')}
 {polaroid('termo', 'Formación continua', 600, 800, 330, 250, -3, '50% 60%', 'Sesión en el ICPNL')}
 <div style="position: absolute; left: 80px; top: 960px; width: 470px; display: flex; flex-direction: column; gap: 18px">
 <div style="display: flex; gap: 16px; align-items: flex-start"><span class="serif" style="font-size: 44px; line-height: 1; color: #5F7E9E">→</span><span style="font-size: 27px; line-height: 1.4">Miembro activo del <strong>ICPNL</strong></span></div>
@@ -127,9 +127,9 @@ S["Pre-07-Cuenta"] = page("Presentación · Esta cuenta", "", "#1E242C", f"""
 {foot('@bernardolatorre.fiscal', 7, T)}
 """, bg=" background: #D9B4A8;")
 
-S["Pre-08-Cierre"] = cierre("Estoy para", "asesorarte",
-    "Si tienes dudas sobre tus impuestos o los de tu empresa, con gusto te atiendo.",
-    "Agenda una asesoría", "<strong>Comparte en comentarios</strong> qué tema te gustaría que abordara en próximas publicaciones.",
+S["Pre-08-Cierre"] = cierre("Agende una", "asesoría",
+    "Atención a personas físicas y empresas en materia fiscal y legal.",
+    "Contactar", "Martes y jueves publico contenido fiscal. <strong>Le invito a seguir la cuenta.</strong>",
     "cerro", "50% 58%", 8, T, "Cerro de la Silla al atardecer")
 
 for k, v in S.items():
