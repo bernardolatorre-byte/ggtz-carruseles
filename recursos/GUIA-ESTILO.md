@@ -99,11 +99,21 @@ Después de renderizar, arma una tira con tu portada nueva junto a las 4 anterio
 
 ## Formato de sábado: "Historias de despacho" (desde 17 oct 2026)
 
-Pedido por Berny el 11 oct 2026 a partir de un post de referencia (@yosoydiegodiaz). **Este formato NO sigue el estilo de martes y jueves**: Berny lo quiere muy parecido a la referencia y claramente distinto de sus otros carruseles. Se publica **los sábados por la mañana** (10:00 suele ser la mejor hora).
+Pedido por Berny el 11 oct 2026 a partir de un post de referencia (@yosoydiegodiaz): un caso contado como hilo, con cada lámina como una publicación tipo X/Twitter. Se publica **los sábados por la mañana**.
 
-- **Diseño fijo (todas las láminas iguales):** fondo de papel claro texturizado (`texturas/papel-arrugado.jpg`, id `69e0532c9283413a0cbdcf3a9f33ca9b`) y **una sola tarjeta negra tipo publicación de X centrada**, de 780 px de ancho. Solo texto. Nada más en la lámina: sin fotos, sin capturas, sin títulos serif, sin post-its, sin pies de página ni numeración, sin logotipo.
-- **Sin la cara de Berny** en ninguna lámina, ni en el cierre. El avatar es un círculo gris con "BL".
-- **Tarjeta:** "Bernardo Latorre" + "@bernardolatorre.fiscal", sin palomita de verificado; texto blanco en párrafos cortos; la primera lámina abre con una frase en MAYÚSCULAS; línea de hora y fecha reales de publicación; fila de íconos (responder, repostear, me gusta, guardar, compartir) **sin números: nunca métricas inventadas**. Generador: `plantillas/_gen_his01_opinion.py` (funciones `page()` y `card()`).
-- **Narrativa:** gancho con el personaje → contexto → el problema → el motivo → lo que dice la ley (artículo entre paréntesis en gris dentro de la tarjeta) → cómo se resolvió → lo que me quedo de esta historia → pregunta para comentar + "📲 81 2758 0277 · GGTZ Consultores" + "Historia ilustrativa: nombre y cifras inventados." en gris.
-- **Personaje ficticio** con nombre común y cifras inventadas; nunca presentarlo como cliente real.
-- Verificar la ley igual que en todos los posts. El pie de foto sigue las reglas de siempre e incluye la línea de historia ilustrativa.
+- **Pieza central:** tarjeta de post con monograma "BL" (no su foto), "Bernardo Latorre" y "@bernardolatorre.fiscal", sin palomita de verificado y **sin métricas inventadas** (ni vistas ni likes); pie "Historias de despacho · Ep. NN". Función `post()` en `plantillas/_gen_his01_opinion.py`.
+- **Estructura:** gancho con el personaje → contexto → el problema → el motivo (número grande) → lo que dice la ley → cómo se resolvió → "Guárdalo" → cierre estándar.
+- **Personaje ficticio** con nombre común y cifras inventadas; la lámina 2 lo aclara en el pie ("Historia ilustrativa: nombre y cifras inventados"). Nunca presentarlo como cliente real.
+- Todo lo demás de esta guía aplica igual (paleta, fondos alternados, mínimo 3 fotos, captura real, fuente legal en el pie, análisis de portada).
+
+## Formato de domingo: historias "Chismesito fiscal" (desde 11 oct 2026)
+
+Pedido por Berny el 11 oct 2026: cada domingo, **historias de Instagram** (1080×1920) con LA noticia fiscal más relevante de la semana, contada como chisme entre amigos. **Estilo deliberadamente sencillo, poco producido** (ref. @emiliocovi, instagram.com/p/DeLvbOEHPjy): NO usa las tarjetas, texturas, fotos ni capas de los carruseles.
+
+- **Plantillas:** `plantillas/Chi-01-Story.dc.html` (gancho) y `Chi-02-Story.dc.html` (detalle). Cada semana se copian con prefijo nuevo.
+- **Pantalla 1 (gancho):** fondo de UN color liso (azul polvo, salvia, terracota suave o marfil; alternar cada semana), etiqueta pequeña "☕ CHISMESITO FISCAL · fechas de la semana", y la noticia como texto corrido en Instrument Serif grande (~70 px), tono de plática ("A ver, siéntate…"), con UNA frase resaltada con marcador. Cierra con la fuente entre paréntesis en texto chico y un garabato de línea simple (taza, ojos, lupa…).
+- **Pantalla 2 (detalle):** fondo marfil o blanco, "lo que casi nadie te dice" en serif grande con resaltado, un recorte tipo hoja blanca con el texto clave (si es un artículo de ley, transcribirlo literal de Luthor/DOF y resaltar lo importante; si no, rotularlo "en corto"), y una invitación sencilla: "¿Tienes algo pendiente? Mándame DM o escríbeme al 81 2758 0277". Pie: "@BERNARDOLATORRE.FISCAL · GGTZ CONSULTORES".
+- **Máximo 2 pantallas** (3 solo si la noticia lo exige). Nada de fotos, sombras dramáticas, elementos rotados ni stickers.
+- **Zona segura de Instagram:** nada en los 200 px de arriba ni en los 220 px de abajo.
+- **Noticia:** de fuente oficial (SAT, DOF, SHCP, Congreso, SCJN, IMSS) y verificada; útil para personas físicas o PyMEs; no repetir la de domingos anteriores.
+- **Entrega:** PNG por pantalla + un PDF con todas, en `AAAA-MM-DD-chismesito-<tema>/`.
