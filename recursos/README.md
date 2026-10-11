@@ -107,4 +107,5 @@ Fotos que Berny compartió el 10 oct 2026 para usar en sus posts (trayectoria: U
 | elevador-saco-azul.jpg | Selfie en elevador con saco azul | ca9c24c05cbeba3fe2b67703258f9639 |
 | deloitte-cumpleanos-escritorio.jpg | Festejo de cumpleaños en su escritorio de Deloitte | ef7401e5a2d861f0e9589b54aa26a24c |
 | deloitte-sillon-verde-2.jpg | En el lobby de Deloitte, sillón verde (piernas cruzadas) | a011b9480cdaf80932f25a89e006f0e7 |
+| avatar-historias.jpg | Recorte circular de su cara (oficina, camisa azul) para el avatar de "Historias de despacho" | ee09a830e465eee2f30b4449a3fe87db |
 | icpnl-caso-2017-tercer-lugar.jpg | Tercer lugar en el 14° Caso ICPNL 2017 | af1d182640088e390fc9a1587aeb8853 |
