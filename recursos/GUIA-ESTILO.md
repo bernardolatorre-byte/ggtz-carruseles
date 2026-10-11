@@ -96,3 +96,12 @@ Después de renderizar, arma una tira con tu portada nueva junto a las 4 anterio
 
 - Es **socio** de GGTZ Consultores (no "socio fundador").
 - En posts formales o de presentación: usar "Bernardo Latorre", no el apodo "Berny". No mencionar el Caso ICPNL 2017 en texto (la foto sí se puede usar).
+
+## Formato de sábado: "Historias de despacho" (desde 17 oct 2026)
+
+Pedido por Berny el 11 oct 2026 a partir de un post de referencia (@yosoydiegodiaz): un caso contado como hilo, con cada lámina como una publicación tipo X/Twitter. Se publica **los sábados por la mañana**.
+
+- **Pieza central:** tarjeta de post con monograma "BL" (no su foto), "Bernardo Latorre" y "@bernardolatorre.fiscal", sin palomita de verificado y **sin métricas inventadas** (ni vistas ni likes); pie "Historias de despacho · Ep. NN". Función `post()` en `plantillas/_gen_his01_opinion.py`.
+- **Estructura:** gancho con el personaje → contexto → el problema → el motivo (número grande) → lo que dice la ley → cómo se resolvió → "Guárdalo" → cierre estándar.
+- **Personaje ficticio** con nombre común y cifras inventadas; la lámina 2 lo aclara en el pie ("Historia ilustrativa: nombre y cifras inventados"). Nunca presentarlo como cliente real.
+- Todo lo demás de esta guía aplica igual (paleta, fondos alternados, mínimo 3 fotos, captura real, fuente legal en el pie, análisis de portada).
