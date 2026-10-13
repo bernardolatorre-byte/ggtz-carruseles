@@ -109,3 +109,26 @@ Fotos que Berny compartió el 10 oct 2026 para usar en sus posts (trayectoria: U
 | deloitte-sillon-verde-2.jpg | En el lobby de Deloitte, sillón verde (piernas cruzadas) | a011b9480cdaf80932f25a89e006f0e7 |
 | avatar-historias.jpg | Recorte circular de su cara (oficina, camisa azul) para el avatar de "Historias de despacho" | ee09a830e465eee2f30b4449a3fe87db |
 | icpnl-caso-2017-tercer-lugar.jpg | Tercer lugar en el 14° Caso ICPNL 2017 | af1d182640088e390fc9a1587aeb8853 |
+
+
+## Fotos del día a día de Berny (`berny/fotos/vida-*`)
+
+Sacadas de su carrete (13 oct 2026) para la tendencia de "fotos de mi vida diaria de fondo". Se usan a todo lo ancho como FONDO con texto encima (degradado oscuro para que se lea). Solo copias de ~1024 px escaladas a 1080: no hacer zoom fuerte. Nunca usar fotos de identificaciones, documentos, pantallas de clientes ni donde salgan otras personas reconocibles sin permiso de Berny.
+
+| Archivo | Qué muestra | Id local |
+|---|---|---|
+| vida-cafe-terraza-playa.jpg | Café en vaso sobre mesa de terraza con sombrillas (playa) | 15e9c1c0c5513d53a848a5eb62972dae |
+| vida-puesto-dulces-chamoy.jpg | Botana con chamoy frente a un puesto de dulces y papitas | 459f6c4661d2af03982ad8a5f63d05bb |
+| vida-taco-mesa.jpg | Taco con guacamole y limones en la mesa | 55aa11df466de45299beca5fc4451c27 |
+| vida-tele-partido.jpg | Tele con un partido de futbol en casa | ce4a2441364a21169580c2bad9c1fecc |
+| vida-ventanilla-avion.jpg | Ventanilla del avión en el aeropuerto | 11fd20eea193a44fa4ff034ea5948fb7 |
+| vida-cerro-ladera-cielo.jpg | Ladera del cerro con cielo azul (trail) | f626acf245b8c7b3901aa1912968dc59 |
+| vida-cima-amanecer-berny.jpg | Berny de pie en la cima al amanecer, sierra con neblina (de espaldas/lejos) | bdeb368cb035afe5ba50676deecfb500 |
+| vida-cima-cielo-nubes.jpg | Cima con cruz y cielo de nubes, sin personas | 85d7ce4d010ee0e369ff6c18fc90bfd7 |
+| vida-carretera-huasteca.jpg | Carretera en la Huasteca con la sierra | 4946905c29ac17fe9afde6b35b61113c |
+| vida-hamburguesa-papas.jpg | Hamburguesa con papas y jalapeños | d7e5c95fb5fd318b674a141463978eed |
+| vida-corte-molcajete.jpg | Corte de carne en plancha con queso fundido | 0c01b25331aaf320141abd8e0cd57614 |
+| vida-frijoles-limonada.jpg | Frijoles charros y limonada | 14f0f5ea6e9394a4b7ae12d278ceddd7 |
+| vida-oficina-escritorios.jpg | Oficina con escritorios (una persona de espaldas) | bd0efe270e1276099ef50c0ff63e15cb |
+| vida-jardin-luces-noche.jpg | Jardín con árbol y foquitos de noche | cc7da96fc62410d91e5b20d2e7782e6d |
+| vida-castillo-chapultepec.jpg | Castillo de Chapultepec con cielo azul | abbd5718e2207686452fcbe8671e6a5f |

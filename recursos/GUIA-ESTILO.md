@@ -125,14 +125,14 @@ Pedido por Berny el 11 oct 2026: cada domingo, **historias de Instagram** (1080�
 
 ## Formato de miércoles: "Miércoles en 3 láminas"
 
-Pedido por Berny el 13 oct 2026: cada miércoles, un carrusel **sencillo y muy puntual de 3 láminas** (1080×1350) sobre UNA noticia fiscal o económica de la semana. **Lleva el lenguaje visual de las historias "Chismesito fiscal", no el de los carruseles de martes/jueves** (Berny: "no me gusta que se vea tan genérico"). Referencia aprobada: `plantillas/_gen_economia_digital.py` (Ecd-*, v2).
+Pedido por Berny el 13 oct 2026: cada miércoles, un carrusel **sencillo y muy puntual de 3 láminas** (1080×1350) sobre UNA noticia fiscal o económica de la semana. Referencia aprobada: `plantillas/_gen_economia_digital.py` (Ecd-*, v3).
 
-- **Al menos UNA foto** del banco ligada a la noticia (Berny lo pidió el 13 oct 2026): recortada derecho (sin giro) dentro de un marco blanco de 14 px con sombra suave, a todo el ancho del margen, normalmente en la lámina 3 entre el texto y el cierre. No repetir la foto de la semana anterior.
-- **Nada de:** fotos de Monterrey ni foto o sticker de Berny, texturas (lino, papel, sarga), tarjetas rotadas, polaroids, botones ni la función `cierre()`.
-- **Cada lámina con un fondo liso distinto:** terracota suave #D9B4A8, marfil #FFFDF8, salvia #A9C9A9 o azul polvo #B7CFE6 (rotar el orden cada semana).
-- **Lámina 1 (gancho):** etiqueta "📲 MIÉRCOLES EN 3 LÁMINAS" + "01 / 03", pregunta grande en Instrument Serif (~120 px, una palabra en cursiva), luego la noticia como texto corrido (~60 px) en tono de plática ("A ver, siéntate…") con UNA frase resaltada con marcador (`.hlw` blanco o `.hl` azul polvo), la fuente entre paréntesis en chico y un garabato de línea simple relacionado al tema.
-- **Lámina 2 (detalle):** "Y lo que casi nadie te dice:" con la frase clave resaltada, y un recorte tipo hoja blanca "en corto" con 3–4 viñetas (o el artículo literal de la ley con lo importante resaltado).
-- **Lámina 3 (remate):** "¿Y a ti en qué te pega?" en texto corrido con un resaltado, y abajo en texto chico simple: invitación a guardar + "¿Dudas…? 81 2758 0277" (si la foto va en otra lámina, aquí va otro garabato).
-- **Pie en láminas 2 y 3:** "@BERNARDOLATORRE.FISCAL · GGTZ CONSULTORES" y "02 / 03".
-- **Datos:** solo lo verificado (fuente oficial o dos medios serios que coincidan), con el estatus claro (aprobada, vigente, falta DOF…).
-- **Publicación:** miércoles a las 10:00 (mejor franja de la semana en Metricool).
+- **Fondo = fotos del día a día de Berny** (tendencia que él pidió): cada lámina lleva a todo lo ancho una foto distinta de `berny/fotos/vida-*` (ver README), elegida para que tenga relación con la noticia (comida/puestos para pagos o consumo, oficina para SAT, cerro/carretera para plazos o "el camino", avión para viajes, etc.). Encima, un degradado pizarra oscuro (rgba(20,24,30,0.85) → transparente) donde va el texto, dejando ver el motivo de la foto en la otra mitad. No repetir las fotos de la semana anterior.
+- **Texto con el lenguaje del Chismesito:** Instrument Serif corrido en marfil con sombra suave, UNA frase con marcador azul polvo (`.hl`, texto oscuro), tono de plática.
+- **Lámina 1 (gancho):** etiqueta "📲 MIÉRCOLES EN 3 LÁMINAS" + "01 / 03", pregunta grande (~120 px, una palabra en cursiva), la noticia en 2–3 renglones con el resaltado, y la fuente en una etiquetita marfil abajo.
+- **Lámina 2 (detalle):** "Y lo que casi nadie te dice:" con la frase clave resaltada arriba, y abajo un recorte de hoja marfil "en corto" con 3–4 viñetas.
+- **Lámina 3 (remate):** "¿Y a ti en qué te pega?" con un resaltado arriba; abajo, en texto chico: invitación a guardar + "¿Dudas…? 81 2758 0277" (sin partir el teléfono).
+- **Pie en láminas 2 y 3:** "@BERNARDOLATORRE.FISCAL · GGTZ CONSULTORES" y la numeración, en marfil.
+- **Nada de:** foto o sticker recortado de Berny, la foto de Monterrey de cierre, texturas (lino, papel, sarga), polaroids, botones ni la función `cierre()`. Ni identificaciones, documentos, pantallas con información de clientes o personas reconocibles sin permiso.
+- **Datos:** solo lo verificado (fuente oficial o dos medios serios que coincidan), con el estatus claro.
+- **Publicación:** miércoles a las 10:00.
