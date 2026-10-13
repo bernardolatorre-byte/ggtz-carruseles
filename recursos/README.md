@@ -129,6 +129,5 @@ Sacadas de su carrete (13 oct 2026) para la tendencia de "fotos de mi vida diari
 | vida-hamburguesa-papas.jpg | Hamburguesa con papas y jalapeños | d7e5c95fb5fd318b674a141463978eed |
 | vida-corte-molcajete.jpg | Corte de carne en plancha con queso fundido | 0c01b25331aaf320141abd8e0cd57614 |
 | vida-frijoles-limonada.jpg | Frijoles charros y limonada | 14f0f5ea6e9394a4b7ae12d278ceddd7 |
-| vida-oficina-escritorios.jpg | Oficina con escritorios (una persona de espaldas) | bd0efe270e1276099ef50c0ff63e15cb |
 | vida-jardin-luces-noche.jpg | Jardín con árbol y foquitos de noche | cc7da96fc62410d91e5b20d2e7782e6d |
 | vida-castillo-chapultepec.jpg | Castillo de Chapultepec con cielo azul | abbd5718e2207686452fcbe8671e6a5f |

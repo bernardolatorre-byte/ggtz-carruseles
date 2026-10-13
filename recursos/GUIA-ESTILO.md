@@ -135,4 +135,6 @@ Pedido por Berny el 13 oct 2026: cada miércoles, un carrusel **sencillo y muy p
 - **Pie en láminas 2 y 3:** "@BERNARDOLATORRE.FISCAL · GGTZ CONSULTORES" y la numeración, en marfil.
 - **Nada de:** foto o sticker recortado de Berny, la foto de Monterrey de cierre, texturas (lino, papel, sarga), polaroids, botones ni la función `cierre()`. Ni identificaciones, documentos, pantallas con información de clientes o personas reconocibles sin permiso.
 - **Datos:** solo lo verificado (fuente oficial o dos medios serios que coincidan), con el estatus claro.
-- **Publicación:** miércoles a las 10:00.
+- **También como historias:** las mismas 3 láminas se renderizan en 1080×1920 (`story()` del generador: foto a todo lo alto y el contenido centrado en la zona segura) y se publican como 3 historias, una por una y en orden (la siguiente solo después de confirmar que la anterior ya salió, con 3 min de diferencia).
+- **Fotos con cuidado (Berny, 13 oct 2026):** antes de usar una foto mírala completa con Read y descártala si trae caras reconocibles de otras personas, pantallas o documentos legibles, placas legibles, marcas muy protagonistas o algo que no se vea bien para un contador. Ante la duda, otra foto.
+- **Publicación:** miércoles a las 10:00 el carrusel; las historias justo después de que salga.

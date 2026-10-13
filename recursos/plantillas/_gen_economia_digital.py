@@ -5,7 +5,7 @@ import pathlib
 HERE = pathlib.Path(__file__).parent
 TOT = 3
 
-def page(title, bg, inner):
+def page(title, bg, inner, h=1350):
     return f"""<!doctype html>
 <html lang="es"><head><meta charset="utf-8"><title>{title}</title></head><body>
 <x-dc>
@@ -19,11 +19,11 @@ body{{margin:0}}
 .tag{{font-size:22px;font-weight:700;letter-spacing:0.24em}}
 </style>
 </helmet>
-<div style="width:1080px;height:1350px;position:relative;overflow:hidden;background:{bg};font-family:'Hanken Grotesk',sans-serif;color:#1E242C">
+<div style="width:1080px;height:{h}px;position:relative;overflow:hidden;background:{bg};font-family:'Hanken Grotesk',sans-serif;color:#1E242C">
 {inner}
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{{"$preview":{{"width":1080,"height":1350}}}}'>
+<script type="text/x-dc" data-dc-script data-props='{{"$preview":{{"width":1080,"height":{h}}}}}'>
 class Component extends DCLogic {{ renderVals(){{ return {{}}; }} }}
 </script></body></html>
 """
@@ -46,7 +46,9 @@ def fondo(blob, pos, grad):
     return (f'<img src="/_blob/{blob}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:{pos}">'
             f'<div aria-hidden="true" style="position:absolute;inset:0;background:{grad}"></div>')
 
-CAFE, DULCES, TACO = "15e9c1c0c5513d53a848a5eb62972dae", "459f6c4661d2af03982ad8a5f63d05bb", "55aa11df466de45299beca5fc4451c27"
+import json, hashlib
+CAFE, DULCES = "15e9c1c0c5513d53a848a5eb62972dae", "459f6c4661d2af03982ad8a5f63d05bb"
+TACO = hashlib.md5(b"vida-carretera-huasteca.jpg").hexdigest()  # lámina 3: carretera en la Huasteca
 SOMBRA = "text-shadow:0 2px 18px rgba(0,0,0,0.35)"
 
 # ---------- 01 Gancho: café en la terraza ----------
@@ -80,7 +82,7 @@ Y lo que casi nadie te dice:<br>
 
 # ---------- 03 Remate: taco en la mesa ----------
 p3 = f"""
-{fondo(TACO, '50% 60%', 'linear-gradient(180deg, rgba(20,24,30,0.86) 0%, rgba(20,24,30,0.66) 42%, rgba(20,24,30,0.05) 66%, rgba(20,24,30,0.75) 100%)')}
+{fondo(TACO, '50% 55%', 'linear-gradient(180deg, rgba(20,24,30,0.82) 0%, rgba(20,24,30,0.6) 40%, rgba(20,24,30,0.1) 62%, rgba(20,24,30,0.8) 100%)')}
 <div class="serif" style="position:absolute;left:90px;right:90px;top:110px;font-size:60px;line-height:1.16;color:#FFFDF8;{SOMBRA}">
 ¿Y a ti en qué te pega?<br>
 Si cobras en digital, <span class="hl" style="color:#1E242C;text-shadow:none">cada peso queda registrado en tu banco</span>. Tu facturación y tus declaraciones tienen que cuadrar con lo que cobras.
@@ -91,7 +93,20 @@ Guárdalo para cuando salga en el DOF.<br>¿Dudas con tu negocio? <b style="whit
 {pie(3, "rgba(244,241,234,0.85)")}
 """
 
+# Versión historia (1080x1920): misma foto a todo lo alto y el contenido del post centrado
+# dentro de la zona segura (nada en los 200 px de arriba ni en los 220 de abajo).
+import re
+def story(inner, title):
+    m = re.match(r"\s*(<img[^>]*>\s*<div aria-hidden[^>]*></div>)", inner)
+    bg = m.group(1); rest = inner[m.end():]
+    body = bg + f'<div style="position:absolute;left:0;top:285px;width:1080px;height:1350px">{rest}</div>'
+    return page(title + " · Historia", "#262F3B", body, 1920)
+
 (HERE / "Ecd-01.dc.html").write_text(page("Ley de Economía Digital · Gancho", "#D9B4A8", p1))
 (HERE / "Ecd-02.dc.html").write_text(page("Ley de Economía Digital · Detalle", "#FFFDF8", p2))
 (HERE / "Ecd-03.dc.html").write_text(page("Ley de Economía Digital · Remate", "#A9C9A9", p3))
 print("ok")
+
+for n, (pp, t) in enumerate([(p1, "Gancho"), (p2, "Detalle"), (p3, "Remate")], 1):
+    (HERE / f"Ecd-S{n}-Story.dc.html").write_text(story(pp, "Ley de Economía Digital · " + t))
+print("stories ok")
