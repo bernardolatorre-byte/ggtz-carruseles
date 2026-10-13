@@ -122,3 +122,14 @@ Pedido por Berny el 11 oct 2026: cada domingo, **historias de Instagram** (1080�
 - **Zona segura de Instagram:** nada en los 200 px de arriba ni en los 220 px de abajo.
 - **Noticia:** de fuente oficial (SAT, DOF, SHCP, Congreso, SCJN, IMSS) y verificada; útil para personas físicas o PyMEs; no repetir la de domingos anteriores.
 - **Entrega:** PNG por pantalla + un PDF con todas, en `AAAA-MM-DD-chismesito-<tema>/`.
+
+## Formato de miércoles: "Miércoles en 3 láminas"
+
+Pedido por Berny el 13 oct 2026: cada miércoles, un carrusel **sencillo y muy puntual de 3 láminas** sobre UNA noticia fiscal o económica de la semana. Referencia: `plantillas/_gen_economia_digital.py` (Ecd-*).
+
+- **Mismo estilo GGTZ** (paleta, tipografías, texturas, pie con fuente y numeración "01 / 03"), pero con poco texto: se tiene que entender en 1 minuto.
+- **Lámina 1 (portada):** etiqueta "MIÉRCOLES EN 3 LÁMINAS", pregunta o gancho de 6 palabras o menos, una línea de bajada y UN objeto dibujado o foto como motivo. Se analiza contra las 4 portadas anteriores igual que las demás.
+- **Lámina 2 (lo que cambia):** fondo distinto al de la portada, título corto y máximo 3 puntos numerados de 1–2 líneas. Si la norma aún no está vigente, una banda "Ojo:" con el estatus (p. ej. "falta el Senado / el DOF").
+- **Lámina 3 (cierre):** función `cierre()` de `_gen_oct20_22.py`: foto de Monterrey, pregunta, qué hacer o cómo ayuda Berny, botón "Agenda tu asesoría", invitación a guardar/compartir, teléfono y logotipo.
+- **Datos:** solo lo verificado (fuente oficial o dos medios serios que coincidan). Nada de cifras dudosas.
+- **Publicación:** miércoles a las 10:00 (mejor franja de la semana en Metricool).
