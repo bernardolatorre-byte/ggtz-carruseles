@@ -132,7 +132,7 @@ Pedido por Berny el 13 oct 2026: cada miércoles, un carrusel **sencillo y muy p
 - **Cada lámina con un fondo liso distinto:** terracota suave #D9B4A8, marfil #FFFDF8, salvia #A9C9A9 o azul polvo #B7CFE6 (rotar el orden cada semana).
 - **Lámina 1 (gancho):** etiqueta "📲 MIÉRCOLES EN 3 LÁMINAS" + "01 / 03", pregunta grande en Instrument Serif (~120 px, una palabra en cursiva), luego la noticia como texto corrido (~60 px) en tono de plática ("A ver, siéntate…") con UNA frase resaltada con marcador (`.hlw` blanco o `.hl` azul polvo), la fuente entre paréntesis en chico y un garabato de línea simple relacionado al tema.
 - **Lámina 2 (detalle):** "Y lo que casi nadie te dice:" con la frase clave resaltada, y un recorte tipo hoja blanca "en corto" con 3–4 viñetas (o el artículo literal de la ley con lo importante resaltado).
-- **Lámina 3 (remate):** "¿Y a ti en qué te pega?" en texto corrido con un resaltado, y abajo en texto chico simple: invitación a guardar + "¿Dudas…? 81 2758 0277" + otro garabato distinto.
+- **Lámina 3 (remate):** "¿Y a ti en qué te pega?" en texto corrido con un resaltado, y abajo en texto chico simple: invitación a guardar + "¿Dudas…? 81 2758 0277" (si la foto va en otra lámina, aquí va otro garabato).
 - **Pie en láminas 2 y 3:** "@BERNARDOLATORRE.FISCAL · GGTZ CONSULTORES" y "02 / 03".
 - **Datos:** solo lo verificado (fuente oficial o dos medios serios que coincidan), con el estatus claro (aprobada, vigente, falta DOF…).
 - **Publicación:** miércoles a las 10:00 (mejor franja de la semana en Metricool).
