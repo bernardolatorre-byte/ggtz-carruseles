@@ -1,81 +1,92 @@
-# Miércoles en 3 láminas: Ley de Economía Digital (Ecd-*)
-import importlib.util, pathlib, io, contextlib, random
+# Miércoles en 3 láminas: Ley de Economía Digital (Ecd-*), v2 con estilo "Chismesito":
+# fondos lisos, texto corrido en serif, marcador, recorte de hoja blanca y garabato de línea.
+# Sin fotos, sin texturas, sin foto de Berny.
+import pathlib
 HERE = pathlib.Path(__file__).parent
-spec = importlib.util.spec_from_file_location("base", HERE / "_gen_oct20_22.py")
-base = importlib.util.module_from_spec(spec)
-with contextlib.redirect_stdout(io.StringIO()):
-    spec.loader.exec_module(base)
-page, B, foot, sello, tape, cierre = base.page, base.B, base.foot, base.sello, base.tape, base.cierre
 TOT = 3
-SRC = "Fuente: Cámara de Diputados, 6 oct 2026"
 
-def qr(size=21, cell=14):
-    rnd = random.Random(14)
-    cells = []
-    def finder(cx, cy):
-        for y in range(7):
-            for x in range(7):
-                on = x in (0, 6) or y in (0, 6) or (2 <= x <= 4 and 2 <= y <= 4)
-                if on: cells.append((cx + x, cy + y))
-    finder(0, 0); finder(size - 7, 0); finder(0, size - 7)
-    for y in range(size):
-        for x in range(size):
-            if (x < 8 and y < 8) or (x >= size - 8 and y < 8) or (x < 8 and y >= size - 8):
-                continue
-            if rnd.random() < 0.48: cells.append((x, y))
-    rects = "".join(f'<rect x="{x*cell}" y="{y*cell}" width="{cell}" height="{cell}"/>' for x, y in cells)
-    s = size * cell
-    return f'<svg aria-hidden="true" width="{s}" height="{s}" viewBox="0 0 {s} {s}" fill="#1E242C">{rects}</svg>'
+def page(title, bg, inner):
+    return f"""<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>{title}</title></head><body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap">
+<style>
+body{{margin:0}}
+.serif{{font-family:'Instrument Serif',serif;font-weight:400}}
+.hl{{background:linear-gradient(transparent 12%, #B7CFE6 12%, #B7CFE6 92%, transparent 92%);padding:0 6px;-webkit-box-decoration-break:clone;box-decoration-break:clone}}
+.hlw{{background:linear-gradient(transparent 12%, #FFFDF8 12%, #FFFDF8 92%, transparent 92%);padding:0 6px;-webkit-box-decoration-break:clone;box-decoration-break:clone}}
+.tag{{font-size:22px;font-weight:700;letter-spacing:0.24em}}
+</style>
+</helmet>
+<div style="width:1080px;height:1350px;position:relative;overflow:hidden;background:{bg};font-family:'Hanken Grotesk',sans-serif;color:#1E242C">
+{inner}
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{{"$preview":{{"width":1080,"height":1350}}}}'>
+class Component extends DCLogic {{ renderVals(){{ return {{}}; }} }}
+</script></body></html>
+"""
 
-# ---------- 01 Portada: fondo terracota liso, celular con QR, título mitad izquierda ----------
+def pie(n, color="#5F7E9E"):
+    return (f'<div style="position:absolute;left:90px;right:90px;bottom:70px;display:flex;justify-content:space-between;'
+            f'font-size:20px;letter-spacing:0.2em;font-weight:700;color:{color}"><span>@BERNARDOLATORRE.FISCAL · GGTZ CONSULTORES</span><span>{n:02d} / {TOT:02d}</span></div>')
+
+STROKE = 'fill="none" stroke="#1E242C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"'
+CEL = (f'<svg aria-hidden="true" width="170" height="210" viewBox="0 0 80 100" {STROKE}>'
+       '<rect x="18" y="6" width="44" height="86" rx="8"/><path d="M34 13h12"/>'
+       '<rect x="27" y="28" width="9" height="9"/><rect x="44" y="28" width="9" height="9"/><rect x="27" y="45" width="9" height="9"/>'
+       '<path d="M44 46h4M52 46v8M44 54h4"/><path d="M30 70h20"/><path d="M66 30c5 4 5 12 0 16M71 25c8 7 8 19 0 26"/></svg>')
+LUPA = (f'<svg aria-hidden="true" width="170" height="170" viewBox="0 0 100 100" {STROKE}>'
+        '<circle cx="42" cy="42" r="24"/><path d="M60 60l22 22"/><path d="M32 36c3-6 9-9 15-8"/></svg>')
+
+# ---------- 01 Gancho: terracota liso ----------
 p1 = f"""
-<div aria-hidden="true" style="position: absolute; right: -220px; top: 200px; width: 720px; height: 720px; border-radius: 50%; border: 3px dashed rgba(38,47,59,0.22)"></div>
-<div style="position: absolute; left: 80px; top: 90px; padding: 12px 22px; background: #262F3B; color: #F4F1EA; font-size: 20px; font-weight: 700; letter-spacing: 0.22em; transform: rotate(-2deg)">MIÉRCOLES EN 3 LÁMINAS</div>
-<div style="position: absolute; left: 80px; top: 300px; width: 520px; display: flex; flex-direction: column; gap: 28px">
-<div class="kicker" style="color: #262F3B">LEY DE ECONOMÍA DIGITAL</div>
-<h1 class="serif" style="margin: 0; font-size: 150px; line-height: 0.86; color: #1E242C">¿Adiós al <em style="font-style: italic; color: #FFFDF8">efectivo?</em></h1>
-<p style="margin: 0; font-size: 34px; line-height: 1.4; color: #262F3B">Lo que aprobaron los diputados, explicado en 1 minuto.</p>
+<div class="tag" style="position:absolute;left:90px;top:110px">📲 MIÉRCOLES EN 3 LÁMINAS</div>
+<div class="serif" style="position:absolute;left:90px;right:90px;top:210px;font-size:124px;line-height:0.95">¿Adiós al <em>efectivo?</em></div>
+<div class="serif" style="position:absolute;left:90px;right:90px;top:400px;font-size:60px;line-height:1.18">
+A ver, siéntate.<br>
+Los diputados aprobaron la Ley de Economía Digital y viene esto: <span class="hlw">los negocios tendrán que aceptar pagos digitales</span>. Tarjeta, transferencia o QR desde el celular.<br><br>
+Pero ojo: el efectivo no desaparece.
 </div>
-<div style="position: absolute; left: 640px; top: 270px; width: 380px; height: 700px; box-sizing: border-box; padding: 18px; border-radius: 56px; background: #262F3B; transform: rotate(6deg); box-shadow: 0 30px 50px rgba(30,36,44,0.35)">
-<div style="height: 100%; border-radius: 40px; background: #FFFDF8; display: flex; flex-direction: column; align-items: center; padding: 60px 26px 0; box-sizing: border-box; gap: 26px">
-<div style="width: 90px; height: 10px; border-radius: 5px; background: #D9D4C8; margin-top: -36px"></div>
-<div class="kicker" style="font-size: 18px; color: #5F7E9E">COBRAR CON QR</div>
-<div style="padding: 14px; background: #fff; border: 2px solid #E4DED2; border-radius: 14px">{qr(21, 13)}</div>
-<div class="serif" style="font-size: 72px; line-height: 1; color: #1E242C">$185.00</div>
-<div style="padding: 10px 22px; border-radius: 30px; background: #A9C9A9; color: #1E242C; font-size: 20px; font-weight: 700">Pago recibido ✓</div>
-</div>
-</div>
-{sello('PASA AL SENADO', '#262F3B', -8, 90, 1040, 32)}
-{foot(SRC, 1, TOT)}
+<div style="position:absolute;left:90px;bottom:150px;font-size:26px;line-height:1.4;opacity:0.75">(Cámara de Diputados, 6 de octubre de 2026.<br>Ya pasó al Senado)</div>
+<div style="position:absolute;right:80px;bottom:120px;transform:rotate(8deg)">{CEL}</div>
+<div style="position:absolute;right:90px;top:118px;font-size:20px;letter-spacing:0.2em;font-weight:700;opacity:0.6">01 / 03</div>
 """
 
-# ---------- 02 Qué cambia: sarga oscura con 3 puntos ----------
-def punto(n, t, d):
-    return (f'<div style="display: flex; gap: 30px; align-items: flex-start">'
-            f'<div class="serif" style="flex: 0 0 auto; width: 90px; font-size: 110px; line-height: 0.8; color: #B7CFE6">{n}</div>'
-            f'<div style="display: flex; flex-direction: column; gap: 10px"><div class="serif" style="font-size: 54px; line-height: 1">{t}</div>'
-            f'<div style="font-size: 29px; line-height: 1.4; color: rgba(244,241,234,0.82)">{d}</div></div></div>')
-
+# ---------- 02 Detalle: marfil + recorte de hoja ----------
 p2 = f"""
-<div style="position: absolute; left: 80px; right: 80px; top: 100px; display: flex; flex-direction: column; gap: 56px">
-<div style="display: flex; flex-direction: column; gap: 18px">
-<div class="kicker" style="color: #B7CFE6">LO QUE CAMBIA</div>
-<h2 class="serif" style="margin: 0; font-size: 92px; line-height: 0.92">El efectivo <em style="font-style: italic; color: #B7CFE6">no desaparece</em>, pero…</h2>
+<div class="serif" style="position:absolute;left:90px;right:90px;top:120px;font-size:64px;line-height:1.16">
+Y lo que casi nadie te dice:<br>
+<span class="hl">Hacienda va a definir en qué sectores el pago digital podrá ser la única opción.</span><br>
+Va a ser gradual, no de golpe.
 </div>
-{punto(1, 'Cobrar en digital', 'Negocios y gobierno tendrán que aceptar pagos electrónicos: tarjeta, transferencia o QR desde el celular.')}
-{punto(2, 'Sectores solo digitales', 'Hacienda definirá en qué sectores el pago digital podrá ser la única opción. Será gradual.')}
-{punto(3, 'Trámites con CURP digital', 'Podrás abrir cuentas y productos financieros en línea con tu CURP digital.')}
+<div style="position:absolute;left:90px;right:90px;top:540px;padding:38px 42px;background:#fff;box-shadow:0 6px 22px rgba(30,36,44,0.12);font-size:30px;line-height:1.5">
+<div style="font-size:22px;color:#5F7E9E;margin-bottom:16px">Lo demás · en corto</div>
+<div>• Negocios y gobierno tendrán que avisarte <span class="hl">qué formas de pago digital aceptan</span>.</div>
+<div style="margin-top:12px">• Si se cae el sistema, se vale pagar en efectivo o con cheque.</div>
+<div style="margin-top:12px">• Podrás abrir cuentas en línea con tu CURP digital.</div>
+<div style="margin-top:12px">• Todavía no es ley: falta el Senado y que se publique en el DOF.</div>
 </div>
-<div style="position: absolute; left: 80px; right: 80px; bottom: 130px; padding: 24px 30px; background: #D9B4A8; color: #1E242C; font-size: 27px; line-height: 1.4; transform: rotate(-1deg)"><b>Ojo:</b> todavía no es ley. Falta que la apruebe el Senado y se publique en el DOF.</div>
-{foot(SRC, 2, TOT, True)}
+{pie(2)}
 """
 
-p3 = cierre("¿Tu negocio ya", "cobra en digital?",
-            "Cada cobro digital queda registrado en tu banco. Te ayudo a que tu facturación y tu contabilidad cuadren con lo que cobras.",
-            "Agenda tu asesoría", "<b>Guárdalo</b> y compártelo con alguien que todavía solo acepta efectivo.",
-            "torres", "50% 40%", 3, TOT, "Torres de Monterrey con la Sierra Madre al fondo")
+# ---------- 03 Remate: salvia, sin foto ----------
+p3 = f"""
+<div class="serif" style="position:absolute;left:90px;right:90px;top:140px;font-size:66px;line-height:1.16">
+¿Y a ti en qué te pega?<br><br>
+Si cobras en digital, <span class="hlw">cada peso queda registrado en tu banco</span>.<br><br>
+Tu facturación y tus declaraciones tienen que cuadrar con lo que cobras. Mejor ordénate desde ahora.
+</div>
+<div style="position:absolute;left:90px;right:330px;bottom:190px;font-size:30px;line-height:1.45">
+Guárdalo para cuando salga en el DOF.<br>
+¿Dudas con tu negocio? <b>81 2758 0277</b>
+</div>
+<div style="position:absolute;right:90px;bottom:160px;transform:rotate(-6deg)">{LUPA}</div>
+{pie(3, "#2B3542")}
+"""
 
-(HERE / "Ecd-01.dc.html").write_text(page("Ley de Economía Digital · Portada", "", "#1E242C", p1, " background: #D9B4A8;"))
-(HERE / "Ecd-02.dc.html").write_text(page("Ley de Economía Digital · Qué cambia", "bg-sarga", "#F4F1EA", p2))
-(HERE / "Ecd-03.dc.html").write_text(p3)
+(HERE / "Ecd-01.dc.html").write_text(page("Ley de Economía Digital · Gancho", "#D9B4A8", p1))
+(HERE / "Ecd-02.dc.html").write_text(page("Ley de Economía Digital · Detalle", "#FFFDF8", p2))
+(HERE / "Ecd-03.dc.html").write_text(page("Ley de Economía Digital · Remate", "#A9C9A9", p3))
 print("ok")

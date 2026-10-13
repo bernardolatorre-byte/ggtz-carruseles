@@ -125,11 +125,13 @@ Pedido por Berny el 11 oct 2026: cada domingo, **historias de Instagram** (1080�
 
 ## Formato de miércoles: "Miércoles en 3 láminas"
 
-Pedido por Berny el 13 oct 2026: cada miércoles, un carrusel **sencillo y muy puntual de 3 láminas** sobre UNA noticia fiscal o económica de la semana. Referencia: `plantillas/_gen_economia_digital.py` (Ecd-*).
+Pedido por Berny el 13 oct 2026: cada miércoles, un carrusel **sencillo y muy puntual de 3 láminas** (1080×1350) sobre UNA noticia fiscal o económica de la semana. **Lleva el lenguaje visual de las historias "Chismesito fiscal", no el de los carruseles de martes/jueves** (Berny: "no me gusta que se vea tan genérico"). Referencia aprobada: `plantillas/_gen_economia_digital.py` (Ecd-*, v2).
 
-- **Mismo estilo GGTZ** (paleta, tipografías, texturas, pie con fuente y numeración "01 / 03"), pero con poco texto: se tiene que entender en 1 minuto.
-- **Lámina 1 (portada):** etiqueta "MIÉRCOLES EN 3 LÁMINAS", pregunta o gancho de 6 palabras o menos, una línea de bajada y UN objeto dibujado o foto como motivo. Se analiza contra las 4 portadas anteriores igual que las demás.
-- **Lámina 2 (lo que cambia):** fondo distinto al de la portada, título corto y máximo 3 puntos numerados de 1–2 líneas. Si la norma aún no está vigente, una banda "Ojo:" con el estatus (p. ej. "falta el Senado / el DOF").
-- **Lámina 3 (cierre):** función `cierre()` de `_gen_oct20_22.py`: foto de Monterrey, pregunta, qué hacer o cómo ayuda Berny, botón "Agenda tu asesoría", invitación a guardar/compartir, teléfono y logotipo.
-- **Datos:** solo lo verificado (fuente oficial o dos medios serios que coincidan). Nada de cifras dudosas.
+- **Nada de:** fotos (ni de Monterrey ni de banco), foto o sticker de Berny, texturas (lino, papel, sarga), tarjetas rotadas, polaroids, botones ni la función `cierre()`.
+- **Cada lámina con un fondo liso distinto:** terracota suave #D9B4A8, marfil #FFFDF8, salvia #A9C9A9 o azul polvo #B7CFE6 (rotar el orden cada semana).
+- **Lámina 1 (gancho):** etiqueta "📲 MIÉRCOLES EN 3 LÁMINAS" + "01 / 03", pregunta grande en Instrument Serif (~120 px, una palabra en cursiva), luego la noticia como texto corrido (~60 px) en tono de plática ("A ver, siéntate…") con UNA frase resaltada con marcador (`.hlw` blanco o `.hl` azul polvo), la fuente entre paréntesis en chico y un garabato de línea simple relacionado al tema.
+- **Lámina 2 (detalle):** "Y lo que casi nadie te dice:" con la frase clave resaltada, y un recorte tipo hoja blanca "en corto" con 3–4 viñetas (o el artículo literal de la ley con lo importante resaltado).
+- **Lámina 3 (remate):** "¿Y a ti en qué te pega?" en texto corrido con un resaltado, y abajo en texto chico simple: invitación a guardar + "¿Dudas…? 81 2758 0277" + otro garabato distinto.
+- **Pie en láminas 2 y 3:** "@BERNARDOLATORRE.FISCAL · GGTZ CONSULTORES" y "02 / 03".
+- **Datos:** solo lo verificado (fuente oficial o dos medios serios que coincidan), con el estatus claro (aprobada, vigente, falta DOF…).
 - **Publicación:** miércoles a las 10:00 (mejor franja de la semana en Metricool).
