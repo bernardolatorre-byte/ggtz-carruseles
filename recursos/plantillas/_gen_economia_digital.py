@@ -71,18 +71,21 @@ Va a ser gradual, no de golpe.
 {pie(2)}
 """
 
-# ---------- 03 Remate: salvia, sin foto ----------
+# ---------- 03 Remate: salvia + UNA foto recortada (hoja/recorte, sin giro) ----------
+FOTO = "/_blob/91a759277f2d4e3b9a03c351430610c6"  # fotos/pago-tarjeta-terminal.jpg
 p3 = f"""
-<div class="serif" style="position:absolute;left:90px;right:90px;top:140px;font-size:66px;line-height:1.16">
-¿Y a ti en qué te pega?<br><br>
-Si cobras en digital, <span class="hlw">cada peso queda registrado en tu banco</span>.<br><br>
-Tu facturación y tus declaraciones tienen que cuadrar con lo que cobras. Mejor ordénate desde ahora.
+<div class="serif" style="position:absolute;left:90px;right:90px;top:110px;font-size:58px;line-height:1.16">
+¿Y a ti en qué te pega?<br>
+Si cobras en digital, <span class="hlw">cada peso queda registrado en tu banco</span>. Tu facturación y tus declaraciones tienen que cuadrar con lo que cobras.
 </div>
-<div style="position:absolute;left:90px;right:330px;bottom:190px;font-size:30px;line-height:1.45">
+<div style="position:absolute;left:90px;right:90px;top:520px;padding:14px;background:#fff;box-shadow:0 6px 22px rgba(30,36,44,0.12)">
+<img src="{FOTO}" alt="Cliente pagando con tarjeta en una terminal digital en un café" style="display:block;width:100%;height:420px;object-fit:cover;object-position:50% 38%">
+</div>
+<div style="position:absolute;left:90px;right:330px;bottom:150px;font-size:30px;line-height:1.45">
 Guárdalo para cuando salga en el DOF.<br>
 ¿Dudas con tu negocio? <b>81 2758 0277</b>
 </div>
-<div style="position:absolute;right:90px;bottom:160px;transform:rotate(-6deg)">{LUPA}</div>
+<div style="position:absolute;right:100px;bottom:140px;transform:rotate(-6deg)">{LUPA.replace('width="170" height="170"', 'width="130" height="130"')}</div>
 {pie(3, "#2B3542")}
 """
 

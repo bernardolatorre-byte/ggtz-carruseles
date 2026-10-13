@@ -127,7 +127,8 @@ Pedido por Berny el 11 oct 2026: cada domingo, **historias de Instagram** (1080�
 
 Pedido por Berny el 13 oct 2026: cada miércoles, un carrusel **sencillo y muy puntual de 3 láminas** (1080×1350) sobre UNA noticia fiscal o económica de la semana. **Lleva el lenguaje visual de las historias "Chismesito fiscal", no el de los carruseles de martes/jueves** (Berny: "no me gusta que se vea tan genérico"). Referencia aprobada: `plantillas/_gen_economia_digital.py` (Ecd-*, v2).
 
-- **Nada de:** fotos (ni de Monterrey ni de banco), foto o sticker de Berny, texturas (lino, papel, sarga), tarjetas rotadas, polaroids, botones ni la función `cierre()`.
+- **Al menos UNA foto** del banco ligada a la noticia (Berny lo pidió el 13 oct 2026): recortada derecho (sin giro) dentro de un marco blanco de 14 px con sombra suave, a todo el ancho del margen, normalmente en la lámina 3 entre el texto y el cierre. No repetir la foto de la semana anterior.
+- **Nada de:** fotos de Monterrey ni foto o sticker de Berny, texturas (lino, papel, sarga), tarjetas rotadas, polaroids, botones ni la función `cierre()`.
 - **Cada lámina con un fondo liso distinto:** terracota suave #D9B4A8, marfil #FFFDF8, salvia #A9C9A9 o azul polvo #B7CFE6 (rotar el orden cada semana).
 - **Lámina 1 (gancho):** etiqueta "📲 MIÉRCOLES EN 3 LÁMINAS" + "01 / 03", pregunta grande en Instrument Serif (~120 px, una palabra en cursiva), luego la noticia como texto corrido (~60 px) en tono de plática ("A ver, siéntate…") con UNA frase resaltada con marcador (`.hlw` blanco o `.hl` azul polvo), la fuente entre paréntesis en chico y un garabato de línea simple relacionado al tema.
 - **Lámina 2 (detalle):** "Y lo que casi nadie te dice:" con la frase clave resaltada, y un recorte tipo hoja blanca "en corto" con 3–4 viñetas (o el artículo literal de la ley con lo importante resaltado).
