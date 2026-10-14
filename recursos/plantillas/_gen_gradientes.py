@@ -1,5 +1,5 @@
 # Ejemplos de fondos con degradados (mesh gradient) en la paleta de marca (Grad-*), 13 oct 2026.
-# Manchas de color difuminadas + grano fino, título en Gloock y sello BL.
+# Manchas de color difuminadas + grano fino, título en la tipografía de marca y sello BL.
 import pathlib
 HERE = pathlib.Path(__file__).parent
 
