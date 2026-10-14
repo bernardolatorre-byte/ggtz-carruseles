@@ -71,28 +71,29 @@ def num_badge(n, dark=False):
     bg = "#B7CFE6" if dark else "#2B3542"; fg = "#262F3B" if dark else "#F4F1EA"
     return f'<div class="serif" style="width: 96px; height: 96px; border-radius: 50%; background: {bg}; color: {fg}; display: flex; align-items: center; justify-content: center; font-size: 64px; line-height: 1">{n}</div>'
 
-def cierre(title, pregunta_em, texto, cta, comenta, photo, pos, n, tot, alt):
+def cierre(title, pregunta_em, texto, cta, comenta, photo=None, pos=None, n=None, tot=None, alt=None, fondo="atardecer"):
+    # 13 oct 2026: sin fotos genéricas (Berny lo pidió). Fondo degradado de marca + sello + logo horizontal.
+    # `photo`, `pos` y `alt` se ignoran; se conservan para no romper generadores viejos.
+    import importlib.util as _u, pathlib as _p
+    _s = _u.spec_from_file_location("_marca", _p.Path(__file__).parent / "_marca.py"); _m = _u.module_from_spec(_s); _s.loader.exec_module(_m)
     inner = f"""
-<div style="position: absolute; left: 0; top: 0; width: 1080px; height: 520px; overflow: hidden">
-<img src="{B(photo)}" alt="{alt}" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: {pos}">
-<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(38,47,59,0) 45%, rgba(38,47,59,1) 100%)"></div>
-</div>
-<div style="position: absolute; left: 60px; top: 60px; padding: 12px 22px; background: rgba(244,241,234,0.92); font-size: 20px; font-weight: 700; letter-spacing: 0.2em; color: #2B3542; transform: rotate(-2deg)">DESDE MONTERREY</div>
-<div aria-hidden="true" style="position: absolute; right: 30px; top: 790px; width: 470px; height: 470px; border-radius: 50%; background: #A9C9A9"></div>
-<img src="{B('berny')}" alt="Bernardo Latorre, GGTZ Consultores" style="position: absolute; right: -30px; bottom: 0; width: 540px; height: auto; filter: drop-shadow(0 14px 24px rgba(0,0,0,0.35))">
-<div style="position: relative; height: 100%; box-sizing: border-box; padding: 470px 80px 64px; display: flex; flex-direction: column; gap: 30px">
-<h2 class="serif" style="margin: 0; font-size: 84px; line-height: 0.95">{title}<br><em style="font-style: italic; color: #B7CFE6">{pregunta_em}</em></h2>
+{_m.grad(fondo)}
+<img src="{_m.SELLO_MARFIL}" alt="" aria-hidden="true" style="position: absolute; right: 80px; top: 80px; width: 130px; height: auto; transform: rotate(-8deg)">
+<div aria-hidden="true" style="position: absolute; right: 30px; top: 790px; width: 470px; height: 470px; border-radius: 50%; background: #A9C9A9; opacity: 0.9"></div>
+<img src="{B('berny')}" alt="Bernardo Latorre, Tax Consultant" style="position: absolute; right: -30px; bottom: 0; width: 540px; height: auto; filter: drop-shadow(0 14px 24px rgba(0,0,0,0.35))">
+<div style="position: relative; height: 100%; box-sizing: border-box; padding: 150px 80px 64px; display: flex; flex-direction: column; gap: 30px">
+<h2 class="serif" style="margin: 0; font-size: 92px; line-height: 0.95">{title}<br><span style="color: #B7CFE6">{pregunta_em}</span></h2>
 <p style="margin: 0; max-width: 470px; font-size: 30px; line-height: 1.45; color: rgba(244,241,234,0.88)">{texto}</p>
 <div style="align-self: flex-start; display: inline-flex; align-items: center; gap: 18px; padding: 26px 40px; background: #F4F1EA; color: #262F3B; font-size: 28px; font-weight: 700; border-radius: 4px">{cta}
 <svg aria-hidden="true" width="30" height="20" viewBox="0 0 40 24" fill="none" stroke="#262F3B" stroke-width="2.4"><path d="M2 12h34M26 3l10 9-10 9"></path></svg></div>
 <div style="max-width: 440px; padding: 22px 28px; background: rgba(244,241,234,0.08); border: 1px solid rgba(244,241,234,0.22); transform: rotate(-1.5deg); font-size: 25px; line-height: 1.4">{comenta}</div>
 <div style="margin-top: auto; display: flex; flex-direction: column; gap: 8px; font-size: 24px; font-weight: 500">
 <span>81 2758 0277 · @bernardolatorre.fiscal</span>
-<img src="/_blob/916dbd49a3cb1e203b606fc4f660fbea" alt="Bernardo Latorre, Tax Consultant" style="width: 320px; height: auto; margin-left: -8px">
+<img src="{_m.LOGO_H_MARFIL}" alt="Bernardo Latorre, Tax Consultant" style="width: 320px; height: auto; margin-left: -8px">
 <span style="font-size: 15px; font-weight: 700; letter-spacing: 0.26em; color: rgba(244,241,234,0.7)">SOCIO EN GGTZ CONSULTORES</span>
 </div>
 </div>"""
-    return page("Cierre", "bg-sarga", "#F4F1EA", inner)
+    return page("Cierre", "", "#F4F1EA", inner, " isolation: isolate;")
 
 def sello(text, color, rot, x, y, size=30):
     return (f'<div style="position: absolute; left: {x}px; top: {y}px; padding: 10px 24px; border: 5px solid {color}; color: {color}; '

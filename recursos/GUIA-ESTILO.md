@@ -30,12 +30,7 @@ Logo "Bernardo Latorre · Tax Consultant" (inspiración: tipografía serif clás
   - Texto en #1E242C. **Nunca dorado.**
 - **Tipografía:** Gloock para los títulos (palabra clave en color, sin cursiva; ver Identidad de marca) y Hanken Grotesk para el texto. Las etiquetas pequeñas van en mayúsculas con letter-spacing de 0.24em.
 - **Portada:** nunca lleva la foto de Berny (excepción: posts de presentación personal, donde él pidió salir en portada y un tono formal). Su foto (sticker recortado) aparece solo en la última lámina, junto al botón para agendar.
-- **Última lámina:**
-  - Una foto real de Monterrey en una banda superior.
-  - Una pregunta en grande.
-  - Un botón de llamada a la acción.
-  - Una tarjeta que invite a comentar o a guardar.
-  - "81 2758 0277 · @bernardolatorre.fiscal" y el logotipo GGTZ CONSULTORES.
+- **Última lámina (13 oct 2026: SIN fotos genéricas):** nunca fotos de banco ni de Monterrey. Usa la función `cierre()` de `_gen_oct20_22.py`: fondo degradado de marca, sello BL arriba, pregunta en grande, botón de llamada a la acción, tarjeta para comentar/guardar, el sticker de Berny sobre círculo salvia, "81 2758 0277 · @bernardolatorre.fiscal", el logo horizontal y "SOCIO EN GGTZ CONSULTORES".
 - **Pie de cada lámina:** la fuente legal ("Fuente: art. X LISR"), el usuario de Instagram y la numeración "03 / 08".
 - **Datos:** toda cifra o artículo se verifica en la ley vigente (Luthor o una fuente oficial) o en el DOF y el SAT antes de usarse.
 - **Imágenes:**
@@ -54,6 +49,12 @@ Berny pidió (10 oct 2026) que las portadas nunca se vean iguales. Antes de dise
 
 Después de renderizar, arma una tira con tu portada nueva junto a las 4 anteriores y mírala: si dos se parecen a primera vista, rehaz la nueva. Anota en `historial.md` la composición **y el motivo principal**.
 
+## Degradados (pedido de Berny, 13 oct 2026: usarlos MÁS)
+
+- **En cada carrusel, al menos 3 láminas con fondo degradado**, siempre la última (`cierre()`) y de preferencia la portada; reparte las demás entre las de en medio (una oscura y una clara funcionan bien). Las otras alternan con lino, papel, sarga, foto o color liso.
+- Se hacen con `grad(nombre)` de `recursos/plantillas/_marca.py` (capa que va como PRIMER hijo de la lámina; la lámina lleva `isolation: isolate`). Degradados disponibles: oscuros (texto marfil) `sierra`, `noche`, `atardecer`, `neblina`; claros (texto tinta) `salvia`, `bruma`. Ejemplos: `Grad-0*.dc.html` y el RESICO v3 (`Res2-*`).
+- Solo con colores de la paleta; nunca dorado ni amarillo. No pongas dos láminas seguidas con el mismo degradado.
+
 ## Ritmo visual (para que no se vea plano)
 
 - **Alternar fondos.** Nunca dos láminas seguidas con el mismo fondo. Las opciones son:
@@ -63,7 +64,8 @@ Después de renderizar, arma una tira con tu portada nueva junto a las 4 anterio
   - Foto a todo lo ancho con degradado pizarra.
   - Bloque de color sólido.
 - **Por carrusel, como mínimo:**
-  - 3 fotos reales.
+  - 3 láminas con degradado (ver arriba).
+  - 2 fotos reales en las láminas de en medio (nunca en la última).
   - 1 captura de pantalla real (del SAT, el DOF, el IMSS o Banxico) si el tema lo permite.
   - 1 lámina oscura.
   - 1 lámina con un número grande como protagonista.
