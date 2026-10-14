@@ -2,6 +2,23 @@
 
 Estándar aprobado por Berny el 9 de octubre de 2026 (versión "v2": Cierre fiscal y RESICO). **Todo carrusel nuevo se hace así**, pero cada uno debe traer algo distinto y nuevo. Las plantillas de referencia están en `recursos/plantillas/` (Cie-* y Res-*).
 
+## Identidad de marca: base de TODOS los diseños (aprobada por Berny el 13 oct 2026)
+
+Logo "Bernardo Latorre · Tax Consultant" (inspiración: tipografía serif clásica tipo correo postal, sello circular y estampilla). Archivos en `recursos/marca/` (PNG transparentes, 2x; se regeneran con `python3 recursos/marca/_gen_marca.py`), ids en `assets.json`:
+
+| Pieza | Archivo | Id | Uso |
+|---|---|---|---|
+| Logo principal (2 líneas + sello) | logo-principal-pizarra.png / -marfil.png | 2b162f4a5a3bf9e2b3b91b5c5abfc022 / 740e8448ef889bbdab01a3d4234291b0 | Portadas de presentación, documentos, propuestas |
+| Logo horizontal (estampilla + nombre) | logo-horizontal-pizarra.png / -marfil.png | 7afe418b8551e87bb3f0f8e196d8230f / 916dbd49a3cb1e203b606fc4f660fbea | Cierre de carruseles, firmas, encabezados |
+| Sello circular BL | sello-pizarra.png / sello-marfil.png | 89b150b4a0eaffd521105fa61198e074 / 5b8391f45478910a1d0d8ca2823faf9b | Marca pequeña en portadas o historias (90–130 px, puede ir girado ±8°) |
+| Estampilla BL | estampilla-azul.png / estampilla-pizarra.png | fb44d2d96240b0ee464978e203027ae7 / 9755ee19657fbb11fb0cb1e5d1302b65 | Avatar, sellos, elementos gráficos |
+| Foto de perfil IG | perfil-instagram-1080.png | 6675c9a47ae55a2cbe563c941226204b | Perfil de Instagram/WhatsApp |
+
+- **Tipografía:** títulos, preguntas, números grandes y textos corridos en serif = **Gloock** (`recursos/fuentes/Gloock-Regular.ttf`, OFL; en Google Fonts `family=Gloock`). Texto y etiquetas = Hanken Grotesk. Gloock no tiene cursiva: la palabra clave se marca con color (azul polvo) o marcador, NUNCA en cursiva. Gloock es más ancha que Instrument Serif: títulos de portada entre 84 y 110 px. Instrument Serif queda solo para pies de polaroid.
+- **Logo en cada diseño:** todo carrusel, historia, anuncio o documento lleva la marca al menos una vez: el sello en la portada/primera pantalla o el logo horizontal en el cierre (la función `cierre()` ya lo trae, con "SOCIO EN GGTZ CONSULTORES" abajo). Versión marfil sobre fondos oscuros o fotos; versión pizarra sobre fondos claros. Nunca deformar, recolorear fuera de la paleta ni poner sobre fondos que le quiten contraste.
+- **Paleta:** la misma de siempre (pizarra, marfil, azul polvo, salvia, terracota). Nunca dorado ni amarillo.
+- Lienzo editable del logo: artifact "Logo Bernardo Latorre"; sistema de marca: artifact "Marca Bernardo Latorre".
+
 ## Lo que no cambia
 
 - **Formato:** 1080×1350 px, de 7 a 9 láminas. Se renderiza con `python3 recursos/render.py <carpeta_plantillas> <carpeta_salida> <archivos.dc.html>`.
@@ -11,7 +28,7 @@ Estándar aprobado por Berny el 9 de octubre de 2026 (versión "v2": Cierre fisc
   - Azul polvo #B7CFE6 como acento principal.
   - Salvia #A9C9A9 y terracota suave #D9B4A8 / #C98F7E como acentos secundarios.
   - Texto en #1E242C. **Nunca dorado.**
-- **Tipografía:** Instrument Serif para los títulos (con una palabra clave en cursiva) y Hanken Grotesk para el texto. Las etiquetas pequeñas van en mayúsculas con letter-spacing de 0.24em.
+- **Tipografía:** Gloock para los títulos (palabra clave en color, sin cursiva; ver Identidad de marca) y Hanken Grotesk para el texto. Las etiquetas pequeñas van en mayúsculas con letter-spacing de 0.24em.
 - **Portada:** nunca lleva la foto de Berny (excepción: posts de presentación personal, donde él pidió salir en portada y un tono formal). Su foto (sticker recortado) aparece solo en la última lámina, junto al botón para agendar.
 - **Última lámina:**
   - Una foto real de Monterrey en una banda superior.
@@ -113,7 +130,7 @@ Pedido por Berny el 11 oct 2026 a partir de un post de referencia (@yosoydiegodi
 Pedido por Berny el 11 oct 2026: cada domingo, **historias de Instagram** (1080×1920) con LA noticia fiscal más relevante de la semana, contada como chisme entre amigos. **Estilo deliberadamente sencillo, poco producido** (ref. @emiliocovi, instagram.com/p/DeLvbOEHPjy): NO usa las tarjetas, texturas, fotos ni capas de los carruseles.
 
 - **Plantillas:** `plantillas/Chi-01-Story.dc.html` (gancho) y `Chi-02-Story.dc.html` (detalle). Cada semana se copian con prefijo nuevo.
-- **Pantalla 1 (gancho):** fondo de UN color liso (azul polvo, salvia, terracota suave o marfil; alternar cada semana), etiqueta pequeña "☕ CHISMESITO FISCAL · fechas de la semana", y la noticia como texto corrido en Instrument Serif grande (~70 px), tono de plática ("A ver, siéntate…"), con UNA frase resaltada con marcador. Cierra con la fuente entre paréntesis en texto chico y un garabato de línea simple (taza, ojos, lupa…).
+- **Pantalla 1 (gancho):** fondo de UN color liso (azul polvo, salvia, terracota suave o marfil; alternar cada semana), etiqueta pequeña "☕ CHISMESITO FISCAL · fechas de la semana", y la noticia como texto corrido en Gloock grande (~66 px), tono de plática ("A ver, siéntate…"), con UNA frase resaltada con marcador. Cierra con la fuente entre paréntesis en texto chico y un garabato de línea simple (taza, ojos, lupa…).
 - **Pantalla 2 (detalle):** fondo marfil o blanco, "lo que casi nadie te dice" en serif grande con resaltado, un recorte tipo hoja blanca con el texto clave (si es un artículo de ley, transcribirlo literal de Luthor/DOF y resaltar lo importante; si no, rotularlo "en corto"),. Pie: "@BERNARDOLATORRE.FISCAL · GGTZ CONSULTORES".
 - **Sin llamado a la acción** (Berny lo pidió así el 11 oct 2026): nada de botones, teléfono ni "escríbeme". Solo el pie "@BERNARDOLATORRE.FISCAL · GGTZ CONSULTORES" en la pantalla 2.
 - **Música SIEMPRE:** cada pantalla se publica como video MP4 de 10 s (1080×1920, H.264 + AAC) con música instrumental ORIGINAL generada con `python3 recursos/musica_lofi.py` (cambia la semilla `default_rng(...)`, los acordes o el bpm cada semana para que no suene igual). Pantalla 1 usa el segundo 0–10 y la 2 el 11.7–21.7, con fade de entrada y salida. Nunca usar canciones con derechos.
@@ -128,7 +145,7 @@ Pedido por Berny el 11 oct 2026: cada domingo, **historias de Instagram** (1080�
 Pedido por Berny el 13 oct 2026: cada miércoles, un carrusel **sencillo y muy puntual de 3 láminas** (1080×1350) sobre UNA noticia fiscal o económica de la semana. Referencia aprobada: `plantillas/_gen_economia_digital.py` (Ecd-*, v3).
 
 - **Fondo = fotos del día a día de Berny** (tendencia que él pidió): cada lámina lleva a todo lo ancho una foto distinta de `berny/fotos/vida-*` (ver README), elegida para que tenga relación con la noticia (comida/puestos para pagos o consumo, oficina para SAT, cerro/carretera para plazos o "el camino", avión para viajes, etc.). Encima, un degradado pizarra oscuro (rgba(20,24,30,0.85) → transparente) donde va el texto, dejando ver el motivo de la foto en la otra mitad. No repetir las fotos de la semana anterior.
-- **Texto con el lenguaje del Chismesito:** Instrument Serif corrido en marfil con sombra suave, UNA frase con marcador azul polvo (`.hl`, texto oscuro), tono de plática.
+- **Texto con el lenguaje del Chismesito:** Gloock corrido en marfil con sombra suave, UNA frase con marcador azul polvo (`.hl`, texto oscuro), tono de plática.
 - **Lámina 1 (gancho):** etiqueta "📲 MIÉRCOLES EN 3 LÁMINAS" + "01 / 03", pregunta grande (~120 px, una palabra en cursiva), la noticia en 2–3 renglones con el resaltado, y la fuente en una etiquetita marfil abajo.
 - **Lámina 2 (detalle):** "Y lo que casi nadie te dice:" con la frase clave resaltada arriba, y abajo un recorte de hoja marfil "en corto" con 3–4 viñetas.
 - **Lámina 3 (remate):** "¿Y a ti en qué te pega?" con un resaltado arriba; abajo, en texto chico: invitación a guardar + "¿Dudas…? 81 2758 0277" (sin partir el teléfono).

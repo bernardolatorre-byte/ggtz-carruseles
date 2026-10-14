@@ -12,6 +12,7 @@ fonts = f"""
 @font-face{{font-family:'Instrument Serif';src:url('file://{FONTS}/InstrumentSerif-Regular.ttf');font-style:normal}}
 @font-face{{font-family:'Instrument Serif';src:url('file://{FONTS}/InstrumentSerif-Italic.ttf');font-style:italic}}
 @font-face{{font-family:'Hanken Grotesk';src:url('file://{FONTS}/HankenGrotesk[wght].ttf');font-weight:100 900}}
+@font-face{{font-family:'Gloock';src:url('file://{FONTS}/Gloock-Regular.ttf')}}
 """
 OUT.mkdir(parents=True, exist_ok=True)
 with sync_playwright() as p:

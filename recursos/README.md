@@ -131,3 +131,7 @@ Sacadas de su carrete (13 oct 2026) para la tendencia de "fotos de mi vida diari
 | vida-frijoles-limonada.jpg | Frijoles charros y limonada | 14f0f5ea6e9394a4b7ae12d278ceddd7 |
 | vida-jardin-luces-noche.jpg | Jardín con árbol y foquitos de noche | cc7da96fc62410d91e5b20d2e7782e6d |
 | vida-castillo-chapultepec.jpg | Castillo de Chapultepec con cielo azul | abbd5718e2207686452fcbe8671e6a5f |
+
+## Marca personal (`marca/`)
+
+Logo "Bernardo Latorre · Tax Consultant" aprobado el 13 oct 2026: base de todos los diseños. Archivos, ids y reglas de uso en la sección "Identidad de marca" de `GUIA-ESTILO.md`. Fuente Gloock en `fuentes/` (licencia OFL en `fuentes/Gloock-OFL.txt`).

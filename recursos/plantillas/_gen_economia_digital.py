@@ -10,10 +10,11 @@ def page(title, bg, inner, h=1350):
 <html lang="es"><head><meta charset="utf-8"><title>{title}</title></head><body>
 <x-dc>
 <helmet>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&amp;family=Instrument+Serif:ital@0;1&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap">
 <style>
 body{{margin:0}}
-.serif{{font-family:'Instrument Serif',serif;font-weight:400}}
+.serif{{font-family:'Gloock','Instrument Serif',serif;font-weight:400}}
+.serif em{{font-style:normal!important}}
 .hl{{background:linear-gradient(transparent 12%, #B7CFE6 12%, #B7CFE6 92%, transparent 92%);padding:0 6px;-webkit-box-decoration-break:clone;box-decoration-break:clone}}
 .hlw{{background:linear-gradient(transparent 12%, #FFFDF8 12%, #FFFDF8 92%, transparent 92%);padding:0 6px;-webkit-box-decoration-break:clone;box-decoration-break:clone}}
 .tag{{font-size:22px;font-weight:700;letter-spacing:0.24em}}
@@ -55,9 +56,9 @@ SOMBRA = "text-shadow:0 2px 18px rgba(0,0,0,0.35)"
 p1 = f"""
 {fondo(CAFE, '50% 62%', 'linear-gradient(180deg, rgba(20,24,30,0.86) 0%, rgba(20,24,30,0.7) 46%, rgba(20,24,30,0) 72%)')}
 <div class="tag" style="position:absolute;left:90px;top:100px;color:#F4F1EA">📲 MIÉRCOLES EN 3 LÁMINAS</div>
-<div style="position:absolute;right:90px;top:108px;font-size:20px;letter-spacing:0.2em;font-weight:700;color:rgba(244,241,234,0.7)">01 / 03</div>
-<div class="serif" style="position:absolute;left:90px;right:90px;top:190px;font-size:124px;line-height:0.95;color:#FFFDF8;{SOMBRA}">¿Adiós al <em>efectivo?</em></div>
-<div class="serif" style="position:absolute;left:90px;right:90px;top:440px;font-size:52px;line-height:1.2;color:#FFFDF8;{SOMBRA}">
+<img src="/_blob/5b8391f45478910a1d0d8ca2823faf9b" alt="Sello BL, Bernardo Latorre Tax Consultant" style="position:absolute;right:80px;top:70px;width:120px;height:auto;transform:rotate(-8deg)">
+<div class="serif" style="position:absolute;left:90px;right:90px;top:180px;font-size:100px;line-height:0.95;color:#FFFDF8;{SOMBRA}">¿Adiós al <em>efectivo?</em></div>
+<div class="serif" style="position:absolute;left:90px;right:90px;top:420px;font-size:48px;line-height:1.2;color:#FFFDF8;{SOMBRA}">
 A ver, siéntate. Los diputados aprobaron la Ley de Economía Digital: <span class="hl" style="color:#1E242C;text-shadow:none">los negocios tendrán que aceptar pagos digitales</span>. Pero ojo: el efectivo no desaparece.
 </div>
 <div style="position:absolute;left:90px;bottom:70px;padding:10px 18px;background:rgba(255,253,248,0.9);font-size:22px;line-height:1.35;color:#2B3542">Cámara de Diputados, 6 oct 2026 · ya pasó al Senado</div>
