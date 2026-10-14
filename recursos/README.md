@@ -134,4 +134,4 @@ Sacadas de su carrete (13 oct 2026) para la tendencia de "fotos de mi vida diari
 
 ## Marca personal (`marca/`)
 
-Logo "Bernardo Latorre · Tax Consultant" aprobado el 13 oct 2026: base de todos los diseños. Archivos, ids y reglas de uso en la sección "Identidad de marca" de `GUIA-ESTILO.md`. Fuente Gloock en `fuentes/` (licencia OFL en `fuentes/Gloock-OFL.txt`).
+Logo "Bernardo Latorre · Tax Consultant" aprobado el 13 oct 2026: base de todos los diseños. Archivos, ids y reglas de uso en la sección "Identidad de marca" de `GUIA-ESTILO.md`. Fuente de títulos: Archivo ExtraBold en `fuentes/` (licencia OFL en `fuentes/Archivo-OFL.txt`).

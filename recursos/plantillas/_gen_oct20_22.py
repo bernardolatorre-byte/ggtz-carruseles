@@ -26,7 +26,7 @@ def page(title, cls, color, inner, bg=""):
 <body>
 <x-dc>
 <helmet>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&amp;family=Instrument+Serif:ital@0;1&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Instrument+Serif:ital@0;1&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap">
 <style>
 body{{margin:0}}
 a{{color:inherit}}
@@ -35,7 +35,7 @@ a{{color:inherit}}
 .bg-sarga{{background-color:#262F3B;background-image:url({B('sarga')});background-size:cover}}
 .hoja{{background-color:#FFFDF8;background-image:linear-gradient(rgba(255,253,248,0.62),rgba(255,253,248,0.62)),url({B('papel')});background-size:cover}}
 .sticker{{filter: drop-shadow(5px 0 0 #fff) drop-shadow(-5px 0 0 #fff) drop-shadow(0 5px 0 #fff) drop-shadow(0 -5px 0 #fff) drop-shadow(0 14px 18px rgba(20,24,30,0.3))}}
-.serif{{font-family:'Gloock','Instrument Serif',serif;font-weight:400}}
+.serif{{font-family:'Archivo',sans-serif;font-weight:800;font-stretch:88%;letter-spacing:-0.03em}}
 .serif em{{font-style:normal!important}}
 .kicker{{font-size:22px;font-weight:600;letter-spacing:0.24em}}
 </style>

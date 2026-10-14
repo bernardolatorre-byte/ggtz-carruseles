@@ -6,7 +6,7 @@ from playwright.sync_api import sync_playwright
 HERE = pathlib.Path(__file__).parent
 F = HERE.parent / "fuentes"
 FONTS = f"""
-@font-face{{font-family:'Gloock';src:url('file://{F}/Gloock-Regular.ttf')}}
+@font-face{{font-family:'Archivo';src:url('file://{F}/Archivo[wdth,wght].ttf');font-weight:100 900;font-stretch:62% 125%}}
 @font-face{{font-family:'Hanken Grotesk';src:url('file://{F}/HankenGrotesk[wght].ttf');font-weight:100 900}}
 body{{margin:0;background:transparent}}
 """
@@ -18,7 +18,7 @@ def sello(ink, size, rid="r"):
             f'<circle cx="100" cy="100" r="57" fill="none" stroke="{ink}" stroke-width="2"/>'
             f'<text font-family="Hanken Grotesk" font-size="15" font-weight="700" fill="{ink}" letter-spacing="2">'
             f'<textPath href="#{rid}" textLength="462">TAX CONSULTANT · MONTERREY · N.L. ·</textPath></text>'
-            f'<text x="100" y="117" text-anchor="middle" font-family="Gloock" font-size="50" fill="{ink}">BL</text></svg>')
+            f'<text x="100" y="117" text-anchor="middle" font-family="Archivo" font-weight="800" font-stretch="88%" letter-spacing="-2" font-size="50" fill="{ink}">BL</text></svg>')
 
 def estampilla(fill, ink, size, label=True):
     pts = sorted({(p, q) for i in range(11) for p, q in [(i*32, 0), (i*32, 320), (0, i*32), (320, i*32)]})
@@ -26,8 +26,8 @@ def estampilla(fill, ink, size, label=True):
     extra = (f'<rect x="34" y="34" width="252" height="252" fill="none" stroke="{ink}" stroke-width="2"/>'
              f'<text x="160" y="72" text-anchor="middle" font-family="Hanken Grotesk" font-size="12" font-weight="700" letter-spacing="4" fill="{ink}">MONTERREY · MX</text>'
              f'<text x="160" y="250" text-anchor="middle" font-family="Hanken Grotesk" font-size="15" font-weight="700" letter-spacing="4" fill="{ink}">TAX CONSULTANT</text>'
-             f'<text x="160" y="190" text-anchor="middle" font-family="Gloock" font-size="128" fill="{ink}">BL</text>') if label else \
-            f'<text x="160" y="205" text-anchor="middle" font-family="Gloock" font-size="140" fill="{ink}">BL</text>'
+             f'<text x="160" y="190" text-anchor="middle" font-family="Archivo" font-weight="800" font-stretch="88%" letter-spacing="-2" font-size="128" fill="{ink}">BL</text>') if label else \
+            f'<text x="160" y="205" text-anchor="middle" font-family="Archivo" font-weight="800" font-stretch="88%" letter-spacing="-2" font-size="140" fill="{ink}">BL</text>'
     # las perforaciones se recortan con una máscara para que el PNG quede transparente
     return (f'<svg viewBox="-20 -20 360 360" width="{size}" height="{size}"><defs><mask id="m">'
             f'<rect x="-20" y="-20" width="360" height="360" fill="black"/><rect x="0" y="0" width="320" height="320" fill="white"/>'
@@ -35,15 +35,15 @@ def estampilla(fill, ink, size, label=True):
 
 def principal(ink):
     return (f'<div style="display:inline-flex;flex-direction:column;padding:20px;color:{ink}">'
-            f'<div style="font-family:Gloock;font-size:212px;line-height:.92;letter-spacing:-.02em">Bernardo</div>'
-            f'<div style="display:flex;align-items:center;gap:34px">{sello(ink, 230)}'
-            f'<div style="font-family:Gloock;font-size:212px;line-height:.92;letter-spacing:-.02em">Latorre</div></div>'
-            f'<div style="margin-top:46px;display:flex;align-items:center;gap:22px"><div style="height:2px;width:120px;background:{ink}"></div>'
+            f'<div style="font-family:Archivo;font-weight:800;font-stretch:88%;font-size:230px;line-height:.86;letter-spacing:-.03em">Bernardo</div>'
+            f'<div style="display:flex;align-items:center;gap:30px">'
+            f'<div style="font-family:Archivo;font-weight:800;font-stretch:88%;font-size:230px;line-height:.86;letter-spacing:-.03em">Latorre</div>{sello(ink, 210)}</div>'
+            f'<div style="margin-top:46px;display:flex;align-items:center;gap:22px"><div style="height:3px;width:120px;background:{ink}"></div>'
             f'<div style="font-family:Hanken Grotesk;font-size:30px;font-weight:700;letter-spacing:.32em">TAX CONSULTANT</div></div></div>')
 
 def horizontal(ink, fill, stampink):
     return (f'<div style="display:inline-flex;align-items:center;gap:48px;padding:20px;color:{ink}">{estampilla(fill, stampink, 250, False)}'
-            f'<div style="display:flex;flex-direction:column;gap:18px"><div style="font-family:Gloock;font-size:128px;line-height:.95;letter-spacing:-.02em;white-space:nowrap">Bernardo Latorre</div>'
+            f'<div style="display:flex;flex-direction:column;gap:18px"><div style="font-family:Archivo;font-weight:800;font-stretch:88%;font-size:128px;line-height:.95;letter-spacing:-.03em;white-space:nowrap">Bernardo Latorre</div>'
             f'<div style="display:flex;align-items:center;gap:20px"><div style="height:2px;width:90px;background:{ink}"></div>'
             f'<div style="font-family:Hanken Grotesk;font-size:26px;font-weight:700;letter-spacing:.32em">TAX CONSULTANT</div></div></div></div>')
 
