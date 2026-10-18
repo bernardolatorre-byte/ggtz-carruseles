@@ -71,7 +71,54 @@ def num_badge(n, dark=False):
     bg = "#B7CFE6" if dark else "#2B3542"; fg = "#262F3B" if dark else "#F4F1EA"
     return f'<div class="serif" style="width: 96px; height: 96px; border-radius: 50%; background: {bg}; color: {fg}; display: flex; align-items: center; justify-content: center; font-size: 64px; line-height: 1">{n}</div>'
 
-def cierre(title, pregunta_em, texto, cta, comenta, photo=None, pos=None, n=None, tot=None, alt=None, fondo="atardecer"):
+def marco_berny(marco="revista"):
+    """Lo que va detrás del sticker de Berny en el cierre. 'circulo' = el original (a Berny no le gustó, 18 oct 2026)."""
+    img = f'<img src="{B('berny')}" alt="Bernardo Latorre, Tax Consultant" style="position: absolute; right: -30px; bottom: 0; width: 540px; height: auto; filter: drop-shadow(0 14px 24px rgba(0,0,0,0.35))">'
+    if marco == "circulo":
+        return '<div aria-hidden="true" style="position: absolute; right: 30px; top: 790px; width: 470px; height: 470px; border-radius: 50%; background: #A9C9A9; opacity: 0.9"></div>' + img
+    if marco == "estampilla":
+        # Estampilla perforada (motivo del logo BL) en azul polvo; la cabeza de Berny se sale por arriba.
+        w, h, r, paso = 450, 560, 11, 32
+        hoyos = "".join(f'<circle cx="{x}" cy="0" r="{r}"/><circle cx="{x}" cy="{h}" r="{r}"/>' for x in range(paso // 2, w, paso))
+        hoyos += "".join(f'<circle cx="0" cy="{y}" r="{r}"/><circle cx="{w}" cy="{y}" r="{r}"/>' for y in range(paso // 2, h, paso))
+        svg = (f'<svg aria-hidden="true" width="{w}" height="{h}" viewBox="0 0 {w} {h}" style="position:absolute;right:50px;bottom:70px;transform:rotate(-5deg);filter:drop-shadow(0 18px 30px rgba(0,0,0,0.35))">'
+               f'<defs><mask id="perf"><rect width="{w}" height="{h}" fill="#fff"/><g fill="#000">{hoyos}</g></mask></defs>'
+               f'<g mask="url(#perf)"><rect width="{w}" height="{h}" fill="#B7CFE6"/>'
+               f'<rect x="26" y="26" width="{w-52}" height="{h-52}" fill="none" stroke="#262F3B" stroke-width="2" opacity="0.55"/></g></svg>')
+        etiqueta = ('<div aria-hidden="true" class="serif" style="position:absolute;right:405px;top:785px;transform:rotate(-5deg);font-size:44px;line-height:1;color:#262F3B">BL</div>')
+        return svg + etiqueta + img
+    if marco == "arco":
+        return ('<div aria-hidden="true" style="position:absolute;right:20px;bottom:0;width:470px;height:560px;border-radius:235px 235px 0 0;'
+                'background:linear-gradient(180deg,#D9B4A8 0%,#C98F7E 100%)"></div>'
+                '<div aria-hidden="true" style="position:absolute;right:0;bottom:0;width:510px;height:600px;border-radius:255px 255px 0 0;border:2px solid rgba(244,241,234,0.45);border-bottom:0"></div>') + img
+    if marco == "postal":
+        return ('<div aria-hidden="true" style="position:absolute;right:30px;bottom:-30px;width:460px;height:560px;background:#F4F1EA;transform:rotate(3deg);box-shadow:0 18px 34px rgba(0,0,0,0.35);'
+                'background-image:repeating-linear-gradient(135deg,#C98F7E 0 14px,#F4F1EA 14px 28px,#B7CFE6 28px 42px,#F4F1EA 42px 56px);'
+                'clip-path:none"><div style="position:absolute;inset:14px;background:#F4F1EA"></div></div>'
+                '<div aria-hidden="true" style="position:absolute;right:300px;top:780px;width:150px;height:40px;background:rgba(183,207,230,0.85);transform:rotate(-8deg)"></div>') + img
+    if marco == "revista":
+        # Efecto portada de revista: apellido gigante DETRÁS de Berny (profundidad), recorte más grande que sangra a la derecha.
+        big = '<img src="' + B('berny') + '" alt="Bernardo Latorre, Tax Consultant" style="position: absolute; right: -80px; bottom: 0; width: 640px; height: auto; filter: drop-shadow(0 20px 30px rgba(0,0,0,0.4))">'
+        palabra = ('<div aria-hidden="true" class="serif" style="position:absolute;left:40px;bottom:300px;font-size:215px;line-height:0.8;letter-spacing:-0.05em;'
+                   'color:rgba(183,207,230,0.22);white-space:nowrap">LATORRE</div>')
+        return palabra + big
+    if marco == "garabato":
+        # Pincelada a mano (tendencia 2026: recorte grande + trazo pintado), sin figura geométrica.
+        trazo = ('<svg aria-hidden="true" width="1080" height="900" viewBox="0 0 1080 900" style="position:absolute;left:0;bottom:0">'
+                 '<defs><filter id="pincel" x="-20%" y="-20%" width="140%" height="140%"><feTurbulence type="fractalNoise" baseFrequency="0.03 0.5" numOctaves="3" seed="7"/>'
+                 '<feDisplacementMap in="SourceGraphic" scale="30"/></filter></defs>'
+                 '<path d="M610 770 C 700 640, 840 520, 950 300" fill="none" stroke="#C98F7E" stroke-width="190" stroke-linecap="round" filter="url(#pincel)" opacity="0.95"/>'
+                 '<path d="M640 860 C 760 760, 900 690, 1000 560" fill="none" stroke="#B7CFE6" stroke-width="36" stroke-linecap="round" filter="url(#pincel)" opacity="0.85"/></svg>')
+        return trazo + img
+    if marco == "polaroid":
+        # Foto real de Berny en polaroid con cinta (collage), en lugar del recorte.
+        return ('<div style="position:absolute;right:60px;bottom:110px;width:430px;box-sizing:border-box;padding:16px 16px 70px;background:#FFFDF8;transform:rotate(4deg);box-shadow:0 22px 40px rgba(0,0,0,0.4)">'
+                '<img src="/_blob/df12d7834689b02a85e1e7c7bb293a70" alt="Bernardo Latorre en su oficina en Monterrey" style="display:block;width:100%;height:470px;object-fit:cover;object-position:35% 30%">'
+                '<div class="serif" style="position:absolute;left:0;right:0;bottom:18px;text-align:center;font-size:30px;color:#262F3B">Bernardo · Monterrey</div></div>'
+                '<div aria-hidden="true" style="position:absolute;right:250px;bottom:690px;width:170px;height:44px;background:rgba(183,207,230,0.88);transform:rotate(-6deg)"></div>')
+    return img
+
+def cierre(title, pregunta_em, texto, cta, comenta, photo=None, pos=None, n=None, tot=None, alt=None, fondo="atardecer", marco="revista"):
     # 13 oct 2026: sin fotos genéricas (Berny lo pidió). Fondo degradado de marca + sello + logo horizontal.
     # `photo`, `pos` y `alt` se ignoran; se conservan para no romper generadores viejos.
     import importlib.util as _u, pathlib as _p
@@ -79,8 +126,7 @@ def cierre(title, pregunta_em, texto, cta, comenta, photo=None, pos=None, n=None
     inner = f"""
 {_m.grad(fondo)}
 <img src="{_m.SELLO_MARFIL}" alt="" aria-hidden="true" style="position: absolute; right: 80px; top: 80px; width: 130px; height: auto; transform: rotate(-8deg)">
-<div aria-hidden="true" style="position: absolute; right: 30px; top: 790px; width: 470px; height: 470px; border-radius: 50%; background: #A9C9A9; opacity: 0.9"></div>
-<img src="{B('berny')}" alt="Bernardo Latorre, Tax Consultant" style="position: absolute; right: -30px; bottom: 0; width: 540px; height: auto; filter: drop-shadow(0 14px 24px rgba(0,0,0,0.35))">
+{marco_berny(marco)}
 <div style="position: relative; height: 100%; box-sizing: border-box; padding: 150px 80px 64px; display: flex; flex-direction: column; gap: 30px">
 <h2 class="serif" style="margin: 0; font-size: 92px; line-height: 0.95">{title}<br><span style="color: #B7CFE6">{pregunta_em}</span></h2>
 <p style="margin: 0; max-width: 470px; font-size: 30px; line-height: 1.45; color: rgba(244,241,234,0.88)">{texto}</p>
