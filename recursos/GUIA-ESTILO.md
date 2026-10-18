@@ -157,3 +157,14 @@ Pedido por Berny el 13 oct 2026: cada miércoles, un carrusel **sencillo y muy p
 - **También como historias:** las mismas 3 láminas se renderizan en 1080×1920 (`story()` del generador: foto a todo lo alto y el contenido centrado en la zona segura) y se publican como 3 historias, una por una y en orden (la siguiente solo después de confirmar que la anterior ya salió, con 3 min de diferencia).
 - **Fotos con cuidado (Berny, 13 oct 2026):** antes de usar una foto mírala completa con Read y descártala si trae caras reconocibles de otras personas, pantallas o documentos legibles, placas legibles, marcas muy protagonistas o algo que no se vea bien para un contador. Ante la duda, otra foto.
 - **Publicación:** miércoles a las 10:00 el carrusel; las historias justo después de que salga.
+
+## Formato de lunes: "Lunes legal" (desde 19 oct 2026)
+
+Pedido por Berny el 18 oct 2026: cada lunes a las 9:00, un carrusel con un tema **legal para emprendedores y empresas**, rematando con que **en GGTZ Consultores les ayudamos con su empresa** (GGTZ es despacho fiscal y legal; Berny es socio y contador, no abogado: el texto habla de "en GGTZ te ayudamos", nunca "como abogado").
+
+- **Temas (rotar, no repetir del historial):** constituir una empresa (S.A. de C.V., S. de R.L., S.A.S., cuál conviene, socios y capital, acta constitutiva, poderes, asambleas y libros), registrar una marca ante el IMPI (búsqueda fonética, clases, vigencia, renovación, qué pasa si no la registras), temas laborales (contratos por escrito, prestaciones de ley, vacaciones, aguinaldo, PTU, finiquito vs. liquidación, NOM-035, subcontratación/REPSE, reglamento interior), contratos con clientes y proveedores, avisos de privacidad, pagarés y cobranza, sucesión y protocolo familiar, franquicias, cumplimiento corporativo anual.
+- **Verificación:** todo artículo o requisito se revisa en la ley vigente con Luthor (LGSM, LFT, Ley Federal de Protección a la Propiedad Industrial, Código de Comercio, LFPDPPP) o en gob.mx / impi.gob.mx / dof.gob.mx. Sin datos inventados ni costos que no estén publicados. Nada de asesoría a un caso concreto: explicar en general.
+- **Diseño:** la identidad de marca y las reglas de los carruseles (Archivo ExtraBold, degradados en al menos 3 láminas, sello BL en la portada, `cierre()` sin fotos genéricas). Etiqueta en la portada "⚖️ LUNES LEGAL". 6 a 8 láminas. Fotos del banco o del día a día de Berny solo si encajan (oficina, firma, negocio), con el mismo cuidado de siempre.
+- **Cierre:** `cierre()` con una pregunta del tema y el texto "En GGTZ te ayudamos con tu empresa: constitución, marcas, contratos y temas laborales." y botón "Agenda tu asesoría".
+- **Pie de foto:** gancho, 3–5 líneas de valor, "En GGTZ Consultores te ayudamos con tu empresa 👉 81 2758 0277", pregunta para comentar y 3–5 hashtags (#Emprendedores #Empresas #MarcaRegistrada #DerechoLaboral #Monterrey según el tema).
+- **Publicación:** lunes 9:00 (America/Monterrey).
