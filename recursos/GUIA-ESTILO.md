@@ -136,7 +136,7 @@ Pedido por Berny el 11 oct 2026: cada domingo, **historias de Instagram** (1080�
 - **Pantalla 2 (detalle):** fondo marfil o blanco, "lo que casi nadie te dice" en serif grande con resaltado, un recorte tipo hoja blanca con el texto clave (si es un artículo de ley, transcribirlo literal de Luthor/DOF y resaltar lo importante; si no, rotularlo "en corto"),. Pie: "@BERNARDOLATORRE.FISCAL · GGTZ CONSULTORES".
 - **Sin llamado a la acción** (Berny lo pidió así el 11 oct 2026): nada de botones, teléfono ni "escríbeme". Solo el pie "@BERNARDOLATORRE.FISCAL · GGTZ CONSULTORES" en la pantalla 2.
 - **Música SIEMPRE:** cada pantalla se publica como video MP4 de 10 s (1080×1920, H.264 + AAC) con música instrumental ORIGINAL generada con `python3 recursos/musica_lofi.py` (cambia la semilla `default_rng(...)`, los acordes o el bpm cada semana para que no suene igual). Pantalla 1 usa el segundo 0–10 y la 2 el 11.7–21.7, con fade de entrada y salida. Nunca usar canciones con derechos.
-- **Publicación:** la pantalla 2 se programa SOLO después de confirmar en Metricool que la 1 ya quedó publicada, y al menos 3 minutos después (el 11 oct salieron al revés con 1 minuto de diferencia).
+- **Publicación (cambio pedido por Berny el 18 oct 2026):** las dos pantallas se dejan listas y se programan de una vez, en la misma corrida: primero la pantalla 1 a la hora elegida y enseguida la 2 para 3 minutos después (nunca a la misma hora ni con 1 minuto de diferencia: el 11 oct salieron al revés así). Ya no se espera a que la 1 salga para programar la 2.
 - **Máximo 2 pantallas** (3 solo si la noticia lo exige). Nada de fotos, sombras dramáticas, elementos rotados ni stickers.
 - **Zona segura de Instagram:** nada en los 200 px de arriba ni en los 220 px de abajo.
 - **Noticia:** de fuente oficial (SAT, DOF, SHCP, Congreso, SCJN, IMSS) y verificada; útil para personas físicas o PyMEs; no repetir la de domingos anteriores.
@@ -156,7 +156,7 @@ Pedido por Berny el 13 oct 2026: cada miércoles, un carrusel **sencillo y muy p
 - **Datos:** solo lo verificado (fuente oficial o dos medios serios que coincidan), con el estatus claro.
 - **También como historias:** las mismas 3 láminas se renderizan en 1080×1920 (`story()` del generador: foto a todo lo alto y el contenido centrado en la zona segura) y se publican como 3 historias, una por una y en orden (la siguiente solo después de confirmar que la anterior ya salió, con 3 min de diferencia).
 - **Fotos con cuidado (Berny, 13 oct 2026):** antes de usar una foto mírala completa con Read y descártala si trae caras reconocibles de otras personas, pantallas o documentos legibles, placas legibles, marcas muy protagonistas o algo que no se vea bien para un contador. Ante la duda, otra foto.
-- **Publicación:** miércoles a las 10:00 el carrusel; las historias justo después de que salga.
+- **Publicación:** miércoles a las 10:00 el carrusel; las historias se programan todas de una vez en la misma corrida (pedido de Berny, 18 oct 2026): la 1 a los 3 minutos del carrusel y cada una de las siguientes 3 minutos después de la anterior.
 
 ## Formato de lunes: "Lunes legal" (desde 19 oct 2026)
 
