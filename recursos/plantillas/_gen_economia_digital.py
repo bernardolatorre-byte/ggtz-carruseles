@@ -59,7 +59,7 @@ p1 = f"""
 <img src="/_blob/5b8391f45478910a1d0d8ca2823faf9b" alt="Sello BL, Bernardo Latorre Tax Consultant" style="position:absolute;right:80px;top:70px;width:120px;height:auto;transform:rotate(-8deg)">
 <div class="serif" style="position:absolute;left:90px;right:90px;top:180px;font-size:100px;line-height:0.95;color:#FFFDF8;{SOMBRA}">¿Adiós al <em>efectivo?</em></div>
 <div class="serif" style="position:absolute;left:90px;right:90px;top:420px;font-size:48px;line-height:1.2;color:#FFFDF8;{SOMBRA}">
-A ver, siéntate. Los diputados aprobaron la Ley de Economía Digital: <span class="hl" style="color:#1E242C;text-shadow:none">los negocios tendrán que aceptar pagos digitales</span>. Pero ojo: el efectivo no desaparece.
+Los diputados aprobaron la Ley de Economía Digital: <span class="hl" style="color:#1E242C;text-shadow:none">los negocios tendrán que aceptar pagos digitales</span>. Pero ojo: el efectivo no desaparece.
 </div>
 <div style="position:absolute;left:90px;bottom:70px;padding:10px 18px;background:rgba(255,253,248,0.9);font-size:22px;line-height:1.35;color:#2B3542">Cámara de Diputados, 6 oct 2026 · ya pasó al Senado</div>
 """
@@ -72,7 +72,7 @@ Y lo que casi nadie te dice:<br>
 <span class="hl" style="color:#1E242C;text-shadow:none">Hacienda va a definir en qué sectores el pago digital podrá ser la única opción.</span> Va a ser gradual.
 </div>
 <div style="position:absolute;left:90px;right:90px;bottom:150px;padding:34px 40px;background:#FFFDF8;box-shadow:0 10px 30px rgba(0,0,0,0.3);font-size:29px;line-height:1.45">
-<div style="font-size:22px;color:#5F7E9E;margin-bottom:14px">Lo demás · en corto</div>
+<div style="font-size:22px;color:#5F7E9E;margin-bottom:14px">Lo demás</div>
 <div>• Negocios y gobierno tendrán que avisarte <span class="hl">qué pagos digitales aceptan</span>.</div>
 <div style="margin-top:10px">• Si se cae el sistema, se vale efectivo o cheque.</div>
 <div style="margin-top:10px">• Podrás abrir cuentas en línea con tu CURP digital.</div>

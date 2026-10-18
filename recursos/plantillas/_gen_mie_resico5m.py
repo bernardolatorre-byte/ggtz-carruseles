@@ -56,7 +56,7 @@ p1 = f"""
 <img src="/_blob/5b8391f45478910a1d0d8ca2823faf9b" alt="Sello BL, Bernardo Latorre Tax Consultant" style="position:absolute;right:80px;top:70px;width:120px;height:auto;transform:rotate(-8deg)">
 <div class="serif" style="position:absolute;left:90px;right:220px;top:180px;font-size:100px;line-height:0.95;color:#FFFDF8;{SOMBRA}">¿RESICO hasta 5 millones?</div>
 <div class="serif" style="position:absolute;left:90px;right:90px;top:400px;font-size:48px;line-height:1.2;color:#FFFDF8;{SOMBRA}">
-A ver, siéntate. Los diputados aprobaron en lo general la reforma al ISR 2027: <span class="hl" style="color:#1E242C;text-shadow:none">el tope del RESICO para personas físicas subiría de 3.5 a 5 millones al año</span>.
+Los diputados aprobaron en lo general la reforma al ISR 2027: <span class="hl" style="color:#1E242C;text-shadow:none">el tope del RESICO para personas físicas subiría de 3.5 a 5 millones al año</span>.
 </div>
 <div style="position:absolute;left:90px;bottom:70px;padding:10px 18px;background:rgba(255,253,248,0.9);font-size:22px;line-height:1.35;color:#2B3542">Cámara de Diputados, 13 oct 2026 · falta el Senado y el DOF</div>
 """
@@ -69,7 +69,7 @@ Y lo que casi nadie te dice:<br>
 <span class="hl" style="color:#1E242C;text-shadow:none">la tasa no sube: el máximo seguiría en 2.5%,</span> ahora hasta los 5 millones.
 </div>
 <div style="position:absolute;left:90px;right:90px;bottom:150px;padding:34px 40px;background:#FFFDF8;box-shadow:0 10px 30px rgba(0,0,0,0.3);font-size:29px;line-height:1.45">
-<div style="font-size:22px;color:#5F7E9E;margin-bottom:14px">Lo demás · en corto</div>
+<div style="font-size:22px;color:#5F7E9E;margin-bottom:14px">Lo demás</div>
 <div>• Hoy, si pasas de 3.5 millones en el año, <span class="hl">te sales del RESICO</span> al mes siguiente.</div>
 <div style="margin-top:10px">• Empresas en RESICO: el tope subiría de 35 a 50 millones.</div>
 <div style="margin-top:10px">• Las tasas más bajas (1% a 2%) no cambian.</div>
