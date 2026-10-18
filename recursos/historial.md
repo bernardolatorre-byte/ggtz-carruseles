@@ -25,3 +25,4 @@ Serie de sábado "Historias de despacho": Ep. 01 opinión de cumplimiento negati
 | Fecha | Noticia | Diseño (color de fondo + garabato) | Fuente |
 |---|---|---|---|
 | 2026-10-11 | Programa de Regularización Fiscal 2026: hasta 100% de descuento en multas y recargos; 15 oct vence la opción de 2 parcialidades, 31 oct cierre | Estilo sencillo: P1 fondo azul polvo liso + texto serif con resaltado blanco + taza; P2 marfil + recorte "en corto" | Comunicado SAT 7 oct 2026; LIF 2026 (transitorio vigésimo segundo según IDC) |
+| 2026-10-18 | Tope a deducciones de empresas con ingresos de más de 50 millones (reforma LISR 2027 aprobada por Diputados el 13 oct; falta Senado y DOF): si facturas menos, no es contigo | P1 fondo salvia liso + Archivo ExtraBold 64 px con resaltado blanco + garabato de lupa; P2 marfil + recorte "en corto" + sello BL | Expansión 13 oct, Bloomberg Línea, La Jornada 12 oct, La Crónica 14 oct, El Contribuyente 14 oct (sin dictamen oficial accesible) |
