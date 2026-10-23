@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Discrepancia fiscal</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Instrument+Serif:ital@0;1&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:inherit}
+.bg-lino{background-color:#EEEAE1;background-image:url(/_blob/6c9eecc651dcae0e49c6e32a51e1513e);background-size:cover}
+.bg-papel{background-color:#F4F1EA;background-image:linear-gradient(rgba(95,126,158,0.10) 1px,transparent 1px),linear-gradient(90deg,rgba(95,126,158,0.10) 1px,transparent 1px),url(/_blob/5fe8c28b9943619ea44f604b391f1f8a);background-size:36px 36px,36px 36px,cover}
+.bg-sarga{background-color:#262F3B;background-image:url(/_blob/dadb3c074dd971422db84d954c63babd);background-size:cover}
+.hoja{background-color:#FFFDF8;background-image:linear-gradient(rgba(255,253,248,0.62),rgba(255,253,248,0.62)),url(/_blob/5fe8c28b9943619ea44f604b391f1f8a);background-size:cover}
+.sticker{filter: drop-shadow(5px 0 0 #fff) drop-shadow(-5px 0 0 #fff) drop-shadow(0 5px 0 #fff) drop-shadow(0 -5px 0 #fff) drop-shadow(0 14px 18px rgba(20,24,30,0.3))}
+.serif{font-family:'Archivo',sans-serif;font-weight:800;font-stretch:88%;letter-spacing:-0.03em}
+.serif em{font-style:normal!important}
+.kicker{font-size:22px;font-weight:600;letter-spacing:0.24em}
+</style>
+</helmet>
+<div class="" style="width: 1080px; height: 1350px; position: relative; overflow: hidden; font-family: 'Hanken Grotesk', sans-serif; color: #F4F1EA; isolation: isolate;">
+
+<div aria-hidden="true" style="position:absolute;inset:0;z-index:-1;overflow:hidden;background:#1C2027"><div style="position:absolute;left:-350px;top:-250px;width:750px;height:1100px;border-radius:50%;background:#E2B48F;filter:blur(110px)"></div><div style="position:absolute;left:-80px;top:-200px;width:700px;height:600px;border-radius:50%;background:#C98F7E;filter:blur(120px)"></div><div style="position:absolute;left:120px;top:-80px;width:900px;height:520px;border-radius:50%;background:#3E5C9A;filter:blur(120px)"></div><div style="position:absolute;left:-330px;top:650px;width:620px;height:900px;border-radius:50%;background:#D8A784;filter:blur(120px)"></div><div style="position:absolute;left:-100px;top:900px;width:650px;height:500px;border-radius:50%;background:#2F4A86;filter:blur(120px)"></div><svg width="1080" height="1350" style="position:absolute;inset:0;opacity:0.16;mix-blend-mode:overlay"><filter id="gr"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#gr)"/></svg></div>
+<div style="position:absolute;left:90px;right:90px;top:130px"><div class="kicker" style="font-weight:700;color:rgba(244,241,234,0.85)">LO QUE SÍ TE DEBE PREOCUPAR</div>
+<h2 class="serif" style="margin:26px 0 0;font-size:100px;line-height:0.94">Gastar más de lo que <span style="color:#B7CFE6">declaras</span></h2>
+<p style="margin:34px 0 0;font-size:32px;line-height:1.45;color:rgba(244,241,234,0.9);max-width:860px">Se llama <b>discrepancia fiscal</b>. Si en un año tus gastos, compras, depósitos, inversiones y pagos de tarjeta suman más que tus ingresos declarados, el SAT puede presumir que la diferencia es ingreso que no declaraste.</p></div>
+<div style="position:absolute;left:90px;right:90px;bottom:170px;display:flex;align-items:flex-end;gap:40px">
+<div style="flex:1"><div style="height:150px;background:rgba(244,241,234,0.85)"></div><div style="margin-top:12px;font-size:24px;font-weight:700;letter-spacing:0.12em">LO QUE DECLARAS</div></div>
+<div style="flex:1"><div style="height:290px;background:#B7CFE6;position:relative"><div class="serif" style="position:absolute;top:-70px;left:0;font-size:60px;color:#B7CFE6">?</div></div><div style="margin-top:12px;font-size:24px;font-weight:700;letter-spacing:0.12em">LO QUE GASTAS</div></div></div>
+<div style="position: absolute; left: 80px; right: 80px; bottom: 60px; display: flex; justify-content: space-between; font-size: 20px; font-weight: 600; color: rgba(244,241,234,0.6)"><span>Art. 91 LISR</span><span>05 / 08</span></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"marker":{"editor":"color","default":"#B7CFE6","options":["#B7CFE6","#A9C9A9","#D9B4A8"]},"$preview":{"width":1080,"height":1350}}'>
+class Component extends DCLogic {
+renderVals() {
+return { marker: this.props.marker ?? '#B7CFE6' };
+}
+}
+</script>
+</body>
+</html>

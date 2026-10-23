@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Qué te perdonan</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Instrument+Serif:ital@0;1&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:inherit}
+.bg-lino{background-color:#EEEAE1;background-image:url(/_blob/6c9eecc651dcae0e49c6e32a51e1513e);background-size:cover}
+.bg-papel{background-color:#F4F1EA;background-image:linear-gradient(rgba(95,126,158,0.10) 1px,transparent 1px),linear-gradient(90deg,rgba(95,126,158,0.10) 1px,transparent 1px),url(/_blob/5fe8c28b9943619ea44f604b391f1f8a);background-size:36px 36px,36px 36px,cover}
+.bg-sarga{background-color:#262F3B;background-image:url(/_blob/dadb3c074dd971422db84d954c63babd);background-size:cover}
+.hoja{background-color:#FFFDF8;background-image:linear-gradient(rgba(255,253,248,0.62),rgba(255,253,248,0.62)),url(/_blob/5fe8c28b9943619ea44f604b391f1f8a);background-size:cover}
+.sticker{filter: drop-shadow(5px 0 0 #fff) drop-shadow(-5px 0 0 #fff) drop-shadow(0 5px 0 #fff) drop-shadow(0 -5px 0 #fff) drop-shadow(0 14px 18px rgba(20,24,30,0.3))}
+.serif{font-family:'Archivo',sans-serif;font-weight:800;font-stretch:88%;letter-spacing:-0.03em}
+.serif em{font-style:normal!important}
+.kicker{font-size:22px;font-weight:600;letter-spacing:0.24em}
+</style>
+</helmet>
+<div class="" style="width: 1080px; height: 1350px; position: relative; overflow: hidden; font-family: 'Hanken Grotesk', sans-serif; color: #1E242C; isolation: isolate;">
+
+<div aria-hidden="true" style="position:absolute;inset:0;z-index:-1;overflow:hidden;background:#EEF0EA"><div style="position:absolute;left:-250px;top:-250px;width:900px;height:800px;border-radius:50%;background:#A9C9A9;filter:blur(130px)"></div><div style="position:absolute;left:500px;top:-100px;width:800px;height:700px;border-radius:50%;background:#B7CFE6;filter:blur(130px)"></div><div style="position:absolute;left:200px;top:600px;width:900px;height:700px;border-radius:50%;background:#F4F1EA;filter:blur(120px)"></div><div style="position:absolute;left:-200px;top:900px;width:800px;height:600px;border-radius:50%;background:#CFE0CF;filter:blur(120px)"></div><div style="position:absolute;left:650px;top:950px;width:600px;height:500px;border-radius:50%;background:#D9B4A8;filter:blur(140px)"></div><svg width="1080" height="1350" style="position:absolute;inset:0;opacity:0.16;mix-blend-mode:overlay"><filter id="gr"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#gr)"/></svg></div>
+<div style="position:absolute;left:90px;right:90px;top:300px"><div class="kicker" style="font-weight:700;color:#2B3542">LO QUE CASI NADIE ENTIENDE</div>
+<h2 class="serif" style="margin:24px 0 46px;font-size:88px;line-height:0.96">El impuesto <span style="background:#FFFDF8;padding:0 10px">no se perdona</span></h2>
+<div style="display:flex;gap:28px">
+<div style="flex:1;background:#262F3B;color:#F4F1EA;padding:36px 34px;transform:rotate(-1.5deg)"><div class="serif" style="font-size:46px;color:#A9C9A9">Sí</div>
+<div style="margin-top:18px;font-size:30px;line-height:1.6">Multas<br>Recargos<br>Gastos de ejecución</div></div>
+<div style="flex:1;background:#FFFDF8;padding:36px 34px;transform:rotate(1.5deg);box-shadow:0 14px 28px rgba(30,36,44,0.12)"><div class="serif" style="font-size:46px;color:#C98F7E">No</div>
+<div style="margin-top:18px;font-size:30px;line-height:1.6">El ISR, IVA o impuesto que debes: ese se paga completo y actualizado</div></div></div></div>
+<div style="position: absolute; left: 80px; right: 80px; bottom: 60px; display: flex; justify-content: space-between; font-size: 20px; font-weight: 600; color: #5F7E9E"><span>Comunicado SAT, 7 oct 2026</span><span>04 / 07</span></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"marker":{"editor":"color","default":"#B7CFE6","options":["#B7CFE6","#A9C9A9","#D9B4A8"]},"$preview":{"width":1080,"height":1350}}'>
+class Component extends DCLogic {
+renderVals() {
+return { marker: this.props.marker ?? '#B7CFE6' };
+}
+}
+</script>
+</body>
+</html>
