@@ -11,7 +11,7 @@ PAPEL = "/_blob/69e0532c9283413a0cbdcf3a9f33ca9b"  # texturas/papel-arrugado.jpg
 AVATAR = "/_blob/ee09a830e465eee2f30b4449a3fe87db"  # berny/fotos/avatar-historias.jpg
 SELLO = "/_blob/89b150b4a0eaffd521105fa61198e074"  # marca/sello-pizarra.png
 TOTAL = 8
-FECHA = "10:00 a. m. · 30/10/26"  # fecha y hora reales de publicación; nunca métricas
+FECHA = "9:45 p. m. · 23/10/26"  # fecha y hora reales de publicación; nunca métricas
 
 def page(title, inner, n=1, sello=False):
     rot = [-0.8, 0.7, -0.5, 0.8, -0.7, 0.5, -0.8, 0.6][(n-1) % 8]
