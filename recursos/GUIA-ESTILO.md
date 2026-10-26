@@ -169,3 +169,14 @@ Pedido por Berny el 18 oct 2026: cada lunes a las 9:00, un carrusel con un tema 
 - **Cierre:** `cierre()` con una pregunta del tema y el texto "En GGTZ te ayudamos con tu empresa: constitución, marcas, contratos y temas laborales." y botón "Agenda tu asesoría".
 - **Pie de foto:** gancho, 3–5 líneas de valor, "En GGTZ Consultores te ayudamos con tu empresa 👉 81 2758 0277", pregunta para comentar y 3–5 hashtags (#Emprendedores #Empresas #MarcaRegistrada #DerechoLaboral #Monterrey según el tema).
 - **Publicación:** lunes 9:00 (America/Monterrey).
+
+## Formato de lunes 7:00: "Tu dosis semanal" (desde 26 oct 2026)
+
+Pedido por Berny el 25 oct 2026: cada lunes a las 7:00, un carrusel con lo más relevante de la semana anterior (lunes a domingo) en lo **fiscal, laboral y legal**, muy llamativo, "mientras te tomas el cafecito mañanero", sin perder la identidad de marca. Referencia aprobada: `plantillas/_gen_dosis_2026_10_26.py` (Dos1-*). Convive con el "Lunes legal" de las 9:00 (no repetir la misma noticia en los dos).
+
+- **5 láminas:** portada + 3 "sorbos" (uno FISCAL, uno LABORAL/IMSS, uno LEGAL) + `cierre()`. Si una semana no hay noticia de alguna categoría, se usa otra de las dos, pero siempre 3 sorbos.
+- **Portada:** foto de café de Berny (`vida-cafe-terraza-playa` u otra foto suya con café si la hay) con degradado oscuro arriba, etiqueta "☕ TU DOSIS SEMANAL · <fechas>", título "Lo que pasó esta semana, mientras te tomas el cafecito" (se puede variar la redacción, siempre con el cafecito), chips FISCAL / LABORAL / LEGAL, sello BL y "3 sorbos →".
+- **Cada sorbo:** fondo degradado distinto (`grad()`), "☕ SORBO N" + chip de categoría (azul polvo fiscal, salvia laboral, terracota legal), la taza de línea arriba a la derecha, titular de gancho en Archivo 104 px con la palabra clave en marcador, una cifra o dato gigante (150 px) cuando lo hay, 2–3 renglones de qué pasó, y la caja "¿Y A TI QUÉ?" con la consecuencia práctica. Fuente en el pie.
+- **Cierre:** `cierre()` con "¿Cuál de los 3 te pegó más?" y "Comenta 1, 2 o 3 y guárdalo para tu próximo cafecito ☕".
+- **Noticias:** de la semana anterior, verificadas en fuente oficial (DOF, SAT, IMSS, STPS, Congreso, SCJN, Luthor) o dos medios serios; estatus claro (aprobada, en comisiones, vigente). No repetir lo del Chismesito del domingo ni lo del miércoles salvo que haya avance nuevo.
+- **Publicación:** lunes 7:00 (America/Monterrey). Carpeta `AAAA-MM-DD-dosis-semanal/`.

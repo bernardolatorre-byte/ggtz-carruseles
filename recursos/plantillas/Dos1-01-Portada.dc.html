@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Tu dosis semanal</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Instrument+Serif:ital@0;1&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:inherit}
+.bg-lino{background-color:#EEEAE1;background-image:url(/_blob/6c9eecc651dcae0e49c6e32a51e1513e);background-size:cover}
+.bg-papel{background-color:#F4F1EA;background-image:linear-gradient(rgba(95,126,158,0.10) 1px,transparent 1px),linear-gradient(90deg,rgba(95,126,158,0.10) 1px,transparent 1px),url(/_blob/5fe8c28b9943619ea44f604b391f1f8a);background-size:36px 36px,36px 36px,cover}
+.bg-sarga{background-color:#262F3B;background-image:url(/_blob/dadb3c074dd971422db84d954c63babd);background-size:cover}
+.hoja{background-color:#FFFDF8;background-image:linear-gradient(rgba(255,253,248,0.62),rgba(255,253,248,0.62)),url(/_blob/5fe8c28b9943619ea44f604b391f1f8a);background-size:cover}
+.sticker{filter: drop-shadow(5px 0 0 #fff) drop-shadow(-5px 0 0 #fff) drop-shadow(0 5px 0 #fff) drop-shadow(0 -5px 0 #fff) drop-shadow(0 14px 18px rgba(20,24,30,0.3))}
+.serif{font-family:'Archivo',sans-serif;font-weight:800;font-stretch:88%;letter-spacing:-0.03em}
+.serif em{font-style:normal!important}
+.kicker{font-size:22px;font-weight:600;letter-spacing:0.24em}
+</style>
+</helmet>
+<div class="" style="width: 1080px; height: 1350px; position: relative; overflow: hidden; font-family: 'Hanken Grotesk', sans-serif; color: #F4F1EA;">
+
+<img src="/_blob/15e9c1c0c5513d53a848a5eb62972dae" alt="Café en una mesa de terraza" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 75%">
+<div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,24,30,0.92) 0%,rgba(20,24,30,0.78) 42%,rgba(20,24,30,0.15) 72%,rgba(20,24,30,0.35) 100%)"></div>
+<img src="/_blob/5b8391f45478910a1d0d8ca2823faf9b" alt="Sello BL, Bernardo Latorre Tax Consultant" style="position:absolute;right:80px;top:80px;width:120px;transform:rotate(-8deg)">
+<div style="position:absolute;left:90px;top:100px;font-size:24px;font-weight:700;letter-spacing:0.24em;color:#D9B4A8">☕ TU DOSIS SEMANAL · 19–25 OCT</div>
+<h1 class="serif" style="position:absolute;left:90px;right:90px;top:190px;margin:0;font-size:106px;line-height:0.95">Lo que pasó esta semana, <span style="color:#B7CFE6">mientras te tomas el cafecito</span></h1>
+<div style="position:absolute;left:90px;top:640px;display:flex;gap:14px">
+<span style="padding:12px 24px;border-radius:999px;background:#B7CFE6;color:#1E242C;font-size:22px;font-weight:700;letter-spacing:0.18em">FISCAL</span><span style="padding:12px 24px;border-radius:999px;background:#A9C9A9;color:#1E242C;font-size:22px;font-weight:700;letter-spacing:0.18em">LABORAL</span><span style="padding:12px 24px;border-radius:999px;background:#D9B4A8;color:#1E242C;font-size:22px;font-weight:700;letter-spacing:0.18em">LEGAL</span></div>
+<div style="position:absolute;left:90px;bottom:70px;font-size:20px;font-weight:600;color:rgba(244,241,234,0.8)">@bernardolatorre.fiscal</div>
+<div style="position:absolute;right:80px;bottom:70px;font-size:22px;font-weight:700;color:#F4F1EA">3 sorbos →</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"marker":{"editor":"color","default":"#B7CFE6","options":["#B7CFE6","#A9C9A9","#D9B4A8"]},"$preview":{"width":1080,"height":1350}}'>
+class Component extends DCLogic {
+renderVals() {
+return { marker: this.props.marker ?? '#B7CFE6' };
+}
+}
+</script>
+</body>
+</html>

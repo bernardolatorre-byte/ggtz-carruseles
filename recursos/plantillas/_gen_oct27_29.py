@@ -187,7 +187,7 @@ R.append(("Reg-06-Despues", page("Después del 31", "", "#1E242C", f"""
 <div style="position:absolute;inset:0;background:#D9B4A8"></div>
 <div style="position:absolute;left:90px;right:90px;top:150px">{tag("¿Y SI NO ALCANZO?", "#262F3B")}
 <h2 class="serif" style="margin:26px 0 0;font-size:96px;line-height:0.95">El 1 de noviembre todo <span style="background:#FFFDF8;padding:0 10px">vuelve a contar</span></h2>
-<p style="margin:40px 0 0;font-size:32px;line-height:1.45;max-width:860px">Cuando cierre el programa, tu adeudo sigue sumando recargos y las multas se cobran completas. Si tienes algo pendiente con el SAT, estos dos días valen oro.</p>
+<p style="margin:40px 0 0;font-size:32px;line-height:1.45;max-width:860px">Cuando cierre, tu adeudo sigue sumando recargos. La Ley de Ingresos 2027 trae otro programa, pero todavía no es ley y sus reglas pueden cambiar. Si tienes algo pendiente con el SAT, estos dos días valen oro.</p>
 <div style="margin-top:56px;display:inline-block;padding:22px 30px;border:4px solid #262F3B;border-radius:10px;transform:rotate(-3deg);font-size:30px;font-weight:700;letter-spacing:0.16em">CIERRA EL SÁBADO 31</div></div>
 {sello(M.SELLO_PIZARRA, 870, 1080, 110, 6)}
 {foot(H, 6, T2)}""")))
