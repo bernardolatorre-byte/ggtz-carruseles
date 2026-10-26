@@ -9,7 +9,6 @@ def _load(n):
 G = _load("_gen_oct20_22"); M = _load("_marca")
 H = "@BERNARDOLATORRE.FISCAL"
 SEMANA = "19–25 OCT"
-CAFE = "/_blob/15e9c1c0c5513d53a848a5eb62972dae"
 BERNY = "/_blob/25bcb8fe94907e94b0640cf81bd101a6"
 PIZ, TIN, MAR, AZ, SAL, TER, TERF = "#262F3B", "#1E242C", "#F4F1EA", "#B7CFE6", "#A9C9A9", "#D9B4A8", "#C98F7E"
 
@@ -45,16 +44,23 @@ def sorbo(n, cat, bg, fg, chip, titulo, cifra, cifra_txt, cuerpo, ati, fuente, c
 
 S = []
 
-# 1 Portada: foto del café de Berny (sombra oscura arriba para leer; sin degradados de color)
+# 1 Portada: ilustración de taza (sin fotos; Berny pidió no usar sus fotos aquí, 25 oct 2026), fondo tinta liso
+TAZA_GRANDE = f"""<svg aria-hidden="true" width="760" height="640" viewBox="0 0 760 640" style="position:absolute;left:160px;top:930px">
+<g fill="none" stroke="{MAR}" stroke-width="10" stroke-linecap="round"><path d="M250 40c-30 40 30 70 0 120"/><path d="M340 20c-30 45 30 80 0 140"/><path d="M430 40c-30 40 30 70 0 120"/></g>
+<ellipse cx="350" cy="560" rx="330" ry="46" fill="{TER}"/>
+<path d="M130 200h440v190c0 100-90 170-220 170S130 490 130 390z" fill="{AZ}"/>
+<path d="M570 250c90 0 120 40 120 85s-40 90-125 80" fill="none" stroke="{AZ}" stroke-width="44" stroke-linecap="round"/>
+<ellipse cx="350" cy="200" rx="220" ry="34" fill="#8A6A55"/>
+<rect x="268" y="300" width="164" height="164" rx="12" fill="{TIN}"/>
+<text x="350" y="410" text-anchor="middle" font-family="Archivo" font-weight="800" font-size="92" fill="{AZ}" style="font-stretch:88%">BL</text></svg>"""
 S.append(("DosS1-01-Portada", story("Tu dosis semanal", MAR, f"""
-<img src="{CAFE}" alt="Café en una mesa de terraza" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 70%">
-<div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,24,30,0.9) 0%,rgba(20,24,30,0.8) 45%,rgba(20,24,30,0.1) 72%,rgba(20,24,30,0.3) 100%)"></div>
 <img src="{M.SELLO_MARFIL}" alt="Sello BL, Bernardo Latorre Tax Consultant" style="position:absolute;right:80px;top:230px;width:130px;transform:rotate(-8deg)">
 <div style="position:absolute;left:90px;top:260px;font-size:26px;font-weight:700;letter-spacing:0.24em;color:{TER}">☕ TU DOSIS SEMANAL</div>
 <div style="position:absolute;left:90px;top:305px;font-size:26px;font-weight:700;letter-spacing:0.24em;color:{MAR};opacity:0.75">{SEMANA}</div>
-<h1 class="serif" style="position:absolute;left:90px;right:90px;top:400px;margin:0;font-size:100px;line-height:0.96">Lo que pasó esta semana, <span style="background:{AZ};color:{TIN};padding:0 12px">mientras te tomas el cafecito</span></h1>
-<div style="position:absolute;left:90px;top:1060px;display:flex;gap:14px">
+<h1 class="serif" style="position:absolute;left:90px;right:90px;top:400px;margin:0;font-size:104px;line-height:0.96">Lo que pasó esta semana, <span style="background:{AZ};color:{TIN};padding:0 12px">mientras te tomas el cafecito</span></h1>
+<div style="position:absolute;left:90px;top:820px;display:flex;gap:14px">
 {''.join(f'<span style="padding:14px 26px;border-radius:999px;background:{c};color:{TIN};font-size:24px;font-weight:700;letter-spacing:0.18em">{t}</span>' for t, c in [("FISCAL", AZ), ("LABORAL", SAL), ("LEGAL", TER)])}</div>
+{TAZA_GRANDE}
 <div style="position:absolute;right:90px;bottom:280px;padding:16px 26px;background:{MAR};color:{TIN};font-size:26px;font-weight:700;border-radius:4px">3 sorbos →</div>
 <div style="position:absolute;left:90px;bottom:290px;font-size:20px;font-weight:700;letter-spacing:0.18em;color:{MAR}">{H}</div>""", TIN)))
 
