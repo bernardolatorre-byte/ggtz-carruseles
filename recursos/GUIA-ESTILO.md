@@ -88,6 +88,9 @@ Después de renderizar, arma una tira con tu portada nueva junto a las 4 anterio
 | Tres polaroids con pie de foto | Perfiles de quién aplica | Res-04 |
 | Ejemplo numérico: "Cobras $X → pagas $Y" | Caso práctico | Res-07 |
 | Dos columnas: "Te conviene si / Compara si" | Decisión | Res-07 |
+| Sello de hule gigante (textura de tinta con `feTurbulence`) | Portada con un símbolo protagonista (®, "PAGADO", "VENCIDO") | Leg2-01 |
+| Etiqueta colgante de precio con casillas | Pregunta directa en portada | Leg2-01 |
+| Línea de vida con círculos de años (0 → 3 → 10) | Vigencias, plazos y renovaciones | Leg2-06 |
 
 **Piezas nuevas para estrenar** (usar al menos una que no se haya usado antes en cada carrusel y agregarla a esta tabla):
 
