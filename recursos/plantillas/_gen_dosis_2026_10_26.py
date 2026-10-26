@@ -1,5 +1,5 @@
-# "Tu dosis semanal" (lunes 7:00) #1 — semana del 19 al 25 oct 2026 (Dos1-*).
-# Formato: portada con foto de café de Berny + 3 "sorbos" (fiscal, laboral, legal) en degradado + cierre().
+# "Tu dosis semanal" (lunes 7:00) #1 — HISTORIAS de Instagram 1080×1920, semana del 19 al 25 oct 2026 (DosS1-*).
+# Berny (25 oct 2026): son historias, no carrusel, y SIN degradados tornasol: fondos de color liso de la paleta.
 # Fuentes: Expansión 21 y 22 oct (Senado comisiones, programa de regularización 2027), Quadratín 21 oct (primera lectura),
 # Expansión 21 oct y Zeta Tijuana (acuerdo IMSS Modalidad 40, DOF 21 oct, vigente 22 oct), Expansión Política 25 oct (ley catastral).
 import importlib.util as _u, pathlib
@@ -7,81 +7,94 @@ HERE = pathlib.Path(__file__).parent
 def _load(n):
     s = _u.spec_from_file_location(n, HERE / f"{n}.py"); m = _u.module_from_spec(s); s.loader.exec_module(m); return m
 G = _load("_gen_oct20_22"); M = _load("_marca")
-page, foot, cierre = G.page, G.foot, G.cierre
-ISO = " isolation: isolate;"
-H = "@bernardolatorre.fiscal"
-T = 5
+H = "@BERNARDOLATORRE.FISCAL"
 SEMANA = "19–25 OCT"
 CAFE = "/_blob/15e9c1c0c5513d53a848a5eb62972dae"
+BERNY = "/_blob/25bcb8fe94907e94b0640cf81bd101a6"
+PIZ, TIN, MAR, AZ, SAL, TER, TERF = "#262F3B", "#1E242C", "#F4F1EA", "#B7CFE6", "#A9C9A9", "#D9B4A8", "#C98F7E"
 
-def taza(color="#F4F1EA", w=150):
-    # Taza de línea con vapor (pieza fija de la serie)
+def story(title, color, inner, bg):
+    """Página 1080×1920. Zona segura: nada en los 200 px de arriba ni en los 220 de abajo."""
+    html = G.page(title, "", color, inner, f" background:{bg};")
+    return html.replace("height: 1350px", "height: 1920px").replace('"height":1350', '"height":1920')
+
+def taza(color, w=120):
     return (f'<svg aria-hidden="true" width="{w}" height="{w}" viewBox="0 0 100 100" fill="none" stroke="{color}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">'
             '<path d="M20 44h50v20c0 13-11 22-25 22s-25-9-25-22z"/><path d="M70 50c11 0 15 4 15 9s-5 10-15 9"/>'
             '<path d="M34 16c-4 5 4 9 0 15M46 12c-4 6 4 10 0 17M58 16c-4 5 4 9 0 15"/></svg>')
 
-def sorbo(n, cat, chip, fondo, titulo, grande, cuerpo, ati, fuente, dark=True, extra=""):
-    fg = "#F4F1EA" if dark else "#1E242C"
-    sub = "rgba(244,241,234,0.9)" if dark else "#2B3542"
-    caja_bg = "#F4F1EA" if dark else "#262F3B"; caja_fg = "#1E242C" if dark else "#F4F1EA"
-    return page(f"Sorbo {n}: {cat}", "", fg, f"""
-{M.grad(fondo)}
-<div style="position:absolute;left:90px;right:90px;top:96px;display:flex;align-items:center;gap:18px">
-<span class="serif" style="font-size:30px;letter-spacing:0;color:{fg};opacity:0.75">☕ SORBO {n}</span>
-<span style="padding:10px 22px;border-radius:999px;background:{chip};color:#1E242C;font-size:22px;font-weight:700;letter-spacing:0.2em">{cat}</span></div>
-<div style="position:absolute;right:70px;top:70px;opacity:0.9">{taza(fg, 110)}</div>
-<div style="position:absolute;left:90px;right:90px;top:220px">
-<h2 class="serif" style="margin:0;font-size:104px;line-height:0.95;color:{fg}">{titulo}</h2>
-{grande}
-<p style="margin:34px 0 0;font-size:34px;line-height:1.45;color:{sub};max-width:900px">{cuerpo}</p>
-{extra}
-<div style="margin-top:50px;padding:32px 38px;background:{caja_bg};color:{caja_fg};transform:rotate(-1deg);max-width:860px;box-shadow:0 16px 30px rgba(0,0,0,0.18)">
-<div style="font-size:20px;font-weight:700;letter-spacing:0.22em;color:#C98F7E;margin-bottom:10px">¿Y A TI QUÉ?</div>
-<div style="font-size:32px;line-height:1.42">{ati}</div></div></div>
-{foot(fuente, n + 1, T, dark)}""", ISO)
+def pie(n, color):
+    return (f'<div style="position:absolute;left:90px;right:90px;bottom:260px;display:flex;justify-content:space-between;font-size:20px;font-weight:700;letter-spacing:0.18em;color:{color}">'
+            f'<span>{H}</span><span>{n} / 5</span></div>')
+
+def sorbo(n, cat, bg, fg, chip, titulo, cifra, cifra_txt, cuerpo, ati, fuente, caja_bg, caja_fg, cifra_color):
+    return story(f"Sorbo {n}: {cat}", fg, f"""
+<div style="position:absolute;left:90px;right:90px;top:250px;display:flex;align-items:center;gap:18px">
+<span class="serif" style="font-size:34px;color:{fg}">☕ SORBO {n}</span>
+<span style="padding:12px 24px;border-radius:999px;background:{chip};color:{TIN};font-size:22px;font-weight:700;letter-spacing:0.2em">{cat}</span></div>
+<div style="position:absolute;right:80px;top:225px">{taza(fg, 120)}</div>
+<div style="position:absolute;left:90px;right:90px;top:400px">
+<h2 class="serif" style="margin:0;font-size:112px;line-height:0.94;color:{fg}">{titulo}</h2>
+<div style="margin-top:40px;display:flex;align-items:baseline;gap:22px"><span class="serif" style="font-size:190px;line-height:0.85;color:{cifra_color}">{cifra}</span><span style="font-size:28px;line-height:1.3;font-weight:600;color:{fg}">{cifra_txt}</span></div>
+<p style="margin:50px 0 0;font-size:40px;line-height:1.42;color:{fg}">{cuerpo}</p>
+<div style="margin-top:64px;padding:40px 44px;background:{caja_bg};color:{caja_fg};transform:rotate(-1.2deg);box-shadow:0 16px 30px rgba(20,24,30,0.18)">
+<div style="font-size:21px;font-weight:700;letter-spacing:0.22em;color:{TERF};margin-bottom:12px">¿Y A TI QUÉ?</div>
+<div style="font-size:37px;line-height:1.4">{ati}</div></div>
+<div style="margin-top:34px;font-size:22px;color:{fg};opacity:0.7">Fuente: {fuente}</div></div>
+{pie(n + 1, fg)}""", bg)
 
 S = []
 
-# 1 Portada: foto del café de Berny + degradado
-S.append(("Dos1-01-Portada", page("Tu dosis semanal", "", "#F4F1EA", f"""
-<img src="{CAFE}" alt="Café en una mesa de terraza" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 75%">
-<div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,24,30,0.92) 0%,rgba(20,24,30,0.78) 42%,rgba(20,24,30,0.15) 72%,rgba(20,24,30,0.35) 100%)"></div>
-<img src="{M.SELLO_MARFIL}" alt="Sello BL, Bernardo Latorre Tax Consultant" style="position:absolute;right:80px;top:80px;width:120px;transform:rotate(-8deg)">
-<div style="position:absolute;left:90px;top:100px;font-size:24px;font-weight:700;letter-spacing:0.24em;color:#D9B4A8">☕ TU DOSIS SEMANAL · {SEMANA}</div>
-<h1 class="serif" style="position:absolute;left:90px;right:90px;top:190px;margin:0;font-size:106px;line-height:0.95">Lo que pasó esta semana, <span style="color:#B7CFE6">mientras te tomas el cafecito</span></h1>
-<div style="position:absolute;left:90px;top:640px;display:flex;gap:14px">
-{''.join(f'<span style="padding:12px 24px;border-radius:999px;background:{c};color:#1E242C;font-size:22px;font-weight:700;letter-spacing:0.18em">{t}</span>' for t, c in [("FISCAL", "#B7CFE6"), ("LABORAL", "#A9C9A9"), ("LEGAL", "#D9B4A8")])}</div>
-<div style="position:absolute;left:90px;bottom:70px;font-size:20px;font-weight:600;color:rgba(244,241,234,0.8)">{H}</div>
-<div style="position:absolute;right:80px;bottom:70px;font-size:22px;font-weight:700;color:#F4F1EA">3 sorbos →</div>""")))
+# 1 Portada: foto del café de Berny (sombra oscura arriba para leer; sin degradados de color)
+S.append(("DosS1-01-Portada", story("Tu dosis semanal", MAR, f"""
+<img src="{CAFE}" alt="Café en una mesa de terraza" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 70%">
+<div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,24,30,0.9) 0%,rgba(20,24,30,0.8) 45%,rgba(20,24,30,0.1) 72%,rgba(20,24,30,0.3) 100%)"></div>
+<img src="{M.SELLO_MARFIL}" alt="Sello BL, Bernardo Latorre Tax Consultant" style="position:absolute;right:80px;top:230px;width:130px;transform:rotate(-8deg)">
+<div style="position:absolute;left:90px;top:260px;font-size:26px;font-weight:700;letter-spacing:0.24em;color:{TER}">☕ TU DOSIS SEMANAL</div>
+<div style="position:absolute;left:90px;top:305px;font-size:26px;font-weight:700;letter-spacing:0.24em;color:{MAR};opacity:0.75">{SEMANA}</div>
+<h1 class="serif" style="position:absolute;left:90px;right:90px;top:400px;margin:0;font-size:100px;line-height:0.96">Lo que pasó esta semana, <span style="background:{AZ};color:{TIN};padding:0 12px">mientras te tomas el cafecito</span></h1>
+<div style="position:absolute;left:90px;top:1060px;display:flex;gap:14px">
+{''.join(f'<span style="padding:14px 26px;border-radius:999px;background:{c};color:{TIN};font-size:24px;font-weight:700;letter-spacing:0.18em">{t}</span>' for t, c in [("FISCAL", AZ), ("LABORAL", SAL), ("LEGAL", TER)])}</div>
+<div style="position:absolute;right:90px;bottom:280px;padding:16px 26px;background:{MAR};color:{TIN};font-size:26px;font-weight:700;border-radius:4px">3 sorbos →</div>
+<div style="position:absolute;left:90px;bottom:290px;font-size:20px;font-weight:700;letter-spacing:0.18em;color:{MAR}">{H}</div>""", TIN)))
 
-# 2 Fiscal
-S.append(("Dos1-02-Fiscal", sorbo(1, "FISCAL", "#B7CFE6", "sierra",
-    'Viene otro '+'<span style="background:#B7CFE6;color:#1E242C;padding:0 12px">perdón de multas</span>',
-    '<div style="margin-top:26px;display:flex;align-items:baseline;gap:20px"><span class="serif" style="font-size:150px;line-height:0.9;color:#B7CFE6">100%</span><span style="font-size:26px;line-height:1.3;color:rgba(244,241,234,0.8)">de descuento en<br>multas y recargos</span></div>',
-    "El paquete fiscal 2027 pasó comisiones del Senado el 21 de octubre y esta semana lo vota el pleno. Trae un nuevo programa con hasta <b>100% de descuento en multas y recargos</b> para adeudos de 2025 y años anteriores.",
+# 2 Fiscal — azul polvo liso
+S.append(("DosS1-02-Fiscal", sorbo(1, "FISCAL", AZ, TIN, MAR,
+    f'Viene otro <span style="background:{MAR};padding:0 12px">perdón de multas</span>',
+    "100%", "de descuento en<br>multas y recargos",
+    "El paquete fiscal 2027 pasó comisiones del Senado el 21 de octubre y esta semana lo vota el pleno. Trae un nuevo programa para adeudos de 2025 y años anteriores.",
     "El programa actual cierra este <b>sábado 31</b>. El de 2027 todavía no es ley: no dejes tu adeudo esperando algo que puede cambiar.",
-    "Expansión 21 y 22 oct · Senado (primera lectura)")))
+    "Expansión, 21 y 22 oct", PIZ, MAR, PIZ)))
 
-# 3 Laboral / IMSS
-S.append(("Dos1-03-Laboral", sorbo(2, "LABORAL · IMSS", "#A9C9A9", "noche",
-    'La Modalidad 40 '+'<span style="background:#B7CFE6;color:#1E242C;padding:0 12px">ya tiene tope</span>',
-    '<div style="margin-top:22px;display:flex;align-items:baseline;gap:20px"><span class="serif" style="font-size:150px;line-height:0.9;color:#A9C9A9">+1 UMA</span><span style="font-size:26px;line-height:1.3;color:rgba(244,241,234,0.8)">máximo sobre<br>tu último salario</span></div>',
-    "Desde el 22 de octubre, quien entre a la Modalidad 40 solo puede cotizar con su último salario registrado más una UMA. Antes podías subir hasta 25 UMA. Y ya no hay inscripciones con fecha hacia atrás.",
+# 3 Laboral — pizarra liso
+S.append(("DosS1-03-Laboral", sorbo(2, "LABORAL · IMSS", PIZ, MAR, SAL,
+    f'La Modalidad 40 <span style="background:{SAL};color:{TIN};padding:0 12px">ya tiene tope</span>',
+    "+1 UMA", "máximo sobre tu<br>último salario",
+    "Desde el 22 de octubre, quien entre a la Modalidad 40 solo puede cotizar con su último salario registrado más una UMA. Antes podías subir hasta 25 UMA.",
     "Si ya estabas inscrito, conservas tus condiciones. Si planeabas tu pensión con Modalidad 40, toca hacer números otra vez.",
-    "Acuerdo IMSS, DOF 21 oct · Expansión, Zeta")))
+    "acuerdo IMSS, DOF 21 oct", MAR, TIN, SAL)))
 
-# 4 Legal
-S.append(("Dos1-04-Legal", sorbo(3, "LEGAL", "#D9B4A8", "salvia",
-    'Tu casa va a tener <span style="background:#FFFDF8;padding:0 10px">su propia “CURP”</span>',
-    '<div style="margin-top:26px;display:flex;align-items:baseline;gap:20px"><span class="serif" style="font-size:150px;line-height:0.9;color:#262F3B">2027</span><span style="font-size:26px;line-height:1.3;color:#2B3542">trámites catastrales<br>en línea</span></div>',
-    "Desde el 24 de octubre está vigente la nueva Ley General de Armonización Catastral y Registral: cada inmueble tendrá una <b>Clave Única Catastral</b> y los trámites pasarán a plataformas digitales desde 2027.",
+# 4 Legal — terracota suave liso
+S.append(("DosS1-04-Legal", sorbo(3, "LEGAL", TER, TIN, MAR,
+    f'Tu casa va a tener <span style="background:{MAR};padding:0 12px">su propia “CURP”</span>',
+    "2027", "trámites catastrales<br>en línea",
+    "Desde el 24 de octubre está vigente la nueva Ley General de Armonización Catastral y Registral: cada inmueble tendrá una <b>Clave Única Catastral</b>.",
     "La ley no sube las tasas del predial. Pero si tu municipio actualiza el valor catastral de tu casa, sí podrías pagar más.",
-    "Expansión Política, 25 oct", dark=False)))
+    "Expansión Política, 25 oct", PIZ, MAR, PIZ)))
 
-# 5 Cierre
-S.append(("Dos1-05-Cierre", cierre("¿Cuál de los 3", "te pegó más?",
-    "Cada lunes te traigo lo que importa en lo fiscal, laboral y legal. Y si alguno te toca de cerca, en GGTZ te ayudamos.",
-    "Agenda tu asesoría", "Comenta 1, 2 o 3 y guárdalo para tu próximo cafecito ☕", fondo="atardecer")))
+# 5 Cierre — marfil liso, sticker de Berny estilo revista sin degradado
+S.append(("DosS1-05-Cierre", story("Cierre dosis semanal", TIN, f"""
+<img src="{M.SELLO_PIZARRA}" alt="" aria-hidden="true" style="position:absolute;right:80px;top:230px;width:130px;transform:rotate(-8deg)">
+<div style="position:absolute;left:90px;right:220px;top:280px">
+<h2 class="serif" style="margin:0;font-size:108px;line-height:0.95">¿Cuál de los 3 <span style="background:{AZ};padding:0 12px">te pegó más?</span></h2>
+<p style="margin:40px 0 0;font-size:36px;line-height:1.42;max-width:820px">Respóndeme esta historia con <b>1, 2 o 3</b>. Y si alguno te toca de cerca, en GGTZ te ayudamos.</p>
+<div style="margin-top:40px;display:flex;gap:16px">{''.join(f'<span class="serif" style="width:110px;height:110px;border-radius:50%;background:{c};display:flex;align-items:center;justify-content:center;font-size:64px">{t}</span>' for t, c in [("1", AZ), ("2", SAL), ("3", TER)])}</div></div>
+<div aria-hidden="true" class="serif" style="position:absolute;left:40px;bottom:520px;font-size:230px;line-height:0.8;letter-spacing:-0.05em;color:#E6E0D3;white-space:nowrap">LATORRE</div>
+<img src="{BERNY}" alt="Bernardo Latorre, Tax Consultant" style="position:absolute;right:-60px;bottom:220px;width:620px;height:auto;filter:drop-shadow(0 18px 26px rgba(20,24,30,0.25))">
+<div style="position:absolute;left:90px;bottom:300px;display:flex;flex-direction:column;gap:10px;font-size:26px;font-weight:600">
+<span>81 2758 0277</span>
+<img src="{M.LOGO_H_PIZARRA}" alt="Bernardo Latorre, Tax Consultant" style="width:320px;margin-left:-8px">
+<span style="font-size:16px;font-weight:700;letter-spacing:0.26em;color:#5F7E9E">SOCIO EN GGTZ CONSULTORES</span></div>""", MAR)))
 
 for name, html in S:
     (HERE / f"{name}.dc.html").write_text(html)
