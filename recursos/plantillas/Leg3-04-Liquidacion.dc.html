@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Liquidación</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Instrument+Serif:ital@0;1&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:inherit}
+.bg-lino{background-color:#EEEAE1;background-image:url(/_blob/6c9eecc651dcae0e49c6e32a51e1513e);background-size:cover}
+.bg-papel{background-color:#F4F1EA;background-image:linear-gradient(rgba(95,126,158,0.10) 1px,transparent 1px),linear-gradient(90deg,rgba(95,126,158,0.10) 1px,transparent 1px),url(/_blob/5fe8c28b9943619ea44f604b391f1f8a);background-size:36px 36px,36px 36px,cover}
+.bg-sarga{background-color:#262F3B;background-image:url(/_blob/dadb3c074dd971422db84d954c63babd);background-size:cover}
+.hoja{background-color:#FFFDF8;background-image:linear-gradient(rgba(255,253,248,0.62),rgba(255,253,248,0.62)),url(/_blob/5fe8c28b9943619ea44f604b391f1f8a);background-size:cover}
+.sticker{filter: drop-shadow(5px 0 0 #fff) drop-shadow(-5px 0 0 #fff) drop-shadow(0 5px 0 #fff) drop-shadow(0 -5px 0 #fff) drop-shadow(0 14px 18px rgba(20,24,30,0.3))}
+.serif{font-family:'Archivo',sans-serif;font-weight:800;font-stretch:88%;letter-spacing:-0.03em}
+.serif em{font-style:normal!important}
+.kicker{font-size:22px;font-weight:600;letter-spacing:0.24em}
+</style>
+</helmet>
+<div class="" style="width: 1080px; height: 1350px; position: relative; overflow: hidden; font-family: 'Hanken Grotesk', sans-serif; color: #1E242C; background: #D9B4A8;">
+
+<div class="serif" aria-hidden="true" style="position:absolute;right:-30px;top:-170px;font-size:820px;line-height:1;color:rgba(255,253,248,0.30)">3</div>
+<div style="position:absolute;left:90px;right:90px;top:130px">
+<div class="kicker" style="color:#2B3542;font-weight:700">CUANDO DESPIDES SIN CAUSA</div>
+<h2 class="serif" style="margin:22px 0 18px;width:760px;font-size:100px;line-height:0.94;color:#2B3542">Ahí sí es <span style="background:#FFFDF8;padding:0 10px">liquidación</span></h2>
+<p style="margin:0 0 60px;width:700px;font-size:31px;line-height:1.42;color:#2B3542">Es el finiquito <b>más</b> una indemnización. Lo básico que marca la ley:</p>
+<div style="display:flex;gap:12px;align-items:center">
+<div style="flex:1;padding:34px 20px;background:#FFFDF8;color:#1E242C;border-radius:8px;transform:rotate(-1.5deg);box-shadow:0 12px 22px rgba(30,36,44,0.16);text-align:center"><div class="serif" style="font-size:46px;line-height:1">Finiquito</div><div style="font-size:22px;line-height:1.3;margin-top:8px">lo que ya ganó</div></div><div class="serif" style="flex:none;font-size:56px;color:#2B3542">+</div>
+<div style="flex:1;padding:34px 20px;background:#2B3542;color:#F4F1EA;border-radius:8px;transform:rotate(1.2deg);box-shadow:0 12px 22px rgba(30,36,44,0.16);text-align:center"><div class="serif" style="font-size:46px;line-height:1">3 meses</div><div style="font-size:22px;line-height:1.3;margin-top:8px">de salario</div></div><div class="serif" style="flex:none;font-size:56px;color:#2B3542">+</div>
+<div style="flex:1;padding:34px 20px;background:#B7CFE6;color:#1E242C;border-radius:8px;transform:rotate(-1deg);box-shadow:0 12px 22px rgba(30,36,44,0.16);text-align:center"><div class="serif" style="font-size:46px;line-height:1">12 días</div><div style="font-size:22px;line-height:1.3;margin-top:8px">por año de prima de antigüedad</div></div>
+</div>
+<div class="hoja" style="margin-top:70px;padding:36px 40px;color:#1E242C;transform:rotate(0.6deg);box-shadow:0 16px 30px rgba(30,36,44,0.18)">
+<div class="kicker" style="font-size:19px;color:#C98F7E">Y PUEDE CRECER</div>
+<div style="font-size:27px;line-height:1.42;margin-top:12px">En algunos casos se suman <b>20 días por cada año</b> trabajado. Y si llega a juicio y no pruebas la causa del despido, también <b>salarios vencidos de hasta 12 meses</b>.</div>
+</div>
+<p style="margin:56px 0 0;font-size:27px;line-height:1.4;color:#2B3542">En el despido, la prima de antigüedad se paga sin importar cuántos años tenga.</p>
+</div>
+<div style="position: absolute; left: 80px; right: 80px; bottom: 60px; display: flex; justify-content: space-between; font-size: 20px; font-weight: 600; color: #5F7E9E"><span>Fuente: arts. 48, 50 y 162 fr. III LFT · @bernardolatorre.fiscal</span><span>04 / 07</span></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"marker":{"editor":"color","default":"#B7CFE6","options":["#B7CFE6","#A9C9A9","#D9B4A8"]},"$preview":{"width":1080,"height":1350}}'>
+class Component extends DCLogic {
+renderVals() {
+return { marker: this.props.marker ?? '#B7CFE6' };
+}
+}
+</script>
+</body>
+</html>

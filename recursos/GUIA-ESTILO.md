@@ -91,11 +91,12 @@ Después de renderizar, arma una tira con tu portada nueva junto a las 4 anterio
 | Sello de hule gigante (textura de tinta con `feTurbulence`) | Portada con un símbolo protagonista (®, "PAGADO", "VENCIDO") | Leg2-01 |
 | Etiqueta colgante de precio con casillas | Pregunta directa en portada | Leg2-01 |
 | Línea de vida con círculos de años (0 → 3 → 10) | Vigencias, plazos y renovaciones | Leg2-06 |
+| Sobres de pago dibujados (el grosor muestra el monto) | Comparar dos pagos o conceptos en portada | Leg3-01 |
+| Quiz A/B/C con la respuesta en la lámina siguiente | Enganchar con una pregunta | Leg3-02 |
 
 **Piezas nuevas para estrenar** (usar al menos una que no se haya usado antes en cada carrusel y agregarla a esta tabla):
 
 - Mito contra realidad, con un sello "FALSO" o "CIERTO".
-- Encuesta o quiz en lámina: "¿Cuál crees que es?", con la respuesta en la siguiente lámina.
 - Recibo o ticket dibujado con un desglose de cifras.
 - Antes y después, o error contra acierto, con una tachadura.
 - Mapa de México o de Nuevo León con un dato.
